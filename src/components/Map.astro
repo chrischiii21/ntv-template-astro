@@ -1,0 +1,94 @@
+<div id="map-wrapper" class="relative w-full h-[400px] md:h-[500px]">
+    <div id="map" class="w-full h-full rounded-b-3xl"></div>
+</div>
+
+<script>
+    import L from "leaflet";
+    import "leaflet/dist/leaflet.css";
+
+    // Declare the function type on Window
+    declare global {
+        interface Window {
+            flyToCity: (lat: number, lng: number) => void;
+        }
+    }
+
+    const map = L.map("map").setView([39.7392, -104.9903], 10);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap",
+    }).addTo(map);
+
+    // Add custom markers for locations
+    const blueIcon = L.divIcon({
+        className: "custom-marker",
+        html: `<div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shadow-lg border-4 border-white animate-bounce">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+        </div>`,
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+    });
+
+    const cyanIcon = L.divIcon({
+        className: "custom-marker",
+        html: `<div class="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+        </div>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+    });
+
+    const indigoIcon = L.divIcon({
+        className: "custom-marker",
+        html: `<div class="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+        </div>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+    });
+
+    // Add markers
+    L.marker([39.7294, -104.8319], { icon: blueIcon })
+        .addTo(map)
+        .bindPopup("<b>Aurora</b>");
+    L.marker([39.7047, -105.0814], { icon: cyanIcon })
+        .addTo(map)
+        .bindPopup("<b>Lakewood</b>");
+    L.marker([39.8028, -105.0875], { icon: indigoIcon })
+        .addTo(map)
+        .bindPopup("<b>Arvada</b>");
+    L.marker([39.5807, -104.8767], { icon: cyanIcon })
+        .addTo(map)
+        .bindPopup("<b>Centennial</b>");
+
+    // Function to move map (accessible by buttons)
+    window.flyToCity = (lat: number, lng: number) => {
+        map.flyTo([lat, lng], 12, {
+            duration: 1.5,
+        });
+    };
+</script>
+
+<style>
+    :global(.custom-marker) {
+        background: transparent;
+        border: none;
+    }
+
+    :global(.leaflet-popup-content-wrapper) {
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+
+    :global(.leaflet-popup-content) {
+        margin: 0.75rem;
+        font-weight: 600;
+        color: #1f2937;
+    }
+</style>
