@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/dealer-logo.avif";
+---
+
+<nav class="fixed top-6 left-0 right-0 z-50 px-6">
+    <div
+        class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl border border-gray-200 shadow-xl px-8 h-20 flex justify-between items-center"
+    >
+        <div class="flex items-center gap-12">
+            <a
+                href="/"
+                class="flex items-center transition-transform hover:scale-105"
+            >
+                <Image
+                    src={logo}
+                    alt="Dashboard Logo"
+                    width={48}
+                    height={48}
+                    format="avif"
+                    loading="eager"
+                    class="rounded-lg object-contain"
+                />
+            </a>
+
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-700">
+                <a
+                    href="/"
+                    class="text-gray-900 font-semibold hover:text-blue-600 transition-colors"
+                    >Home</a
+                >
+                <a href="#" class="hover:text-gray-900 transition-colors"
+                    >About Us</a
+                >
+                <a
+                    href="#"
+                    class="hover:text-gray-900 transition-colors flex items-center gap-1"
+                >
+                    Indoor Billboards
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+                <a
+                    href="#"
+                    class="hover:text-gray-900 transition-colors flex items-center gap-1"
+                >
+                    Solutions
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button
+                class="bg-[#0a1628] text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#0d1f3c] transition-all shadow-lg hover:shadow-xl uppercase tracking-wide"
+            >
+                CONTACT US
+            </button>
+
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-700 hover:text-gray-900">
+                <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>

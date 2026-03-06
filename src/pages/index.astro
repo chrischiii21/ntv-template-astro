@@ -1,11 +1,314 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { getImage } from "astro:assets";
+import homeImage from "../assets/home.avif";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const optimizedBackground = await getImage({ src: homeImage });
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="NTV Template 5 Clone">
+	<!-- Hero Section - Refined -->
+	<section
+		class="relative min-h-screen flex items-center justify-center pt-12 pb-20 px-6 bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#0a1628]"
+	>
+		<!-- Background Image - Better Positioned -->
+		<div class="absolute inset-0 overflow-hidden">
+			<div
+				class="absolute inset-0 w-full h-full bg-cover bg-center opacity-50"
+				style={`background-image: url(${optimizedBackground.src}); background-position: center 40%;`}
+			>
+			</div>
+			<!-- Gradient Overlay for Better Text Visibility -->
+			<div
+				class="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/70 to-[#0a1628]/90"
+			>
+			</div>
+			<div
+				class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a1628]/80"
+			>
+			</div>
+		</div>
+
+		<div class="relative z-10 w-full max-w-7xl mx-auto">
+			<div class="text-center max-w-4xl mx-auto space-y-8">
+				<!-- Badge -->
+				<div class="flex justify-center">
+					<div
+						class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 rounded-full px-5 py-2.5 backdrop-blur-sm"
+					>
+						<svg
+							class="w-4 h-4 text-blue-400"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
+							<path
+								d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+							></path>
+							<path
+								d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+							></path>
+						</svg>
+						<span
+							class="text-blue-300 text-sm font-semibold tracking-wider uppercase"
+							>Premium Marketing Solutions</span
+						>
+					</div>
+				</div>
+
+				<!-- Main Heading - Refined Size -->
+				<h1
+					class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight"
+				>
+					Local Advertising and
+					<span
+						class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 mt-2"
+					>
+						Digital Marketing
+					</span>
+					<span class="block mt-2">Pros in Denver</span>
+				</h1>
+
+				<!-- Subheading -->
+				<div class="flex justify-center">
+					<div
+						class="flex items-start gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-5 max-w-xl"
+					>
+						<svg
+							class="w-6 h-6 text-blue-400 shrink-0 mt-0.5"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+						</svg>
+						<p
+							class="text-blue-100 text-lg leading-relaxed text-left"
+						>
+							Helping Businesses Get Noticed—On Screens and Online
+						</p>
+					</div>
+				</div>
+
+				<!-- CTA Buttons -->
+				<div class="flex flex-wrap justify-center gap-4 pt-4">
+					<button
+						class="bg-white text-[#0a1628] px-10 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all uppercase tracking-wide text-sm shadow-2xl hover:shadow-blue-500/20 hover:scale-105 transform duration-200"
+					>
+						Talk to Our Team
+					</button>
+					<button
+						class="bg-transparent border-2 border-white/40 text-white px-10 py-4 rounded-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all uppercase tracking-wide text-sm backdrop-blur-sm"
+					>
+						Learn More
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bottom Gradient Fade -->
+		<div
+			class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"
+		>
+		</div>
+	</section>
+
+	<!-- Content Section -->
+	<section class="bg-white py-20">
+		<div class="max-w-7xl mx-auto px-6">
+			<div
+				class="flex flex-col lg:flex-row items-center justify-between gap-12 mb-20"
+			>
+				<div class="lg:w-1/2">
+					<h2 class="mb-6">
+						Local Advertising Solutions for Denver Businesses
+					</h2>
+					<p>
+						As your trusted <span
+							class="font-semibold text-gray-900"
+							>Denver marketing pros</span
+						>, our
+						<a href="#" class="text-blue-600 hover:underline"
+							>billboard network</a
+						> gives you access to high-traffic locations where your message
+						reaches the right audience.
+					</p>
+				</div>
+
+				<div class="lg:w-auto">
+					<button
+						class="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-colors flex items-center text-lg shadow-lg"
+					>
+						<svg
+							class="w-5 h-5 mr-2"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+						>
+							<path
+								d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+							></path>
+						</svg>
+						EXPLORE OUR DIGITAL MARKETING SERVICES
+					</button>
+				</div>
+			</div>
+
+			<!-- Services Grid -->
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Indoor Billboard Advertising -->
+				<div
+					class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-300"
+				>
+					<div class="flex items-start gap-6">
+						<div class="flex-shrink-0">
+							<div
+								class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center"
+							>
+								<svg
+									class="w-8 h-8 text-blue-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<rect
+										x="3"
+										y="3"
+										width="18"
+										height="18"
+										rx="2"
+										stroke-width="2"></rect>
+									<path
+										d="M9 9h6M9 12h6M9 15h4"
+										stroke-width="2"
+										stroke-linecap="round"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">
+								Indoor Billboard Advertising
+							</h3>
+							<p class="text-gray-600 leading-relaxed">
+								High-impact advertising in premium indoor
+								locations across Denver
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Social Media Marketing -->
+				<div
+					class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-300"
+				>
+					<div class="flex items-start gap-6">
+						<div class="flex-shrink-0">
+							<div
+								class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center"
+							>
+								<svg
+									class="w-8 h-8 text-blue-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">
+								Social Media Marketing
+							</h3>
+							<p class="text-gray-600 leading-relaxed">
+								Build and engage your audience with strategic
+								social media content
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Custom Website Design -->
+				<div
+					class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-300"
+				>
+					<div class="flex items-start gap-6">
+						<div class="flex-shrink-0">
+							<div
+								class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center"
+							>
+								<svg
+									class="w-8 h-8 text-blue-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">
+								Custom Website Design
+							</h3>
+							<p class="text-gray-600 leading-relaxed">
+								Professional websites that convert visitors into
+								customers
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Targeted Lead Generation -->
+				<div
+					class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-300"
+				>
+					<div class="flex items-start gap-6">
+						<div class="flex-shrink-0">
+							<div
+								class="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center"
+							>
+								<svg
+									class="w-8 h-8 text-blue-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"></path>
+									<path
+										d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"></path>
+								</svg>
+							</div>
+						</div>
+						<div class="flex-1">
+							<h3 class="text-xl font-bold text-gray-900 mb-3">
+								Targeted Lead Generation
+							</h3>
+							<p class="text-gray-600 leading-relaxed">
+								Strategic campaigns that generate quality leads
+								and maximize ROI
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
