@@ -5,11 +5,11 @@ body {
 }
 
 h2 {
-    @apply text-3xl font-bold text-blue-950 leading-tight;
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-blue-950 leading-tight;
     font-family: 'Inter', sans-serif;
 }
 
 p {
-    @apply text-lg text-gray-600 leading-relaxed;
+    @apply text-base md:text-lg text-gray-600 leading-relaxed;
     font-family: 'Inter', sans-serif;
 }

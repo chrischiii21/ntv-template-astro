@@ -3,11 +3,11 @@ import { Image } from "astro:assets";
 import logo from "../assets/dealer-logo.avif";
 ---
 
-<nav class="fixed top-6 left-0 right-0 z-50 px-6">
+<nav class="fixed top-4 left-0 right-0 z-50 px-4 md:px-6">
     <div
-        class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl border border-gray-200 shadow-xl px-8 h-20 flex justify-between items-center"
+        class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md rounded-xl md:rounded-2xl border border-gray-200 shadow-lg px-4 md:px-8 h-16 md:h-20 flex justify-between items-center"
     >
-        <div class="flex items-center gap-12">
+        <div class="flex items-center gap-6 md:gap-12">
             <a
                 href="/"
                 class="flex items-center transition-transform hover:scale-105"
@@ -15,15 +15,17 @@ import logo from "../assets/dealer-logo.avif";
                 <Image
                     src={logo}
                     alt="Dashboard Logo"
-                    width={48}
-                    height={48}
+                    width={40}
+                    height={40}
                     format="avif"
                     loading="eager"
-                    class="rounded-lg object-contain"
+                    class="rounded-lg object-contain md:w-12 md:h-12"
                 />
             </a>
 
-            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-700">
+            <div
+                class="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-gray-700"
+            >
                 <a
                     href="/"
                     class="text-gray-900 font-semibold hover:text-blue-600 transition-colors"
@@ -71,17 +73,17 @@ import logo from "../assets/dealer-logo.avif";
             </div>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3">
             <button
-                class="bg-[#0a1628] text-white text-sm font-semibold px-6 py-2.5 rounded-lg hover:bg-[#0d1f3c] transition-all shadow-lg hover:shadow-xl uppercase tracking-wide"
+                class="bg-[#0a1628] text-white text-xs md:text-sm font-semibold px-4 md:px-6 py-2 md:py-2.5 rounded-lg hover:bg-[#0d1f3c] transition-all shadow-md hover:shadow-lg uppercase tracking-wide"
             >
-                CONTACT US
+                Contact Us
             </button>
 
             <!-- Mobile menu button -->
-            <button class="md:hidden text-gray-700 hover:text-gray-900">
+            <button class="md:hidden text-gray-700 hover:text-gray-900 p-2">
                 <svg
-                    class="w-6 h-6"
+                    class="w-5 h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
