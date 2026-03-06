@@ -1431,7 +1431,9 @@ const optimizedBackground = await getImage({ src: homeImage });
 					</div>
 
 					<script>
-						function setActiveLocation(clickedButton) {
+						function setActiveLocation(
+							clickedButton: HTMLButtonElement,
+						) {
 							// Remove active state from all buttons
 							const allButtons =
 								document.querySelectorAll(".location-btn");
@@ -1478,15 +1480,16 @@ const optimizedBackground = await getImage({ src: homeImage });
 							);
 
 							// Update icon background
-							const iconDiv =
+							const activeIconDiv =
 								clickedButton.querySelector("div > div");
-							iconDiv.classList.remove("bg-slate-100");
-							iconDiv.classList.add("bg-white");
+							activeIconDiv.classList.remove("bg-slate-100");
+							activeIconDiv.classList.add("bg-white");
 
 							// Update icon color
-							const icon = iconDiv.querySelector("svg");
-							icon.classList.remove("text-slate-600");
-							icon.classList.add("text-slate-900");
+							const activeIcon =
+								activeIconDiv.querySelector("svg");
+							activeIcon.classList.remove("text-slate-600");
+							activeIcon.classList.add("text-slate-900");
 
 							// Update text color
 							const span = clickedButton.querySelector("span");
@@ -1500,8 +1503,6 @@ const optimizedBackground = await getImage({ src: homeImage });
 							arrow.classList.add("text-white");
 
 							// Show active indicator (add green dot)
-							const activeIconDiv =
-								clickedButton.querySelector("div > div");
 							activeIconDiv.style.position = "relative";
 							let indicator =
 								activeIconDiv.querySelector(".active-dot");
