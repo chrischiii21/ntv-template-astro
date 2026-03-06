@@ -11,37 +11,33 @@ const optimizedBackground = await getImage({ src: homeImage });
 ---
 
 <Layout title="NTV Template 5 Clone">
-	<!-- Hero Section - Refined & Responsive -->
+	<!-- Hero Section - Balanced & Clean -->
 	<section
-		class="relative min-h-screen flex items-center justify-center pt-20 md:pt-24 lg:pt-28 pb-12 md:pb-16 lg:pb-20 px-4 md:px-6 bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#0a1628]"
+		class="relative flex items-center justify-center pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-24 lg:pb-28 px-4 md:px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
 	>
-		<!-- Background Image - Better Positioned -->
+		<!-- Background Image -->
 		<div class="absolute inset-0 overflow-hidden">
 			<div
-				class="absolute inset-0 w-full h-full bg-cover bg-center opacity-50"
+				class="absolute inset-0 w-full h-full bg-cover bg-center opacity-40"
 				style={`background-image: url(${optimizedBackground.src}); background-position: center 40%;`}
 			>
 			</div>
-			<!-- Gradient Overlay for Better Text Visibility -->
+			<!-- Simplified Overlay -->
 			<div
-				class="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/70 to-[#0a1628]/90"
-			>
-			</div>
-			<div
-				class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a1628]/80"
+				class="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/75 to-slate-900/90"
 			>
 			</div>
 		</div>
 
-		<div class="relative z-10 w-full max-w-7xl mx-auto">
-			<div class="text-center max-w-4xl mx-auto space-y-6 md:space-y-8">
+		<div class="relative z-10 w-full max-w-6xl mx-auto">
+			<div class="text-center max-w-4xl mx-auto space-y-5 md:space-y-6">
 				<!-- Badge -->
 				<div class="flex justify-center">
 					<div
-						class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 rounded-full px-3 py-2 md:px-5 md:py-2.5 backdrop-blur-sm"
+						class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-400/30 rounded-full px-4 py-2 backdrop-blur-sm"
 					>
 						<svg
-							class="w-3 h-3 md:w-4 md:h-4 text-blue-400"
+							class="w-3.5 h-3.5 text-sky-400"
 							fill="currentColor"
 							viewBox="0 0 20 20"
 						>
@@ -53,61 +49,43 @@ const optimizedBackground = await getImage({ src: homeImage });
 							></path>
 						</svg>
 						<span
-							class="text-blue-300 text-xs md:text-sm font-semibold tracking-wider uppercase"
+							class="text-sky-300 text-xs md:text-sm font-semibold tracking-wider uppercase"
 							>Premium Marketing Solutions</span
 						>
 					</div>
 				</div>
 
-				<!-- Main Heading - Responsive Size -->
+				<!-- Main Heading -->
 				<h1
-					class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight px-2"
+					class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight px-2"
 				>
 					Local Advertising and
 					<span
-						class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 mt-2"
+						class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-sky-400 mt-1.5"
 					>
 						Digital Marketing
 					</span>
-					<span class="block mt-2">Pros in Denver</span>
+					<span class="block mt-1.5">Pros in Denver</span>
 				</h1>
 
-				<!-- Subheading -->
-				<div class="flex justify-center px-4">
-					<div
-						class="flex items-start gap-2 md:gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-4 md:p-5 max-w-xl"
-					>
-						<svg
-							class="w-5 h-5 md:w-6 md:h-6 text-blue-400 shrink-0 mt-0.5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-						</svg>
-						<p
-							class="text-blue-300 text-base md:text-lg leading-relaxed text-left"
-						>
-							Helping Businesses Get Noticed—On Screens and Online
-						</p>
-					</div>
-				</div>
+				<!-- Subheading - Simplified -->
+				<p
+					class="text-sky-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto px-4"
+				>
+					Helping Businesses Get Noticed—On Screens and Online
+				</p>
 
 				<!-- CTA Buttons -->
 				<div
-					class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4 pt-2 md:pt-4 px-4"
+					class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 pt-3 px-4"
 				>
 					<button
-						class="bg-white text-[#0a1628] px-8 md:px-10 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all uppercase tracking-wide text-sm shadow-2xl hover:shadow-blue-500/20 hover:scale-105 transform duration-200"
+						class="bg-white text-slate-900 px-8 py-3.5 rounded-lg font-semibold hover:bg-slate-50 transition-all uppercase tracking-wide text-sm shadow-xl hover:shadow-indigo-500/20 hover:scale-105 transform duration-200"
 					>
 						Talk to Our Team
 					</button>
 					<button
-						class="bg-transparent border-2 border-white/40 text-white px-8 md:px-10 py-3 md:py-4 rounded-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all uppercase tracking-wide text-sm backdrop-blur-sm"
+						class="bg-transparent border-2 border-white/40 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all uppercase tracking-wide text-sm backdrop-blur-sm"
 					>
 						Learn More
 					</button>
@@ -117,81 +95,65 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 		<!-- Bottom Gradient Fade -->
 		<div
-			class="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-white to-transparent"
+			class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"
 		>
 		</div>
 	</section>
 
 	<!-- Services Section -->
-	<section class="bg-white py-12 md:py-16 lg:py-20">
+	<section class="bg-slate-50 py-16 md:py-20 lg:py-24">
 		<div class="max-w-7xl mx-auto px-4 md:px-6">
 			<!-- Section Header -->
-			<div class="text-center mb-12 md:mb-16">
-				<h2 class="mb-4 md:mb-6 max-w-4xl mx-auto">
+			<div class="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+				<h2
+					class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4"
+				>
 					Local Advertising Solutions for Denver Businesses
 				</h2>
-				<p>
-					As your trusted <span class="font-bold"
+				<p class="text-slate-600 text-base md:text-lg leading-relaxed">
+					As your trusted <span class="font-bold text-slate-900"
 						>Denver marketing pros</span
-					>, our <a class="text-blue-500 font-semibold"
-						>billboard network</a
+					>, our <span class="text-indigo-600 font-semibold"
+						>billboard network</span
 					> gives you access to high-traffic locations where your ideal
 					customers spend time. From gyms and restaurants to retail stores
 					and office buildings, we help you get noticed in the moments that
 					matter.
 				</p>
 			</div>
-
-			<!-- Services Grid -->
-			<div class="grid md:grid-cols-2 gap-6 md:gap-8">
-				<!-- Indoor Billboard Advertising Card -->
+			<!-- Unique Asymmetric Grid Layout -->
+			<div class="grid lg:grid-cols-2 gap-6 md:gap-7">
+				<!-- Featured Card - Indoor Billboard (Large) -->
 				<div
-					class="group bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300"
+					class="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-10 lg:p-12 hover:shadow-2xl transition-all duration-300 lg:row-span-2 flex flex-col justify-between"
 				>
-					<div
-						class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border-2 border-blue-900"
-					>
-						<svg
-							class="w-7 h-7 text-blue-900"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
+					<div>
+						<h3
+							class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 uppercase tracking-wide"
 						>
-							<rect
-								x="3"
-								y="3"
-								width="18"
-								height="18"
-								rx="2"
-								stroke-width="2"></rect>
-							<path
-								d="M9 9h6M9 12h6M9 15h4"
-								stroke-width="2"
-								stroke-linecap="round"></path>
-						</svg>
+							Local Advertising Solutions for Denver Businesses
+						</h3>
+						<p
+							class="text-slate-300 text-base md:text-lg leading-relaxed mb-6"
+						>
+							As your trusted <span class="font-bold text-white"
+								>Denver marketing pros</span
+							>, our <span class="text-indigo-400 font-semibold"
+								>billboard network</span
+							> gives you access to high-traffic locations where your
+							ideal customers spend time. From gyms and restaurants
+							to retail stores and office buildings, we help you get
+							noticed in the moments that matter.
+						</p>
 					</div>
-					<h3
-						class="text-xl md:text-2xl font-bold text-gray-900 mb-3 uppercase tracking-wide"
-					>
-						Indoor Billboard Advertising
-					</h3>
-					<p
-						class="text-gray-700 text-sm md:text-base leading-relaxed"
-					>
-						High-impact advertising in premium indoor locations
-						across Denver
-					</p>
-				</div>
-
-				<!-- Social Media Marketing Card -->
-				<div
-					class="group bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300"
-				>
 					<div
-						class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border-2 border-blue-900"
+						class="flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-3 transition-all group-hover:text-indigo-300"
 					>
+						<span class="text-sm uppercase tracking-wider"
+							>Explore Our Digital Marketing Services</span
+						>
 						<svg
-							class="w-7 h-7 text-blue-900"
+							class="w-5 h-5"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -200,286 +162,388 @@ const optimizedBackground = await getImage({ src: homeImage });
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-							></path>
+								d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
 						</svg>
 					</div>
-					<h3
-						class="text-xl md:text-2xl font-bold text-gray-900 mb-3 uppercase tracking-wide"
-					>
-						Social Media Marketing
-					</h3>
-					<p
-						class="text-gray-700 text-sm md:text-base leading-relaxed"
-					>
-						Build and engage your audience with strategic social
-						media content
-					</p>
 				</div>
 
-				<!-- Custom Website Design Card -->
-				<div
-					class="group bg-gradient-to-br from-cyan-50 to-cyan-100/50 rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300"
-				>
+				<!-- Compact Cards Column -->
+				<div class="space-y-6 md:space-y-7">
+					<!-- Indoor Billboard Advertising Card -->
 					<div
-						class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border-2 border-blue-900"
+						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-indigo-400"
 					>
-						<svg
-							class="w-7 h-7 text-blue-900"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-							></path>
-						</svg>
+						<div class="flex items-start gap-4">
+							<div
+								class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+							>
+								<svg
+									class="w-8 h-8 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<rect
+										x="3"
+										y="3"
+										width="18"
+										height="18"
+										rx="2"
+										stroke-width="2"></rect>
+									<path
+										d="M9 9h6M9 12h6M9 15h4"
+										stroke-width="2"
+										stroke-linecap="round"></path>
+								</svg>
+							</div>
+							<div>
+								<h3
+									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
+								>
+									Indoor Billboard Advertising
+								</h3>
+								<p
+									class="text-slate-700 text-sm leading-relaxed"
+								>
+									High-impact advertising in premium indoor
+									locations across Denver. Reach your audience
+									where they spend their time.
+								</p>
+							</div>
+						</div>
 					</div>
-					<h3
-						class="text-xl md:text-2xl font-bold text-gray-900 mb-3 uppercase tracking-wide"
+					<!-- Social Media Marketing Card -->
+					<div
+						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-indigo-400"
 					>
-						Custom Website Design
-					</h3>
-					<p
-						class="text-gray-700 text-sm md:text-base leading-relaxed"
-					>
-						Professional websites that convert visitors into
-						customers
-					</p>
-				</div>
+						<div class="flex items-start gap-4">
+							<div
+								class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+							>
+								<svg
+									class="w-6 h-6 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+									></path>
+								</svg>
+							</div>
+							<div>
+								<h3
+									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
+								>
+									Social Media Marketing
+								</h3>
+								<p
+									class="text-slate-700 text-sm leading-relaxed"
+								>
+									Build and engage your audience with
+									strategic social media content
+								</p>
+							</div>
+						</div>
+					</div>
 
-				<!-- Targeted Lead Generation Card -->
-				<div
-					class="group bg-gradient-to-br from-indigo-50 to-indigo-100/50 rounded-3xl p-8 md:p-10 hover:shadow-xl transition-all duration-300"
-				>
+					<!-- Custom Website Design Card -->
 					<div
-						class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform border-2 border-blue-900"
+						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-sky-400"
 					>
-						<svg
-							class="w-7 h-7 text-blue-900"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-							></path>
-						</svg>
+						<div class="flex items-start gap-4">
+							<div
+								class="w-12 h-12 bg-sky-500 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+							>
+								<svg
+									class="w-6 h-6 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+									></path>
+								</svg>
+							</div>
+							<div>
+								<h3
+									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
+								>
+									Custom Website Design
+								</h3>
+								<p
+									class="text-slate-700 text-sm leading-relaxed"
+								>
+									Professional websites that convert visitors
+									into customers
+								</p>
+							</div>
+						</div>
 					</div>
-					<h3
-						class="text-xl md:text-2xl font-bold text-gray-900 mb-3 uppercase tracking-wide"
+
+					<!-- Targeted Lead Generation Card -->
+					<div
+						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-indigo-400"
 					>
-						Targeted Lead Generation
-					</h3>
-					<p
-						class="text-gray-700 text-sm md:text-base leading-relaxed"
-					>
-						Strategic campaigns that generate quality leads and
-						maximize ROI
-					</p>
+						<div class="flex items-start gap-4">
+							<div
+								class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+							>
+								<svg
+									class="w-6 h-6 text-white"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+									></path>
+								</svg>
+							</div>
+							<div>
+								<h3
+									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
+								>
+									Targeted Lead Generation
+								</h3>
+								<p
+									class="text-slate-700 text-sm leading-relaxed"
+								>
+									Strategic campaigns that generate quality
+									leads and maximize ROI
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Venue Partner Network Section - Redesigned -->
-	<section
-		class="relative bg-white py-12 md:py-16 lg:py-20 pb-32 md:pb-40 lg:pb-48 overflow-hidden"
-	>
-		<!-- Background Pattern -->
-		<div class="absolute inset-0 opacity-5">
-			<div
-				class="absolute inset-0"
-				style="background-image: radial-gradient(circle at 2px 2px, #0a1628 1px, transparent 0); background-size: 40px 40px;"
-			>
-			</div>
-		</div>
-
-		<div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+	<!-- Venue Partner Network Section - Balanced & Clean -->
+	<section class="relative bg-white py-16 md:py-20 lg:py-24 overflow-hidden">
+		<div class="max-w-6xl mx-auto px-4 md:px-6">
 			<!-- Section Header -->
-			<div class="text-center mb-12 md:mb-16">
-				<h2 class="mb-4 md:mb-6 max-w-4xl mx-auto">
+			<div class="text-center mb-10 md:mb-12">
+				<h2
+					class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3"
+				>
 					Denver's Premier Venue Partner Network
 				</h2>
-				<p>
-					Our <span class="font-bold">digital marketing pros</span> have
-					built exclusive partnerships with Denver's most popular venues
-					and businesses. Our <span class="font-bold"
-						>screen network</span
-					> reaches customers when they're relaxed, engaged, and ready to
-					take action—whether they're working out, dining, shopping, or
-					waiting for service.
+				<p
+					class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto"
+				>
+					Exclusive partnerships with Denver's most popular venues
+					reaching customers when they're engaged and ready to take
+					action.
 				</p>
 			</div>
 
 			<!-- Content Grid -->
-			<div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
-				<!-- Image Side with Stats Overlay -->
-				<div class="relative flex">
-					<!-- Main Image -->
+			<div class="grid lg:grid-cols-2 gap-8 md:gap-10 items-start">
+				<!-- Image Side with Stats -->
+				<div class="relative order-2 lg:order-1">
 					<div
-						class="relative rounded-3xl overflow-hidden shadow-2xl w-full"
+						class="relative rounded-xl overflow-hidden shadow-xl aspect-[5/4]"
 					>
 						<img
 							src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80"
 							alt="Modern digital advertising display"
-							class="w-full h-full object-cover min-h-[600px] lg:min-h-full"
+							class="w-full h-full object-cover"
 						/>
 						<div
-							class="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-blue-900/20 to-transparent"
+							class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
 						>
 						</div>
 
-						<!-- Floating Stats Cards -->
+						<!-- Stats Overlay -->
 						<div
-							class="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-4"
+							class="absolute bottom-3 left-3 right-3 grid grid-cols-2 gap-2.5"
 						>
 							<div
-								class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl"
+								class="bg-white/95 backdrop-blur-sm rounded-lg p-3.5"
 							>
 								<div
-									class="text-3xl font-bold text-blue-600 mb-1"
+									class="text-2xl md:text-3xl font-bold text-indigo-600"
 								>
 									50+
 								</div>
-								<div class="text-xs text-gray-600 font-medium">
+								<div class="text-xs text-slate-600 font-medium">
 									Premium Venues
 								</div>
 							</div>
 							<div
-								class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl"
+								class="bg-white/95 backdrop-blur-sm rounded-lg p-3.5"
 							>
 								<div
-									class="text-3xl font-bold text-blue-600 mb-1"
+									class="text-2xl md:text-3xl font-bold text-indigo-600"
 								>
 									2M+
 								</div>
-								<div class="text-xs text-gray-600 font-medium">
+								<div class="text-xs text-slate-600 font-medium">
 									Monthly Views
 								</div>
 							</div>
 						</div>
 					</div>
-
-					<!-- Decorative Element -->
-					<div
-						class="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full blur-3xl opacity-50"
-					>
-					</div>
-					<div
-						class="absolute -bottom-4 -left-4 w-32 h-32 bg-cyan-100 rounded-full blur-3xl opacity-50"
-					>
-					</div>
 				</div>
 
-				<!-- Key Benefits -->
-				<div class="grid sm:grid-cols-2 gap-4 mb-8">
-					<div
-						class="flex items-center gap-3 bg-blue-50 rounded-xl p-4"
-					>
+				<!-- Content Side -->
+				<div class="order-1 lg:order-2">
+					<!-- Benefits Grid -->
+					<div class="grid gap-3.5 mb-6">
 						<div
-							class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shrink-0"
+							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-indigo-200 transition-colors"
 						>
-							<svg
-								class="w-5 h-5 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
+							<div
+								class="w-9 h-9 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0"
 							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"></path>
-							</svg>
+								<svg
+									class="w-5 h-5 text-indigo-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"></path>
+								</svg>
+							</div>
+							<div>
+								<h4
+									class="font-semibold text-slate-900 text-sm mb-1"
+								>
+									Local Market Expertise
+								</h4>
+								<p
+									class="text-xs text-slate-600 leading-relaxed"
+								>
+									Strategic placement in high-traffic Denver
+									locations
+								</p>
+							</div>
 						</div>
-						<span class="font-semibold text-gray-900 text-sm"
-							>Local Market Enterprise</span
-						>
-					</div>
-					<div
-						class="flex items-center gap-3 bg-blue-50 rounded-xl p-4"
-					>
-						<div
-							class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shrink-0"
-						>
-							<svg
-								class="w-5 h-5 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"></path>
-							</svg>
-						</div>
-						<span class="font-semibold text-gray-900 text-sm"
-							>High-dwell-time Locations</span
-						>
-					</div>
-					<div
-						class="flex items-center gap-3 bg-blue-50 rounded-xl p-4"
-					>
-						<div
-							class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shrink-0"
-						>
-							<svg
-								class="w-5 h-5 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"></path>
-							</svg>
-						</div>
-						<span class="font-semibold text-gray-900 text-sm"
-							>Targeted Audience Reach</span
-						>
-					</div>
-					<div
-						class="flex items-center gap-3 bg-blue-50 rounded-xl p-4"
-					>
-						<div
-							class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shrink-0"
-						>
-							<svg
-								class="w-5 h-5 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M5 13l4 4L19 7"></path>
-							</svg>
-						</div>
-						<span class="font-semibold text-gray-900 text-sm"
-							>Flexible Campaign Options</span
-						>
-					</div>
-				</div>
 
-				<!-- CTA Button -->
-				<div class="mt-8">
+						<div
+							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-sky-200 transition-colors"
+						>
+							<div
+								class="w-9 h-9 bg-sky-100 rounded-lg flex items-center justify-center shrink-0"
+							>
+								<svg
+									class="w-5 h-5 text-sky-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"></path>
+								</svg>
+							</div>
+							<div>
+								<h4
+									class="font-semibold text-slate-900 text-sm mb-1"
+								>
+									High-Dwell-Time Locations
+								</h4>
+								<p
+									class="text-xs text-slate-600 leading-relaxed"
+								>
+									Gyms, restaurants, retail stores, and office
+									buildings
+								</p>
+							</div>
+						</div>
+
+						<div
+							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-indigo-200 transition-colors"
+						>
+							<div
+								class="w-9 h-9 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0"
+							>
+								<svg
+									class="w-5 h-5 text-indigo-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"></path>
+								</svg>
+							</div>
+							<div>
+								<h4
+									class="font-semibold text-slate-900 text-sm mb-1"
+								>
+									Targeted Audience Reach
+								</h4>
+								<p
+									class="text-xs text-slate-600 leading-relaxed"
+								>
+									Connect with your ideal customers at the
+									right moment
+								</p>
+							</div>
+						</div>
+
+						<div
+							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-sky-200 transition-colors"
+						>
+							<div
+								class="w-9 h-9 bg-sky-100 rounded-lg flex items-center justify-center shrink-0"
+							>
+								<svg
+									class="w-5 h-5 text-sky-600"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M5 13l4 4L19 7"></path>
+								</svg>
+							</div>
+							<div>
+								<h4
+									class="font-semibold text-slate-900 text-sm mb-1"
+								>
+									Flexible Campaign Options
+								</h4>
+								<p
+									class="text-xs text-slate-600 leading-relaxed"
+								>
+									Customizable solutions to fit your budget
+									and goals
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- CTA Button -->
 					<button
-						class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
+						class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white px-7 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2"
 					>
-						VIEW VENUE PARTNERS
+						View Venue Partners
 						<svg
 							class="w-5 h-5"
 							fill="none"
@@ -499,14 +563,12 @@ const optimizedBackground = await getImage({ src: homeImage });
 	</section>
 
 	<!-- Full-Service Marketing Section -->
-	<section
-		class="bg-gradient-to-br from-slate-50 to-white py-12 md:py-16 lg:py-20"
-	>
+	<section class="bg-slate-50 py-12 md:py-16 lg:py-20">
 		<div class="max-w-7xl mx-auto px-4 md:px-6">
 			<!-- Section Header -->
 			<div class="max-w-4xl mb-12 md:mb-16">
 				<div
-					class="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
+					class="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
 				>
 					<svg
 						class="w-4 h-4"
@@ -521,13 +583,13 @@ const optimizedBackground = await getImage({ src: homeImage });
 					Featured
 				</div>
 				<h2
-					class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6"
+					class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 md:mb-6"
 				>
 					Full-Service Digital Marketing from Denver Pros
 				</h2>
-				<p class="text-gray-600 text-base md:text-lg leading-relaxed">
+				<p class="text-slate-600 text-base md:text-lg leading-relaxed">
 					Beyond screen ads, our <span
-						class="font-semibold text-gray-900"
+						class="font-semibold text-slate-900"
 						>Denver marketing pros</span
 					> provide full-scale digital marketing to help your business show
 					up, stand out, and grow. Whether you're just getting started or
@@ -555,15 +617,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 			<div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
 				<!-- Google Business Profile Setup -->
 				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-blue-200"
+					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
 				>
 					<div class="flex items-start gap-4 md:gap-6">
 						<div class="shrink-0">
 							<div
-								class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors"
+								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
 							>
 								<svg
-									class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors"
+									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -579,11 +641,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</div>
 						<div class="flex-1">
 							<h3
-								class="text-lg md:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide"
+								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
 							>
 								Google Business Profile Setup
 							</h3>
-							<p class="text-gray-600 text-sm md:text-base">
+							<p class="text-slate-600 text-sm md:text-base">
 								Get found on Google Maps and local search.
 							</p>
 						</div>
@@ -592,15 +654,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 				<!-- Professional Website Design -->
 				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-blue-200"
+					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
 				>
 					<div class="flex items-start gap-4 md:gap-6">
 						<div class="shrink-0">
 							<div
-								class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors"
+								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
 							>
 								<svg
-									class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors"
+									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -616,11 +678,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</div>
 						<div class="flex-1">
 							<h3
-								class="text-lg md:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide"
+								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
 							>
 								Professional Website Design
 							</h3>
-							<p class="text-gray-600 text-sm md:text-base">
+							<p class="text-slate-600 text-sm md:text-base">
 								Fast, mobile-ready websites built for
 								performance.
 							</p>
@@ -630,15 +692,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 				<!-- Social Media Strategy -->
 				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-blue-200"
+					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
 				>
 					<div class="flex items-start gap-4 md:gap-6">
 						<div class="shrink-0">
 							<div
-								class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors"
+								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
 							>
 								<svg
-									class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors"
+									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -654,11 +716,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</div>
 						<div class="flex-1">
 							<h3
-								class="text-lg md:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide"
+								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
 							>
 								Social Media Strategy
 							</h3>
-							<p class="text-gray-600 text-sm md:text-base">
+							<p class="text-slate-600 text-sm md:text-base">
 								Consistent posting and creative to grow your
 								presence.
 							</p>
@@ -668,15 +730,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 				<!-- PPC Campaign Management -->
 				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-gray-100 hover:border-blue-200"
+					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
 				>
 					<div class="flex items-start gap-4 md:gap-6">
 						<div class="shrink-0">
 							<div
-								class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors"
+								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
 							>
 								<svg
-									class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors"
+									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -692,11 +754,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</div>
 						<div class="flex-1">
 							<h3
-								class="text-lg md:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide"
+								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
 							>
 								PPC Campaign Management
 							</h3>
-							<p class="text-gray-600 text-sm md:text-base">
+							<p class="text-slate-600 text-sm md:text-base">
 								Targeted ads that drive calls, clicks, and
 								leads.
 							</p>
@@ -708,7 +770,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 			<!-- CTA Button -->
 			<div class="text-center">
 				<button
-					class="bg-white border-2 border-gray-900 text-gray-900 px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold hover:bg-gray-900 hover:text-white transition-all shadow-md hover:shadow-xl uppercase tracking-wide text-sm inline-flex items-center gap-2"
+					class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white px-7 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2"
 				>
 					View All Marketing Solutions
 					<svg
@@ -729,10 +791,10 @@ const optimizedBackground = await getImage({ src: homeImage });
 	</section>
 
 	<!-- Why Choose Us Section -->
-	<section class="bg-white py-12 md:py-16 lg:py-20">
+	<section class="bg-slate-50 py-12 md:py-16 lg:py-20">
 		<div class="max-w-7xl mx-auto px-4 md:px-6">
 			<div
-				class="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
+				class="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
 			>
 				<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
 					<path
@@ -748,37 +810,37 @@ const optimizedBackground = await getImage({ src: homeImage });
 				<!-- Content Side -->
 				<div class="order-2 lg:order-1">
 					<h2
-						class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+						class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
 					>
 						Why Denver Businesses Choose Our Marketing Pros
 					</h2>
 
 					<div class="space-y-4 mb-8">
 						<p
-							class="text-gray-700 text-base md:text-lg leading-relaxed"
+							class="text-slate-700 text-base md:text-lg leading-relaxed"
 						>
 							We're not just another agency. We're <span
-								class="font-bold text-gray-900"
+								class="font-bold text-slate-900"
 								>Denver marketing pros</span
 							> and locals who understand the market, know the neighborhoods,
 							and have the relationships that get results.
 						</p>
 						<p
-							class="text-gray-700 text-base md:text-lg leading-relaxed"
+							class="text-slate-700 text-base md:text-lg leading-relaxed"
 						>
 							Our clients choose us because we deliver measurable
 							outcomes, transparent reporting, and personalized
 							service that treats your business like our own. From <span
-								class="font-semibold text-gray-900"
+								class="font-semibold text-slate-900"
 								>web design</span
-							> to <span class="font-semibold text-gray-900"
+							> to <span class="font-semibold text-slate-900"
 								>PPC campaigns</span
 							>, we've got you covered.
 						</p>
 					</div>
 
 					<button
-						class="bg-blue-600 hover:bg-blue-700 text-white px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
+						class="bg-slate-900 hover:bg-slate-800 text-white px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
 					>
 						Get Started Today
 						<svg
@@ -809,7 +871,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 								class="w-full h-[500px] md:h-[600px] object-cover"
 							/>
 							<div
-								class="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent"
+								class="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"
 							>
 							</div>
 						</div>
@@ -818,17 +880,19 @@ const optimizedBackground = await getImage({ src: homeImage });
 						<div
 							class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[200px]"
 						>
-							<div class="text-4xl font-bold text-blue-600 mb-1">
+							<div
+								class="text-4xl font-bold text-indigo-600 mb-1"
+							>
 								500+
 							</div>
-							<div class="text-sm text-gray-600 font-semibold">
+							<div class="text-sm text-slate-600 font-semibold">
 								Happy Clients in Denver
 							</div>
 						</div>
 
 						<!-- Decorative Elements -->
 						<div
-							class="absolute -top-4 -right-4 w-32 h-32 bg-blue-200 rounded-full blur-3xl opacity-40"
+							class="absolute -top-4 -right-4 w-32 h-32 bg-sky-200 rounded-full blur-3xl opacity-40"
 						>
 						</div>
 						<div
@@ -843,7 +907,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 	<!-- Partner With Us Section -->
 	<section
-		class="relative bg-gradient-to-br from-[#0a1628] via-[#0d1f3c] to-[#0a1628] py-16 md:py-20 lg:py-24 overflow-hidden"
+		class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 lg:py-20 overflow-hidden"
 	>
 		<!-- Background Pattern -->
 		<div class="absolute inset-0 opacity-10">
@@ -856,11 +920,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 		<!-- Decorative Gradient Blobs -->
 		<div
-			class="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+			class="absolute top-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
 		>
 		</div>
 		<div
-			class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+			class="absolute bottom-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl"
 		>
 		</div>
 
@@ -878,7 +942,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 					</h2>
 
 					<p
-						class="text-blue-50 text-base md:text-lg leading-relaxed mb-8 drop-shadow"
+						class="text-sky-200 text-base md:text-lg leading-relaxed mb-8 drop-shadow"
 					>
 						Whether you're looking for <span
 							class="font-semibold text-white">screen ads</span
@@ -896,7 +960,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						class="flex flex-col sm:flex-row gap-4 justify-center items-center"
 					>
 						<button
-							class="bg-white text-[#0a1628] px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm w-full sm:w-auto"
+							class="bg-white text-[#0a1628] px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm w-full sm:w-auto"
 						>
 							Schedule Free Consultation
 						</button>
@@ -913,7 +977,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 					>
 						<div class="flex items-center gap-2">
 							<svg
-								class="w-5 h-5 text-blue-400"
+								class="w-5 h-5 text-sky-500"
 								fill="currentColor"
 								viewBox="0 0 20 20"
 							>
@@ -926,7 +990,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</div>
 						<div class="flex items-center gap-2">
 							<svg
-								class="w-5 h-5 text-blue-400"
+								class="w-5 h-5 text-sky-500"
 								fill="currentColor"
 								viewBox="0 0 20 20"
 							>
@@ -939,7 +1003,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</div>
 						<div class="flex items-center gap-2">
 							<svg
-								class="w-5 h-5 text-blue-400"
+								class="w-5 h-5 text-sky-500"
 								fill="currentColor"
 								viewBox="0 0 20 20"
 							>
@@ -958,9 +1022,9 @@ const optimizedBackground = await getImage({ src: homeImage });
 	<section class="bg-white py-12 md:py-16 lg:py-20">
 		<div class="max-w-4xl mx-auto px-4 md:px-6">
 			<!-- Header -->
-			<div class="text-center mb-8 md:mb-12">
+			<div class="text-center mb-12 md:mb-16">
 				<div
-					class="inline-flex items-center gap-2 bg-blue-100 text-blue-600 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-4"
+					class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-600 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-4"
 				>
 					<svg
 						class="w-4 h-4"
@@ -974,10 +1038,10 @@ const optimizedBackground = await getImage({ src: homeImage });
 					</svg>
 					Fill Every Call with Joy
 				</div>
-				<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+				<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
 					Frequently Asked Questions
 				</h2>
-				<p class="text-gray-600 max-w-2xl mx-auto">
+				<p class="text-slate-600 max-w-2xl mx-auto">
 					Find answers to common questions about our services and how
 					we can benefit your business.
 				</p>
@@ -987,18 +1051,18 @@ const optimizedBackground = await getImage({ src: homeImage });
 			<div class="space-y-4">
 				<!-- FAQ 1 - Open by default -->
 				<div
-					class="faq-item faq-open border-2 border-blue-500 rounded-2xl overflow-hidden bg-blue-50/50 hover:border-gray-300 transition-all"
+					class="faq-item faq-open border-2 border-indigo-600 rounded-2xl overflow-hidden bg-indigo-50/50 hover:border-gray-300 transition-all"
 				>
 					<button
-						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-blue-50 transition-all"
+						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-indigo-50 transition-all"
 					>
 						<h3
-							class="text-lg md:text-xl font-bold text-gray-900 pr-4"
+							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
 						>
 							What is indoor digital signage advertising?
 						</h3>
 						<svg
-							class="faq-icon w-6 h-6 text-gray-900 shrink-0"
+							class="faq-icon w-6 h-6 text-slate-900 shrink-0"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -1011,7 +1075,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</svg>
 					</button>
 					<div class="faq-content px-6 pb-6">
-						<p class="text-gray-700 leading-relaxed">
+						<p class="text-slate-700 leading-relaxed">
 							It's the placement of your ads on TV screens located
 							inside high-traffic venues, offering brand
 							visibility where people are already engaged.
@@ -1027,7 +1091,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-all"
 					>
 						<h3
-							class="text-lg md:text-xl font-bold text-gray-900 pr-4"
+							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
 						>
 							Do you offer packages that include screens and
 							online ads?
@@ -1046,7 +1110,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</svg>
 					</button>
 					<div class="faq-content px-6 pb-6" style="display: none;">
-						<p class="text-gray-700 leading-relaxed">
+						<p class="text-slate-700 leading-relaxed">
 							Yes! We offer comprehensive marketing packages that
 							combine indoor digital signage with online
 							advertising campaigns. Our bundled solutions provide
@@ -1065,7 +1129,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-all"
 					>
 						<h3
-							class="text-lg md:text-xl font-bold text-gray-900 pr-4"
+							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
 						>
 							Can you help my business rank on Google?
 						</h3>
@@ -1083,7 +1147,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</svg>
 					</button>
 					<div class="faq-content px-6 pb-6" style="display: none;">
-						<p class="text-gray-700 leading-relaxed">
+						<p class="text-slate-700 leading-relaxed">
 							Absolutely! Our digital marketing services include
 							Google Business Profile optimization, local SEO
 							strategies, and PPC campaign management. We'll help
@@ -1102,7 +1166,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-all"
 					>
 						<h3
-							class="text-lg md:text-xl font-bold text-gray-900 pr-4"
+							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
 						>
 							How long does it take to see results?
 						</h3>
@@ -1120,7 +1184,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</svg>
 					</button>
 					<div class="faq-content px-6 pb-6" style="display: none;">
-						<p class="text-gray-700 leading-relaxed">
+						<p class="text-slate-700 leading-relaxed">
 							Results vary by service. Indoor advertising
 							campaigns typically show immediate brand visibility,
 							while digital marketing efforts like SEO may take
@@ -1139,7 +1203,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 			>
 				<div class="flex items-center gap-4">
 					<div
-						class="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center shrink-0"
+						class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center shrink-0"
 					>
 						<svg
 							class="w-6 h-6 text-white"
@@ -1156,17 +1220,17 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</svg>
 					</div>
 					<div>
-						<h3 class="font-bold text-gray-900 mb-1">
+						<h3 class="font-bold text-slate-900 mb-1">
 							Still have a question?
 						</h3>
-						<p class="text-sm text-gray-600">
+						<p class="text-sm text-slate-600">
 							If you didn't find your answer, feel free to reach
 							out
 						</p>
 					</div>
 				</div>
 				<button
-					class="bg-white border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-gray-900 hover:text-white transition-all text-sm whitespace-nowrap"
+					class="bg-white border-2 border-slate-900 text-slate-900 px-6 py-3 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all text-sm whitespace-nowrap"
 				>
 					Contact us
 				</button>
@@ -1176,14 +1240,14 @@ const optimizedBackground = await getImage({ src: homeImage });
 
 	<!-- Locations Map Section -->
 	<section
-		class="bg-gradient-to-br from-slate-50 to-white py-12 md:py-16 lg:py-20"
+		class="bg-slate-50 py-12 md:py-16 lg:py-20 pb-40 md:pb-48 lg:pb-56"
 	>
 		<div class="max-w-7xl mx-auto px-4 md:px-6">
 			<div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
 				<!-- Left Side - Content -->
 				<div>
 					<div
-						class="inline-flex items-center gap-2 bg-blue-100 text-blue-600 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-6"
+						class="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
 					>
 						<svg
 							class="w-4 h-4"
@@ -1195,17 +1259,17 @@ const optimizedBackground = await getImage({ src: homeImage });
 								d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
 								clip-rule="evenodd"></path>
 						</svg>
-						Network Coverage
+						NETWORK COVERAGE
 					</div>
 
 					<h2
-						class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+						class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
 					>
 						We Put Local Brands on the Map
 					</h2>
 
 					<p
-						class="text-gray-600 text-base md:text-lg leading-relaxed mb-8"
+						class="text-slate-600 text-base md:text-lg leading-relaxed mb-8"
 					>
 						Our network spans across Denver's most popular
 						neighborhoods and venues
@@ -1214,15 +1278,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 					<!-- Location List -->
 					<div class="space-y-3">
 						<button
-							onclick="flyToCity(39.7294, -104.8319)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-blue-600 rounded-xl hover:bg-blue-50 transition-all group"
+							onclick="flyToCity(39.7294, -104.8319); setActiveLocation(this)"
+							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
 						>
 							<div class="flex items-center gap-3">
 								<div
-									class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
+									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
 								>
 									<svg
-										class="w-5 h-5 text-white"
+										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
 										fill="currentColor"
 										viewBox="0 0 20 20"
 									>
@@ -1233,12 +1297,12 @@ const optimizedBackground = await getImage({ src: homeImage });
 									</svg>
 								</div>
 								<span
-									class="font-semibold text-gray-900 text-left"
+									class="font-semibold text-slate-900 text-left transition-colors"
 									>Aurora</span
 								>
 							</div>
 							<svg
-								class="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform"
+								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -1252,15 +1316,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</button>
 
 						<button
-							onclick="flyToCity(39.7047, -105.0814)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-blue-400 transition-all group"
+							onclick="flyToCity(39.7047, -105.0814); setActiveLocation(this)"
+							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
 						>
 							<div class="flex items-center gap-3">
 								<div
-									class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors"
+									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
 								>
 									<svg
-										class="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors"
+										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
 										fill="currentColor"
 										viewBox="0 0 20 20"
 									>
@@ -1271,12 +1335,12 @@ const optimizedBackground = await getImage({ src: homeImage });
 									</svg>
 								</div>
 								<span
-									class="font-semibold text-gray-900 text-left"
+									class="font-semibold text-slate-900 text-left"
 									>Lakewood</span
 								>
 							</div>
 							<svg
-								class="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"
+								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -1290,15 +1354,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</button>
 
 						<button
-							onclick="flyToCity(39.8028, -105.0875)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-blue-400 transition-all group"
+							onclick="flyToCity(39.8028, -105.0875); setActiveLocation(this)"
+							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
 						>
 							<div class="flex items-center gap-3">
 								<div
-									class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors"
+									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
 								>
 									<svg
-										class="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors"
+										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
 										fill="currentColor"
 										viewBox="0 0 20 20"
 									>
@@ -1309,12 +1373,12 @@ const optimizedBackground = await getImage({ src: homeImage });
 									</svg>
 								</div>
 								<span
-									class="font-semibold text-gray-900 text-left"
+									class="font-semibold text-slate-900 text-left"
 									>Arvada</span
 								>
 							</div>
 							<svg
-								class="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"
+								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -1328,15 +1392,15 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</button>
 
 						<button
-							onclick="flyToCity(39.5807, -104.8767)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-blue-400 transition-all group"
+							onclick="flyToCity(39.5807, -104.8767); setActiveLocation(this)"
+							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
 						>
 							<div class="flex items-center gap-3">
 								<div
-									class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors"
+									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
 								>
 									<svg
-										class="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors"
+										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
 										fill="currentColor"
 										viewBox="0 0 20 20"
 									>
@@ -1347,12 +1411,12 @@ const optimizedBackground = await getImage({ src: homeImage });
 									</svg>
 								</div>
 								<span
-									class="font-semibold text-gray-900 text-left"
+									class="font-semibold text-slate-900 text-left"
 									>Centennial</span
 								>
 							</div>
 							<svg
-								class="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all"
+								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
 								fill="none"
 								stroke="currentColor"
 								viewBox="0 0 24 24"
@@ -1366,10 +1430,103 @@ const optimizedBackground = await getImage({ src: homeImage });
 						</button>
 					</div>
 
+					<script>
+						function setActiveLocation(clickedButton) {
+							// Remove active state from all buttons
+							const allButtons =
+								document.querySelectorAll(".location-btn");
+							allButtons.forEach((button) => {
+								button.classList.remove(
+									"bg-slate-900",
+									"border-slate-900",
+								);
+								button.classList.add(
+									"bg-white",
+									"border-slate-200",
+								);
+
+								// Reset icon background
+								const iconDiv =
+									button.querySelector("div > div");
+								iconDiv.classList.remove("bg-white");
+								iconDiv.classList.add("bg-slate-100");
+
+								// Reset icon color
+								const icon = iconDiv.querySelector("svg");
+								icon.classList.remove("text-slate-900");
+								icon.classList.add("text-slate-600");
+
+								// Reset text color
+								const span = button.querySelector("span");
+								span.classList.remove("text-white");
+								span.classList.add("text-slate-900");
+
+								// Reset arrow color
+								const arrow = button.querySelector("div + svg");
+								arrow.classList.remove("text-white");
+								arrow.classList.add("text-slate-400");
+							});
+
+							// Add active state to clicked button
+							clickedButton.classList.remove(
+								"bg-white",
+								"border-slate-200",
+							);
+							clickedButton.classList.add(
+								"bg-slate-900",
+								"border-slate-900",
+							);
+
+							// Update icon background
+							const iconDiv =
+								clickedButton.querySelector("div > div");
+							iconDiv.classList.remove("bg-slate-100");
+							iconDiv.classList.add("bg-white");
+
+							// Update icon color
+							const icon = iconDiv.querySelector("svg");
+							icon.classList.remove("text-slate-600");
+							icon.classList.add("text-slate-900");
+
+							// Update text color
+							const span = clickedButton.querySelector("span");
+							span.classList.remove("text-slate-900");
+							span.classList.add("text-white");
+
+							// Update arrow color
+							const arrow =
+								clickedButton.querySelector("div + svg");
+							arrow.classList.remove("text-slate-400");
+							arrow.classList.add("text-white");
+
+							// Show active indicator (add green dot)
+							const activeIconDiv =
+								clickedButton.querySelector("div > div");
+							activeIconDiv.style.position = "relative";
+							let indicator =
+								activeIconDiv.querySelector(".active-dot");
+							if (!indicator) {
+								indicator = document.createElement("span");
+								indicator.className =
+									"active-dot absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white";
+								activeIconDiv.appendChild(indicator);
+							}
+
+							// Hide indicators from other buttons
+							allButtons.forEach((button) => {
+								if (button !== clickedButton) {
+									const dot =
+										button.querySelector(".active-dot");
+									if (dot) dot.remove();
+								}
+							});
+						}
+					</script>
+
 					<!-- View All Button -->
 					<div class="mt-8">
 						<button
-							class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
+							class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
 						>
 							View All Locations
 							<svg
@@ -1392,11 +1549,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 				<div class="relative">
 					<!-- Map Container -->
 					<div
-						class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-100"
+						class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-slate-200"
 					>
 						<!-- Header -->
 						<div
-							class="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white"
+							class="bg-gradient-to-r from-slate-800 to-slate-900 p-6 text-white"
 						>
 							<div class="flex items-center gap-3 mb-2">
 								<svg
@@ -1411,7 +1568,7 @@ const optimizedBackground = await getImage({ src: homeImage });
 								</svg>
 								<h3 class="text-xl font-bold">Our Locations</h3>
 							</div>
-							<p class="text-blue-100 text-sm">
+							<p class="text-slate-300 text-sm">
 								Browse the venues in our network while exploring
 								the map.
 							</p>
@@ -1428,11 +1585,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 								class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl"
 							>
 								<div
-									class="text-2xl font-bold text-blue-600 mb-1"
+									class="text-2xl font-bold text-slate-900 mb-1"
 								>
 									50+
 								</div>
-								<div class="text-xs text-gray-600 font-medium">
+								<div class="text-xs text-slate-600 font-medium">
 									Active Venues
 								</div>
 							</div>
@@ -1440,11 +1597,11 @@ const optimizedBackground = await getImage({ src: homeImage });
 								class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl"
 							>
 								<div
-									class="text-2xl font-bold text-blue-600 mb-1"
+									class="text-2xl font-bold text-slate-900 mb-1"
 								>
 									15+
 								</div>
-								<div class="text-xs text-gray-600 font-medium">
+								<div class="text-xs text-slate-600 font-medium">
 									Neighborhoods
 								</div>
 							</div>
@@ -1453,5 +1610,5 @@ const optimizedBackground = await getImage({ src: homeImage });
 				</div>
 			</div>
 		</div>
-	</section></Layout
->
+	</section>
+</Layout>
