@@ -79,271 +79,190 @@ import Map from "../components/Map.astro";
 			</div>
 		</div>
 	</section>
-</Layout>
 
-<!-- Services Section -->
-<section class="section-white">
-	<div class="section-container">
-		<div class="section-grid">
-			<div class="section-header">
-				<span class="section-label">OUR SERVICES</span>
-				<h2 class="section-title">
-					LOCAL ADVERTISING SOLUTIONS FOR DENVER BUSINESSES
-				</h2>
+	<!-- Services Section -->
+	<section class="services-section">
+		<div class="services-container">
+			<!-- Header with split layout -->
+			<div class="services-header">
+				<div class="services-header-left">
+					<span class="services-label">WHAT WE DO</span>
+					<h2 class="services-title">
+						<span class="services-title-main"
+							>Local Advertising</span
+						>
+						<span class="services-title-sub">Built for Denver.</span
+						>
+					</h2>
+				</div>
+				<div class="services-header-right">
+					<p class="services-description">
+						From billboard access to full digital campaigns —
+						everything your business needs to stand out and scale up
+						in the Denver market.
+					</p>
+				</div>
 			</div>
 
-			<div class="section-content">
-				<p class="section-description">
-					As your trusted Denver marketing pros, our billboard network
-					gives you access to high-traffic locations where your ideal
-					customers spend time.
-				</p>
+			<!-- Services Grid -->
+			<div class="services-grid">
+				<!-- Service 01 -->
+				<div class="service-card">
+					<div class="service-number">01</div>
+					<div class="service-icon">
+						<svg
+							width="32"
+							height="32"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<rect
+								x="3"
+								y="3"
+								width="18"
+								height="18"
+								rx="2"
+								stroke-width="1.5"></rect>
+							<path d="M3 9h18M9 21V9" stroke-width="1.5"></path>
+						</svg>
+					</div>
+					<h3 class="service-card-title">
+						Indoor Billboard Advertising
+					</h3>
+					<p class="service-card-description">
+						Own the room. High-impact digital screens placed inside
+						Denver's busiest gyms, restaurants, and retail spaces.
+					</p>
+				</div>
 
-				<div class="service-list">
-					<div class="service-item">
-						<h3 class="service-title">
-							INDOOR BILLBOARD ADVERTISING
-						</h3>
-						<p class="service-description">
-							High-impact advertising in premium indoor locations
-							across Denver.
-						</p>
+				<!-- Service 02 -->
+				<div class="service-card">
+					<div class="service-number">02</div>
+					<div class="service-icon">
+						<svg
+							width="32"
+							height="32"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="1.5"
+								d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+							></path>
+						</svg>
 					</div>
-					<div class="service-item">
-						<h3 class="service-title">SOCIAL MEDIA MARKETING</h3>
-						<p class="service-description">
-							Build and engage your audience with strategic social
-							media content.
-						</p>
+					<h3 class="service-card-title">Social Media Marketing</h3>
+					<p class="service-card-description">
+						Scroll-stopping content that builds communities and
+						turns followers into paying customers.
+					</p>
+				</div>
+
+				<!-- Service 03 -->
+				<div class="service-card">
+					<div class="service-number">03</div>
+					<div class="service-icon">
+						<svg
+							width="32"
+							height="32"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<circle cx="12" cy="12" r="10" stroke-width="1.5"
+							></circle>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="1.5"
+								d="M2 12h20"></path>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="1.5"
+								d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+							></path>
+						</svg>
 					</div>
-					<div class="service-item">
-						<h3 class="service-title">CUSTOM WEBSITE DESIGN</h3>
-						<p class="service-description">
-							Professional websites that convert visitors into
-							customers.
-						</p>
+					<h3 class="service-card-title">Custom Website Design</h3>
+					<p class="service-card-description">
+						Blazing-fast, beautifully-crafted websites engineered to
+						convert visitors into loyal clients.
+					</p>
+				</div>
+
+				<!-- Service 04 -->
+				<div class="service-card">
+					<div class="service-number">04</div>
+					<div class="service-icon">
+						<svg
+							width="32"
+							height="32"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<circle cx="12" cy="12" r="3" stroke-width="1.5"
+							></circle>
+							<circle cx="12" cy="12" r="8" stroke-width="1.5"
+							></circle>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="1.5"
+								d="M12 2v4m0 12v4M2 12h4m12 0h4"></path>
+						</svg>
 					</div>
-					<div class="service-item">
-						<h3 class="service-title">TARGETED LEAD GENERATION</h3>
-						<p class="service-description">
-							Strategic campaigns that generate quality leads and
-							maximize ROI.
-						</p>
-					</div>
+					<h3 class="service-card-title">Targeted Lead Generation</h3>
+					<p class="service-card-description">
+						Precision-targeted campaigns across Google and social
+						that hit your pipeline with quality leads.
+					</p>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<!-- Venue Partner Network Section -->
-<section class="section-paper">
-	<div class="section-container">
-		<div class="section-grid">
-			<div class="section-header">
-				<span class="section-label">NETWORK COVERAGE</span>
-				<h2 class="section-title">
-					DENVER'S PREMIER VENUE PARTNER NETWORK
-				</h2>
-			</div>
+	<!-- Venue Network Section -->
+	<section class="venue-section">
+		<div class="venue-container">
+			<div class="venue-grid">
+				<!-- Left: Content -->
+				<div class="venue-content">
+					<span class="venue-label">VENUE NETWORK</span>
+					<h2 class="venue-title">
+						Denver's Most<br />Coveted Locations.
+					</h2>
+					<p class="venue-description">
+						We've built an exclusive network inside Denver's
+						highest-traffic venues — where your audience is already
+						present, relaxed, and receptive.
+					</p>
 
-			<div class="section-content">
-				<p class="section-description">
-					Exclusive partnerships with Denver's most popular venues
-					reaching customers when they're engaged and ready to take
-					action.
-				</p>
-
-				<div class="stats-grid">
-					<div class="stat-card">
-						<div class="stat-number">50+</div>
-						<div class="stat-label">PREMIUM VENUES</div>
-					</div>
-					<div class="stat-card">
-						<div class="stat-number">2M+</div>
-						<div class="stat-label">MONTHLY VIEWS</div>
-					</div>
-				</div>
-
-				<button class="btn-primary">
-					VIEW VENUE PARTNERS
-					<svg
-						width="14"
-						height="14"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="3"
-							d="M9 5l7 7-7 7"></path>
-					</svg>
-				</button>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- FAQ Section -->
-<section class="section-white">
-	<div class="section-container">
-		<div class="section-grid">
-			<div class="section-header sticky-header">
-				<span class="section-label">FAQ</span>
-				<h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
-				<p class="section-description">
-					Find answers to common questions about our services.
-				</p>
-			</div>
-
-			<div class="section-content">
-				<div class="faq-list">
-					<div class="faq-item">
-						<button class="faq-button">
-							<h3 class="faq-question">
-								WHAT IS INDOOR DIGITAL SIGNAGE ADVERTISING?
-							</h3>
-							<svg
-								class="faq-icon"
-								width="24"
-								height="24"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 4v16m8-8H4"></path>
-							</svg>
-						</button>
-						<div class="faq-answer hidden">
-							<p>
-								It's the placement of your ads on TV screens
-								located inside high-traffic venues, offering
-								brand visibility where people are already
-								engaged.
-							</p>
+					<!-- Stats -->
+					<div class="venue-stats">
+						<div class="venue-stat">
+							<div class="venue-stat-number">80+</div>
+							<div class="venue-stat-label">Active Venues</div>
+						</div>
+						<div class="venue-stat">
+							<div class="venue-stat-number">2.4M</div>
+							<div class="venue-stat-label">
+								Monthly Impressions
+							</div>
+						</div>
+						<div class="venue-stat">
+							<div class="venue-stat-number">15+</div>
+							<div class="venue-stat-label">Neighborhoods</div>
 						</div>
 					</div>
 
-					<div class="faq-item">
-						<button class="faq-button">
-							<h3 class="faq-question">
-								DO YOU OFFER PACKAGES THAT INCLUDE SCREENS AND
-								ONLINE ADS?
-							</h3>
-							<svg
-								class="faq-icon"
-								width="24"
-								height="24"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 4v16m8-8H4"></path>
-							</svg>
-						</button>
-						<div class="faq-answer hidden">
-							<p>
-								Yes! We offer comprehensive marketing packages
-								that combine indoor digital signage with online
-								advertising campaigns.
-							</p>
-						</div>
-					</div>
-
-					<div class="faq-item">
-						<button class="faq-button">
-							<h3 class="faq-question">
-								CAN YOU HELP MY BUSINESS RANK ON GOOGLE?
-							</h3>
-							<svg
-								class="faq-icon"
-								width="24"
-								height="24"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 4v16m8-8H4"></path>
-							</svg>
-						</button>
-						<div class="faq-answer hidden">
-							<p>
-								Absolutely! Our digital marketing services
-								include Google Business Profile optimization,
-								local SEO strategies, and PPC campaign
-								management.
-							</p>
-						</div>
-					</div>
-
-					<div class="faq-item">
-						<button class="faq-button">
-							<h3 class="faq-question">
-								HOW LONG DOES IT TAKE TO SEE RESULTS?
-							</h3>
-							<svg
-								class="faq-icon"
-								width="24"
-								height="24"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 4v16m8-8H4"></path>
-							</svg>
-						</button>
-						<div class="faq-answer hidden">
-							<p>
-								Results vary by service. Indoor advertising
-								campaigns typically show immediate brand
-								visibility, while digital marketing efforts like
-								SEO may take 3-6 months.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-	<div class="cta-container">
-		<div class="cta-grid">
-			<div class="cta-header">
-				<h2 class="cta-title">
-					PARTNER WITH DENVER'S LOCAL ADVERTISING & DIGITAL MARKETING
-					PROS
-				</h2>
-			</div>
-			<div class="cta-content">
-				<p class="cta-description">
-					Whether you're looking for screen ads, a new website, or a
-					complete digital marketing strategy in Denver, we're here to
-					help.
-				</p>
-				<div class="cta-buttons">
-					<button class="btn-cta-primary">
-						SCHEDULE FREE CONSULTATION
+					<button class="venue-cta">
+						VIEW ALL VENUES
 						<svg
 							width="14"
 							height="14"
@@ -358,38 +277,28 @@ import Map from "../components/Map.astro";
 								d="M9 5l7 7-7 7"></path>
 						</svg>
 					</button>
-					<button class="btn-cta-secondary"> LEARN MORE </button>
+				</div>
+
+				<!-- Right: Image with Tags -->
+				<div class="venue-image-container">
+					<img
+						src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80"
+						alt="Fitness studio with equipment"
+						class="venue-image"
+					/>
+					<div class="venue-tags">
+						<span class="venue-tag">Fitness Studios</span>
+						<span class="venue-tag">Restaurants</span>
+						<span class="venue-tag">Retail Stores</span>
+						<span class="venue-tag">Medical Offices</span>
+						<span class="venue-tag">Coworking Spaces</span>
+						<span class="venue-tag">Hotel Lobbies</span>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
-
-<script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const faqButtons = document.querySelectorAll(".faq-button");
-
-		faqButtons.forEach((button) => {
-			button.addEventListener("click", () => {
-				const faqItem = button.closest(".faq-item");
-				const answer = faqItem?.querySelector(".faq-answer");
-				const icon = button.querySelector(".faq-icon");
-
-				if (answer && icon) {
-					const isOpen = !answer.classList.contains("hidden");
-
-					if (isOpen) {
-						answer.classList.add("hidden");
-						icon.style.transform = "rotate(0deg)";
-					} else {
-						answer.classList.remove("hidden");
-						icon.style.transform = "rotate(45deg)";
-					}
-				}
-			});
-		});
-	});
-</script>
+	</section>
+</Layout>
 
 <style>
 	/* Hero Section */
@@ -536,54 +445,33 @@ import Map from "../components/Map.astro";
 		color: #ff5c00;
 	}
 
-	/* Section Styles */
-	.section-white {
+	/* Services Section */
+	.services-section {
 		background: #ffffff;
 		padding: 6rem 2rem;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
-	.section-paper {
-		background: #f9f9f7;
-		padding: 6rem 2rem;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-	}
-
-	.section-container {
+	.services-container {
 		max-width: 90rem;
 		margin: 0 auto;
 	}
 
-	.section-grid {
+	.services-header {
 		display: grid;
-		grid-template-columns: repeat(12, 1fr);
+		grid-template-columns: 1fr;
 		gap: 3rem;
-	}
-
-	.section-header {
-		grid-column: span 12;
-	}
-
-	.section-content {
-		grid-column: span 12;
+		margin-bottom: 5rem;
 	}
 
 	@media (min-width: 1024px) {
-		.section-header {
-			grid-column: span 5;
-		}
-
-		.section-content {
-			grid-column: span 7;
-		}
-
-		.sticky-header {
-			position: sticky;
-			top: 8rem;
+		.services-header {
+			grid-template-columns: 1fr 1fr;
+			gap: 6rem;
 		}
 	}
 
-	.section-label {
+	.services-label {
 		font-size: 11px;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -593,252 +481,75 @@ import Map from "../components/Map.astro";
 		margin-bottom: 2rem;
 	}
 
-	.section-title {
-		font-size: clamp(2rem, 5vw, 3.5rem);
+	.services-title {
+		font-size: clamp(2.5rem, 6vw, 4.5rem);
 		font-weight: 800;
 		line-height: 1;
 		letter-spacing: -0.02em;
-		text-transform: uppercase;
-		margin-bottom: 2rem;
 	}
 
-	.section-description {
+	.services-title-main {
+		display: block;
+		color: #000000;
+	}
+
+	.services-title-sub {
+		display: block;
+		color: rgba(0, 0, 0, 0.25);
+	}
+
+	.services-description {
 		font-size: 15px;
 		line-height: 1.7;
 		color: rgba(0, 0, 0, 0.6);
-		margin-bottom: 3rem;
+		max-width: 500px;
 	}
 
-	/* Service List */
-	.service-list {
-		display: flex;
-		flex-direction: column;
-		gap: 0;
+	.services-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 
-	.service-item {
-		padding: 2rem 0;
+	@media (min-width: 768px) {
+		.services-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 3rem;
+		}
+	}
+
+	.service-card {
+		position: relative;
+		padding: 2.5rem 0;
 		border-top: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
-	.service-title {
-		font-size: 16px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		margin-bottom: 0.75rem;
-	}
-
-	.service-description {
-		font-size: 14px;
-		line-height: 1.6;
-		color: rgba(0, 0, 0, 0.6);
-	}
-
-	/* Stats Grid */
-	.stats-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	.stat-card {
-		background: #ffffff;
-		padding: 2rem;
-		border: 1px solid rgba(0, 0, 0, 0.08);
-		border-radius: 0;
-	}
-
-	.stat-number {
-		font-size: 2.5rem;
-		font-weight: 800;
-		color: #ff5c00;
-		margin-bottom: 0.5rem;
-	}
-
-	.stat-label {
+	.service-number {
+		position: absolute;
+		top: 2.5rem;
+		right: 0;
 		font-size: 11px;
 		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
-		color: rgba(0, 0, 0, 0.6);
+		color: #ff5c00;
+		letter-spacing: 0.1em;
 	}
 
-	/* Buttons */
-	.btn-primary {
-		background: #000000;
-		color: #ffffff;
-		border: none;
-		padding: 1rem 2rem;
-		font-size: 11px;
+	.service-icon {
+		color: rgba(0, 0, 0, 0.4);
+		margin-bottom: 1.5rem;
+	}
+
+	.service-card-title {
+		font-size: 18px;
 		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		cursor: pointer;
-		transition: background 0.2s;
-		display: inline-flex;
-		align-items: center;
-		gap: 0.75rem;
-		border-radius: 0;
+		margin-bottom: 1rem;
+		line-height: 1.3;
 	}
 
-	.btn-primary:hover {
-		background: #ff5c00;
-	}
-
-	/* FAQ */
-	.faq-list {
-		display: flex;
-		flex-direction: column;
-		gap: 0;
-	}
-
-	.faq-item {
-		background: #ffffff;
-		border-top: 1px solid rgba(0, 0, 0, 0.08);
-	}
-
-	.faq-button {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 2rem 0;
-		background: none;
-		border: none;
-		cursor: pointer;
-		text-align: left;
-		transition: none;
-	}
-
-	.faq-button:hover {
-		background: rgba(0, 0, 0, 0.02);
-	}
-
-	.faq-question {
-		font-size: 16px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		padding-right: 2rem;
-	}
-
-	.faq-icon {
-		flex-shrink: 0;
-		transition: transform 0.3s;
-	}
-
-	.faq-answer {
-		padding: 0 0 2rem 0;
-	}
-
-	.faq-answer.hidden {
-		display: none;
-	}
-
-	.faq-answer p {
+	.service-card-description {
 		font-size: 14px;
 		line-height: 1.7;
 		color: rgba(0, 0, 0, 0.6);
-	}
-
-	/* CTA Section */
-	.cta-section {
-		background: #000000;
-		color: #ffffff;
-		padding: 6rem 2rem;
-	}
-
-	.cta-container {
-		max-width: 90rem;
-		margin: 0 auto;
-	}
-
-	.cta-grid {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		gap: 3rem;
-		align-items: center;
-	}
-
-	.cta-header {
-		grid-column: span 12;
-	}
-
-	.cta-content {
-		grid-column: span 12;
-	}
-
-	@media (min-width: 1024px) {
-		.cta-header {
-			grid-column: span 5;
-		}
-
-		.cta-content {
-			grid-column: span 7;
-		}
-	}
-
-	.cta-title {
-		font-size: clamp(2rem, 5vw, 3.5rem);
-		font-weight: 800;
-		line-height: 1;
-		letter-spacing: -0.02em;
-		text-transform: uppercase;
-	}
-
-	.cta-description {
-		font-size: 15px;
-		line-height: 1.7;
-		color: rgba(255, 255, 255, 0.6);
-		margin-bottom: 2rem;
-	}
-
-	.cta-buttons {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-	}
-
-	.btn-cta-primary {
-		background: #ff5c00;
-		color: #000000;
-		border: none;
-		padding: 1.125rem 2rem;
-		font-size: 11px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		cursor: pointer;
-		transition: background 0.2s;
-		display: inline-flex;
-		align-items: center;
-		gap: 0.75rem;
-		border-radius: 0;
-	}
-
-	.btn-cta-primary:hover {
-		background: #ffffff;
-	}
-
-	.btn-cta-secondary {
-		background: transparent;
-		color: #ffffff;
-		border: 2px solid #ffffff;
-		padding: 1.125rem 2rem;
-		font-size: 11px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		cursor: pointer;
-		transition: all 0.2s;
-		border-radius: 0;
-	}
-
-	.btn-cta-secondary:hover {
-		background: #ffffff;
-		color: #000000;
 	}
 
 	/* Responsive */
@@ -856,10 +567,158 @@ import Map from "../components/Map.astro";
 			gap: 2rem;
 		}
 
-		.section-white,
-		.section-paper,
-		.cta-section {
+		.services-section {
 			padding: 4rem 1.5rem;
+		}
+	}
+
+	/* Venue Network Section */
+	.venue-section {
+		background: #000000;
+		color: #ffffff;
+		padding: 6rem 2rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.venue-container {
+		max-width: 90rem;
+		margin: 0 auto;
+	}
+
+	.venue-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	@media (min-width: 1024px) {
+		.venue-grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 6rem;
+		}
+	}
+
+	.venue-label {
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		color: #ff5c00;
+		display: block;
+		margin-bottom: 2rem;
+	}
+
+	.venue-title {
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		margin-bottom: 1.5rem;
+	}
+
+	.venue-description {
+		font-size: 15px;
+		line-height: 1.7;
+		color: rgba(255, 255, 255, 0.6);
+		margin-bottom: 3rem;
+		max-width: 500px;
+	}
+
+	.venue-stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		padding: 2rem 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	.venue-stat-number {
+		font-size: 2rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+	}
+
+	.venue-stat-label {
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.venue-cta {
+		background: transparent;
+		color: #ffffff;
+		border: 2px solid #ffffff;
+		padding: 1rem 2rem;
+		font-size: 11px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		cursor: pointer;
+		transition: all 0.2s;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		border-radius: 0;
+	}
+
+	.venue-cta:hover {
+		background: #ffffff;
+		color: #000000;
+	}
+
+	.venue-image-container {
+		position: relative;
+		border-radius: 0;
+		overflow: hidden;
+	}
+
+	.venue-image {
+		width: 100%;
+		height: 500px;
+		object-fit: cover;
+		display: block;
+	}
+
+	.venue-tags {
+		position: absolute;
+		bottom: 1.5rem;
+		left: 1.5rem;
+		right: 1.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.venue-tag {
+		background: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(10px);
+		color: #ffffff;
+		padding: 0.625rem 1.25rem;
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		border-radius: 0;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	@media (max-width: 1024px) {
+		.venue-section {
+			padding: 4rem 1.5rem;
+		}
+
+		.venue-stats {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.venue-image {
+			height: 400px;
 		}
 	}
 </style>

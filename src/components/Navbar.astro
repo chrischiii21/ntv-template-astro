@@ -12,6 +12,35 @@ import logo from "../assets/dealer-logo.avif";
         z-index: 50;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(10px);
+        transition:
+            background 0.3s,
+            box-shadow 0.3s;
+    }
+
+    nav.scrolled {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    nav.scrolled .logo-text,
+    nav.scrolled .nav-links a {
+        color: #000000;
+    }
+
+    nav.scrolled .nav-links a {
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    nav.scrolled .nav-links a:hover {
+        color: #ff5c00;
+    }
+
+    nav.scrolled .nav-meta {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    nav.scrolled .mobile-menu-btn {
+        color: #000000;
     }
 
     .nav-container {
@@ -202,3 +231,17 @@ import logo from "../assets/dealer-logo.avif";
         </div>
     </div>
 </nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector("nav");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                nav?.classList.add("scrolled");
+            } else {
+                nav?.classList.remove("scrolled");
+            }
+        });
+    });
+</script>
