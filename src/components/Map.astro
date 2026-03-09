@@ -1,94 +1,147 @@
-<div id="map-wrapper" class="relative w-full h-[400px] md:h-[500px]">
-    <div id="map" class="w-full h-full rounded-b-3xl"></div>
+---
+
+---
+
+<div id="map-wrapper" class="relative w-full h-full">
+    <div id="map" class="w-full h-full"></div>
+    <div id="map-location-overlay" class="map-location-overlay">
+        <span id="map-location-name">AURORA</span>
+        <span id="map-location-region">East Metro</span>
+    </div>
 </div>
 
 <script>
     import L from "leaflet";
     import "leaflet/dist/leaflet.css";
 
-    // Declare the function type on Window
     declare global {
         interface Window {
-            flyToCity: (lat: number, lng: number) => void;
+            flyToCity: (
+                lat: number,
+                lng: number,
+                name: string,
+                region: string,
+            ) => void;
         }
     }
 
-    const map = L.map("map").setView([39.7392, -104.9903], 10);
+    const map = L.map("map", {
+        zoomControl: false, // Remove zoom controls
+        scrollWheelZoom: false,
+        doubleClickZoom: false,
+        touchZoom: false,
+    }).setView([39.7294, -104.8319], 12);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        attribution: "© OpenStreetMap",
-    }).addTo(map);
+    // Dark theme map tiles
+    L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+        {
+            attribution: "© OpenStreetMap contributors © CARTO",
+            subdomains: "abcd",
+            maxZoom: 20,
+        },
+    ).addTo(map);
 
-    // Add custom markers for locations
-    const primaryIcon = L.divIcon({
-        className: "custom-marker",
-        html: `<div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center shadow-lg border-4 border-white animate-bounce">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+    // Custom orange marker icon
+    const orangeIcon = L.divIcon({
+        className: "custom-marker-orange",
+        html: `<div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center shadow-2xl border-4 border-white pulse-marker">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
             </svg>
         </div>`,
-        iconSize: [40, 40],
-        iconAnchor: [20, 40],
+        iconSize: [48, 48],
+        iconAnchor: [24, 48],
     });
 
-    const secondaryIcon = L.divIcon({
-        className: "custom-marker",
-        html: `<div class="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-            </svg>
-        </div>`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
-    });
+    // Store current marker
+    let currentMarker: L.Marker | null = null;
 
-    const tertiaryIcon = L.divIcon({
-        className: "custom-marker",
-        html: `<div class="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-            </svg>
-        </div>`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
-    });
+    // Function to move map and update overlay
+    window.flyToCity = (
+        lat: number,
+        lng: number,
+        name: string,
+        region: string,
+    ) => {
+        // Remove previous marker
+        if (currentMarker) {
+            map.removeLayer(currentMarker);
+        }
 
-    // Add markers
-    L.marker([39.7294, -104.8319], { icon: primaryIcon })
-        .addTo(map)
-        .bindPopup("<b>Aurora</b>");
-    L.marker([39.7047, -105.0814], { icon: secondaryIcon })
-        .addTo(map)
-        .bindPopup("<b>Lakewood</b>");
-    L.marker([39.8028, -105.0875], { icon: tertiaryIcon })
-        .addTo(map)
-        .bindPopup("<b>Arvada</b>");
-    L.marker([39.5807, -104.8767], { icon: secondaryIcon })
-        .addTo(map)
-        .bindPopup("<b>Centennial</b>");
+        // Add new marker
+        currentMarker = L.marker([lat, lng], { icon: orangeIcon }).addTo(map);
 
-    // Function to move map (accessible by buttons)
-    window.flyToCity = (lat: number, lng: number) => {
+        // Fly to location
         map.flyTo([lat, lng], 12, {
             duration: 1.5,
         });
+
+        // Update overlay text
+        const nameElement = document.getElementById("map-location-name");
+        const regionElement = document.getElementById("map-location-region");
+        if (nameElement) nameElement.textContent = name.toUpperCase();
+        if (regionElement) regionElement.textContent = region;
     };
+
+    // Initialize with Aurora
+    currentMarker = L.marker([39.7294, -104.8319], { icon: orangeIcon }).addTo(
+        map,
+    );
 </script>
 
 <style>
-    :global(.custom-marker) {
+    :global(.custom-marker-orange) {
         background: transparent;
         border: none;
     }
 
-    :global(.leaflet-popup-content-wrapper) {
-        border-radius: 0.75rem;
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    :global(.pulse-marker) {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
 
-    :global(.leaflet-popup-content) {
-        margin: 0.75rem;
+    @keyframes pulse {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.7;
+        }
+    }
+
+    .map-location-overlay {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        padding: 1rem 1.5rem;
+        border-radius: 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    #map-location-name {
+        font-size: 18px;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+    }
+
+    #map-location-region {
+        font-size: 11px;
         font-weight: 600;
-        color: #0f172a;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    /* Hide Leaflet attribution */
+    :global(.leaflet-control-attribution) {
+        display: none;
     }
 </style>

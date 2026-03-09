@@ -1,52 +1,40 @@
 // FAQ Accordion functionality
-document.addEventListener("DOMContentLoaded", () => {
-    const faqItems = document.querySelectorAll(".faq-item");
+export function initFaqAccordion() {
+    const faqButtons = document.querySelectorAll(".faq-item-button");
 
-    faqItems.forEach((item) => {
-        const button = item.querySelector(".faq-button");
-        const content = item.querySelector(".faq-content") as HTMLElement;
-        const icon = item.querySelector(".faq-icon");
+    faqButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const faqItem = button.closest(".faq-item");
+            const answer = faqItem?.querySelector(".faq-item-answer");
+            const icon = button.querySelector(".faq-item-icon");
+            const svg = icon?.querySelector("svg");
 
-        button?.addEventListener("click", () => {
-            const isOpen = item.classList.contains("faq-open");
+            if (answer && icon && svg) {
+                const isOpen = faqItem?.classList.contains("faq-item-open");
 
-            // Close all other FAQs
-            faqItems.forEach((otherItem) => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove("faq-open");
-                    otherItem.classList.remove(
-                        "border-blue-500",
-                        "bg-blue-50/50",
-                    );
-                    otherItem.classList.add("border-gray-200", "bg-white");
-                    const otherContent =
-                        otherItem.querySelector(".faq-content") as HTMLElement;
-                    const otherIcon = otherItem.querySelector(".faq-icon");
-                    if (otherContent) otherContent.style.display = "none";
-                    if (otherIcon)
-                        otherIcon.innerHTML =
-                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>';
+                // Reset all items
+                document.querySelectorAll(".faq-item").forEach((item) => {
+                    item.classList.remove("faq-item-open");
+                    item.querySelector(".faq-item-answer")?.classList.add("hidden");
+
+                    const otherIcon = item.querySelector(".faq-item-icon");
+                    otherIcon?.classList.remove("bg-[#ff5c00]", "border-[#ff5c00]");
+                    otherIcon?.querySelector("svg")?.setAttribute("stroke", "currentColor");
+                });
+
+                // Open target item if it was closed
+                if (!isOpen) {
+                    faqItem?.classList.add("faq-item-open");
+                    answer.classList.remove("hidden");
+                    icon.classList.add("bg-[#ff5c00]", "border-[#ff5c00]");
+                    svg.setAttribute("stroke", "white");
                 }
-            });
-
-            // Toggle current FAQ
-            if (isOpen) {
-                item.classList.remove("faq-open");
-                item.classList.remove("border-blue-500", "bg-blue-50/50");
-                item.classList.add("border-gray-200", "bg-white");
-                if (content) content.style.display = "none";
-                if (icon)
-                    icon.innerHTML =
-                        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>';
-            } else {
-                item.classList.add("faq-open");
-                item.classList.remove("border-gray-200", "bg-white");
-                item.classList.add("border-blue-500", "bg-blue-50/50");
-                if (content) content.style.display = "block";
-                if (icon)
-                    icon.innerHTML =
-                        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>';
             }
         });
     });
-});
+}
+
+// Auto-initialize when DOM is ready
+if (typeof document !== 'undefined') {
+    document.addEventListener("DOMContentLoaded", initFaqAccordion);
+}
