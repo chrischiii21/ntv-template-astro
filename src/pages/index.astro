@@ -1098,38 +1098,7 @@ import Footer from "../components/Footer.astro";
 	</section>
 
 	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const faqButtons = document.querySelectorAll(".faq-item-button");
-
-			faqButtons.forEach((button) => {
-				button.addEventListener("click", () => {
-					const faqItem = button.closest(".faq-item");
-					const answer = faqItem?.querySelector(".faq-item-answer");
-					const icon = button.querySelector(".faq-item-icon svg");
-
-					if (answer && icon) {
-						const isOpen =
-							faqItem?.classList.contains("faq-item-open");
-
-						// Close all items
-						document
-							.querySelectorAll(".faq-item")
-							.forEach((item) => {
-								item.classList.remove("faq-item-open");
-								item.querySelector(
-									".faq-item-answer",
-								)?.classList.add("hidden");
-							});
-
-						// Open clicked item if it was closed
-						if (!isOpen) {
-							faqItem?.classList.add("faq-item-open");
-							answer.classList.remove("hidden");
-						}
-					}
-				});
-			});
-		});
+		import "/src/scripts/faq.js";
 	</script>
 
 	<!-- Coverage Area / Map Section -->
@@ -1340,20 +1309,7 @@ import Footer from "../components/Footer.astro";
 	</section>
 
 	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const locationCards = document.querySelectorAll(
-				".map-location-card, .map-location-active",
-			);
-
-			locationCards.forEach((card) => {
-				card.addEventListener("click", () => {
-					locationCards.forEach((c) =>
-						c.classList.remove("map-location-active"),
-					);
-					card.classList.add("map-location-active");
-				});
-			});
-		});
+		import "/src/scripts/mapLocationCards.js";
 	</script>
 
 	<!-- Final CTA Section -->
@@ -1499,42 +1455,3 @@ import Footer from "../components/Footer.astro";
 		</div>
 	</section>
 </Layout>
-
-<style>
-	/* FAQ Icon States - Keep for JavaScript interaction */
-	.faq-item-open {
-		background: #f9f9f7;
-	}
-
-	.faq-item-open .faq-item-icon {
-		background: #06b6d4;
-		border-color: #06b6d4;
-	}
-
-	.faq-item-open .faq-item-icon svg {
-		color: #ffffff;
-	}
-
-	/* Map Location Active States - Keep for JavaScript interaction */
-	.map-location-active {
-		background: #000000 !important;
-		border-color: #000000 !important;
-		padding: 2rem !important;
-	}
-
-	.map-location-active h3 {
-		color: #ffffff !important;
-		font-size: 1.5rem !important;
-		margin-bottom: 0.75rem !important;
-	}
-
-	.map-location-active p {
-		display: block !important;
-		text-transform: none !important;
-		color: #ffffff !important;
-	}
-
-	.map-location-active > div:last-child {
-		display: grid !important;
-	}
-</style>

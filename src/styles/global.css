@@ -23,28 +23,25 @@
 }
 
 * {
-    box-sizing: border-box;
+    @apply box-border;
 }
 
 body {
+    @apply m-0 p-0 antialiased;
     font-family: var(--font-family-body);
     background: var(--color-ntv-paper);
     color: var(--color-ntv-black);
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
 }
 
-/* Display Headings - Space Grotesk for impact */
+/* Display Headings - Plus Jakarta Sans for impact */
 h1,
 h2 {
+    @apply font-bold m-0;
     font-family: var(--font-family-display);
-    font-weight: 700;
     letter-spacing: var(--letter-spacing-display);
     line-height: var(--line-height-display);
-    margin: 0;
 }
 
 /* Sub-headings - Inter for clarity */
@@ -52,35 +49,31 @@ h3,
 h4,
 h5,
 h6 {
+    @apply font-bold m-0;
     font-family: var(--font-family-body);
-    font-weight: 700;
     letter-spacing: -0.01em;
     line-height: var(--line-height-heading);
-    margin: 0;
 }
 
 /* Body Text - Inter for readability */
 p {
+    @apply m-0;
     font-family: var(--font-family-body);
     line-height: var(--line-height-body);
-    margin: 0;
 }
 
 /* Labels - Inter uppercase for UI elements */
 .label {
+    @apply text-xs font-bold uppercase;
     font-family: var(--font-family-body);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: var(--letter-spacing-label);
     color: var(--color-ntv-orange);
 }
 
 /* Buttons - Inter for consistency */
 button {
+    @apply font-bold uppercase;
     font-family: var(--font-family-body);
-    font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: var(--letter-spacing-button);
 }
 
@@ -103,15 +96,58 @@ button {
 
 /* Asymmetric Grid Helpers */
 .grid-asymmetric {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
+    @apply grid grid-cols-12 gap-8;
 }
 
 .grid-header {
-    grid-column: 1 / 6;
+    @apply col-span-5;
 }
 
 .grid-content {
-    grid-column: 7 / 13;
+    @apply col-span-7;
+}
+
+/* Component-specific styles for interactive elements */
+
+/* FAQ Icon States - Keep for JavaScript interaction */
+.faq-item-open {
+    @apply bg-[#f9f9f7];
+}
+
+.faq-item-open .faq-item-icon {
+    @apply bg-[#06b6d4] border-[#06b6d4];
+}
+
+.faq-item-open .faq-item-icon svg {
+    @apply text-white;
+}
+
+/* Map Location Active States - Keep for JavaScript interaction */
+.map-location-active {
+    @apply bg-black border-black p-8;
+    /* Using !important for JavaScript interaction override */
+    background: #000000 !important;
+    border-color: #000000 !important;
+    padding: 2rem !important;
+}
+
+.map-location-active h3 {
+    @apply text-white text-2xl mb-3;
+    /* Using !important for JavaScript interaction override */
+    color: #ffffff !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.map-location-active p {
+    @apply block normal-case text-white;
+    /* Using !important for JavaScript interaction override */
+    display: block !important;
+    text-transform: none !important;
+    color: #ffffff !important;
+}
+
+.map-location-active>div:last-child {
+    /* Using !important for JavaScript interaction override */
+    display: block !important;
 }
