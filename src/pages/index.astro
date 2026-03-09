@@ -9,19 +9,32 @@ import Footer from "../components/Footer.astro";
 	<section
 		class="relative bg-black text-white min-h-screen flex items-center px-6 py-24 pb-12 overflow-hidden md:px-8 md:py-32 md:pb-16"
 	>
+		<!-- Background Image -->
+		<div
+			class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+			style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');"
+		>
+		</div>
+
 		<!-- Pattern Background -->
 		<div
 			class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle_at_2px_2px,#ffffff_1px,transparent_0)] bg-[length:40px_40px]"
 		>
 		</div>
 
+		<!-- Gradient Overlay -->
+		<div
+			class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"
+		>
+		</div>
+
 		<div class="max-w-[90rem] mx-auto w-full relative z-10">
 			<!-- Label -->
 			<div class="flex items-center gap-4">
-				<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+				<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 				<span
-					class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+					class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 				>
 					Premium Marketing Solutions
 				</span>
@@ -29,25 +42,37 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Heading -->
 			<h1
-				class="font-display text-[clamp(2.5rem,10vw,4rem)] md:text-[clamp(3rem,12vw,9rem)] font-bold leading-[0.9] tracking-tighter mb-10 uppercase"
+				class="font-display text-[clamp(2rem,8vw,3.5rem)] md:text-[clamp(2.5rem,10vw,6rem)] font-bold leading-[0.95] tracking-tighter mb-10 uppercase"
 			>
-				<span class="block">GET YOUR</span>
-				<span class="block text-[#ff5c00] italic">BUSINESS</span>
-				<span class="block">NOTICED.</span>
+				<span class="block">Local Advertising &</span>
+				<span class="block text-[#06B6D4] italic"
+					>Digital Marketing</span
+				>
+				<span class="block">Pros in Denver</span>
 			</h1>
 
 			<!-- Description -->
-			<p
-				class="text-[18px] leading-[1.7] text-white/60 py-5 mb-16 max-w-[600px]"
-			>
-				Denver's sharpest advertising and digital marketing<br />
-				team — on screens, on search, and everywhere<br />
-				your customers are.
-			</p>
+			<div class="flex items-start gap-4 py-5 mb-16 max-w-[600px]">
+				<svg
+					class="w-6 h-6 text-white/60 mt-1 flex-shrink-0"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M7 17L17 7M17 7H7M17 7v10"></path>
+				</svg>
+				<p class="text-[18px] leading-[1.7] text-white/60">
+					Helping Businesses Get Noticed—On Screens and Online
+				</p>
+			</div>
 
 			<!-- CTA Button -->
 			<button
-				class="bg-[#ff5c00] text-black border-none px-10 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-colors duration-200 inline-flex items-center gap-3 rounded-none mb-24 hover:bg-white"
+				class="bg-[#06B6D4] text-black border-none px-10 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none mb-24 hover:scale-105 hover:shadow-lg hover:shadow-[#06B6D4]/50"
 			>
 				TALK TO OUR TEAM
 				<svg
@@ -76,10 +101,10 @@ import Footer from "../components/Footer.astro";
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-24">
 				<div>
 					<div class="flex items-center gap-4">
-						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+						<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 						<span
-							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 						>
 							What we do
 						</span>
@@ -97,9 +122,9 @@ import Footer from "../components/Footer.astro";
 					<p
 						class="text-[18px] leading-[1.7] text-black/60 max-w-[500px] py-5 mb-10"
 					>
-						As your trusted <span class="font-bold text-[#FF4500]"
+						As your trusted <span class="font-bold text-[#06B6D4]"
 							>Denver marketing pros</span
-						>, our <span class="font-bold text-[#FF4500]"
+						>, our <span class="font-bold text-[#06B6D4]"
 							>billboard network</span
 						> gives you access to high-traffic locations where your ideal
 						customers spend time. From gyms and restaurants to retail
@@ -107,7 +132,7 @@ import Footer from "../components/Footer.astro";
 						moments that matter.
 					</p>
 					<button
-						class="bg-[#ff5c00] text-black border-none px-10 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-colors duration-200 inline-flex items-center gap-3 rounded-none hover:bg-black hover:text-white"
+						class="bg-[#06B6D4] text-black border-none px-10 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none hover:scale-105 hover:shadow-lg hover:shadow-[#06B6D4]/50"
 					>
 						EXPLORE OUR DIGITAL MARKETING SERVICES
 						<svg
@@ -134,12 +159,12 @@ import Footer from "../components/Footer.astro";
 					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 				>
 					<div
-						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#06B6D4] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						01
 					</div>
 					<div
-						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						<svg
 							width="32"
@@ -159,7 +184,7 @@ import Footer from "../components/Footer.astro";
 						</svg>
 					</div>
 					<h3
-						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						Indoor Billboard Advertising
 					</h3>
@@ -176,12 +201,12 @@ import Footer from "../components/Footer.astro";
 					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 				>
 					<div
-						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#06B6D4] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						02
 					</div>
 					<div
-						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						<svg
 							width="32"
@@ -199,7 +224,7 @@ import Footer from "../components/Footer.astro";
 						</svg>
 					</div>
 					<h3
-						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						Social Media Marketing
 					</h3>
@@ -216,12 +241,12 @@ import Footer from "../components/Footer.astro";
 					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 				>
 					<div
-						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#06B6D4] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						03
 					</div>
 					<div
-						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						<svg
 							width="32"
@@ -246,7 +271,7 @@ import Footer from "../components/Footer.astro";
 						</svg>
 					</div>
 					<h3
-						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						Custom Website Design
 					</h3>
@@ -263,12 +288,12 @@ import Footer from "../components/Footer.astro";
 					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 				>
 					<div
-						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#06B6D4] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						04
 					</div>
 					<div
-						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						<svg
 							width="32"
@@ -289,7 +314,7 @@ import Footer from "../components/Footer.astro";
 						</svg>
 					</div>
 					<h3
-						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#06B6D4]"
 					>
 						Targeted Lead Generation
 					</h3>
@@ -315,10 +340,10 @@ import Footer from "../components/Footer.astro";
 				<!-- Left: Content -->
 				<div>
 					<div class="flex items-center gap-4">
-						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+						<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 						<span
-							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 						>
 							Venue Network
 						</span>
@@ -331,7 +356,7 @@ import Footer from "../components/Footer.astro";
 					<p
 						class="text-[18px] leading-[1.7] text-white/60 py-5 mb-16 max-w-[500px]"
 					>
-						Our <span class="font-bold text-[#FF4500]"
+						Our <span class="font-bold text-[#06B6D4]"
 							>digital marketing pros</span
 						> have built exclusive partnerships with Denver's most popular
 						venues and businesses. Our screen network reaches customers
@@ -345,7 +370,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="20"
 								height="20"
 								fill="none"
@@ -366,7 +391,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="20"
 								height="20"
 								fill="none"
@@ -387,7 +412,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="20"
 								height="20"
 								fill="none"
@@ -408,7 +433,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="20"
 								height="20"
 								fill="none"
@@ -428,7 +453,7 @@ import Footer from "../components/Footer.astro";
 					</ul>
 
 					<button
-						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-white hover:text-black"
+						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none hover:scale-105 hover:shadow-lg hover:shadow-white/30"
 					>
 						VIEW ALL VENUES
 						<svg
@@ -450,8 +475,8 @@ import Footer from "../components/Footer.astro";
 				<!-- Right: Image with Tags -->
 				<div class="relative rounded-none overflow-hidden">
 					<img
-						src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80"
-						alt="Fitness studio with equipment"
+						src="/venue-partner-mobile.avif"
+						alt="Indoor digital advertising screen in retail environment"
 						class="w-full h-[500px] max-lg:h-[400px] object-cover block"
 					/>
 					<div
@@ -474,10 +499,10 @@ import Footer from "../components/Footer.astro";
 				<!-- Left: Content + Image -->
 				<div class="flex flex-col">
 					<div class="flex items-center gap-4 mb-6">
-						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+						<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 						<span
-							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 						>
 							Full Stack
 						</span>
@@ -505,7 +530,7 @@ import Footer from "../components/Footer.astro";
 							class="w-full h-[280px] object-cover block"
 						/>
 						<span
-							class="absolute bottom-5 left-5 bg-[#ff5c00] text-black px-5 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+							class="absolute bottom-5 left-5 bg-[#06B6D4] text-black px-5 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
 							>DENVER PROS</span
 						>
 					</div>
@@ -521,7 +546,7 @@ import Footer from "../components/Footer.astro";
 							<div class="flex-1">
 								<div class="flex items-center gap-3 mb-3">
 									<div
-										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										<svg
 											width="24"
@@ -539,7 +564,7 @@ import Footer from "../components/Footer.astro";
 										</svg>
 									</div>
 									<h3
-										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										Google Business Profile Setup
 									</h3>
@@ -559,7 +584,7 @@ import Footer from "../components/Footer.astro";
 							<div class="flex-1">
 								<div class="flex items-center gap-3 mb-3">
 									<div
-										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										<svg
 											width="24"
@@ -587,7 +612,7 @@ import Footer from "../components/Footer.astro";
 										</svg>
 									</div>
 									<h3
-										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										Professional Website Design
 									</h3>
@@ -608,7 +633,7 @@ import Footer from "../components/Footer.astro";
 							<div class="flex-1">
 								<div class="flex items-center gap-3 mb-3">
 									<div
-										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										<svg
 											width="24"
@@ -626,7 +651,7 @@ import Footer from "../components/Footer.astro";
 										</svg>
 									</div>
 									<h3
-										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										Social Media Strategy
 									</h3>
@@ -647,7 +672,7 @@ import Footer from "../components/Footer.astro";
 							<div class="flex-1">
 								<div class="flex items-center gap-3 mb-3">
 									<div
-										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										<svg
 											width="24"
@@ -675,7 +700,7 @@ import Footer from "../components/Footer.astro";
 										</svg>
 									</div>
 									<h3
-										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#06B6D4]"
 									>
 										PPC Campaign Management
 									</h3>
@@ -705,10 +730,10 @@ import Footer from "../components/Footer.astro";
 			>
 				<div>
 					<div class="flex items-center gap-4">
-						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+						<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 						<span
-							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 						>
 							Why Denver Businesses Choose Our Marketing Pros
 						</span>
@@ -722,7 +747,7 @@ import Footer from "../components/Footer.astro";
 				</div>
 				<div class="flex items-start pt-2">
 					<button
-						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none whitespace-nowrap hover:bg-white hover:text-black"
+						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none whitespace-nowrap hover:scale-105 hover:shadow-lg hover:shadow-white/30"
 					>
 						GET STARTED TODAY
 						<svg
@@ -748,10 +773,10 @@ import Footer from "../components/Footer.astro";
 			>
 				<!-- Card 01 -->
 				<div
-					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#06B6D4]/20"
 				>
 					<div
-						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
+						class="text-[18px] font-bold text-[#06B6D4] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						01
 					</div>
@@ -770,10 +795,10 @@ import Footer from "../components/Footer.astro";
 
 				<!-- Card 02 -->
 				<div
-					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#06B6D4]/20"
 				>
 					<div
-						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
+						class="text-[18px] font-bold text-[#06B6D4] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						02
 					</div>
@@ -792,10 +817,10 @@ import Footer from "../components/Footer.astro";
 
 				<!-- Card 03 -->
 				<div
-					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#06B6D4]/20"
 				>
 					<div
-						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
+						class="text-[18px] font-bold text-[#06B6D4] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						03
 					</div>
@@ -814,10 +839,10 @@ import Footer from "../components/Footer.astro";
 
 				<!-- Card 04 -->
 				<div
-					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#06B6D4]/20"
 				>
 					<div
-						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
+						class="text-[18px] font-bold text-[#06B6D4] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						04
 					</div>
@@ -846,7 +871,7 @@ import Footer from "../components/Footer.astro";
 						>Denver marketing pros</strong
 					> and locals who understand the market, know the neighborhoods,
 					and have the relationships that <span
-						class="text-[#ff5c00] font-bold">get results</span
+						class="text-[#06B6D4] font-bold">get results</span
 					>."
 				</p>
 			</div>
@@ -855,7 +880,7 @@ import Footer from "../components/Footer.astro";
 
 	<!-- CTA Section -->
 	<section
-		class="bg-[#ff5c00] text-white px-8 py-28 max-lg:px-6 max-lg:py-20"
+		class="bg-[#06B6D4] text-white px-8 py-28 max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<div
@@ -891,7 +916,7 @@ import Footer from "../components/Footer.astro";
 						business.
 					</p>
 					<button
-						class="bg-white text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-black hover:text-white"
+						class="bg-white text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none hover:scale-105 hover:shadow-lg hover:shadow-white/50"
 					>
 						SCHEDULE FREE CONSULTATION
 						<svg
@@ -924,10 +949,10 @@ import Footer from "../components/Footer.astro";
 				<!-- Left: Header -->
 				<div class="sticky top-32 self-start max-lg:static">
 					<div class="flex items-center gap-4">
-						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+						<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 						<span
-							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 						>
 							FAQs
 						</span>
@@ -949,11 +974,11 @@ import Footer from "../components/Footer.astro";
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0 px-6 -mx-6"
 						>
 							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#ff5c00]"
+								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#06B6D4]"
 								>What is Indoor Digital Signage Advertising?</span
 							>
 							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#ff5c00]"
+								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#06B6D4]"
 							>
 								<svg
 									width="24"
@@ -991,12 +1016,12 @@ import Footer from "../components/Footer.astro";
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0 px-6 -mx-6"
 						>
 							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#ff5c00]"
+								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#06B6D4]"
 								>Do you offer packages that include screens and
 								online ads?</span
 							>
 							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#ff5c00]"
+								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#06B6D4]"
 							>
 								<svg
 									width="24"
@@ -1034,11 +1059,11 @@ import Footer from "../components/Footer.astro";
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0 px-6 -mx-6"
 						>
 							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#ff5c00]"
+								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#06B6D4]"
 								>Can you help my business rank on Google?</span
 							>
 							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#ff5c00]"
+								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#06B6D4]"
 							>
 								<svg
 									width="24"
@@ -1118,10 +1143,10 @@ import Footer from "../components/Footer.astro";
 			>
 				<div>
 					<div class="flex items-center gap-4 mb-6">
-						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+						<div class="h-[2px] w-12 bg-[#06B6D4]"></div>
 
 						<span
-							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
 						>
 							Coverage Area
 						</span>
@@ -1139,7 +1164,7 @@ import Footer from "../components/Footer.astro";
 					<p
 						class="text-[18px] leading-[1.65] text-black/60 max-w-[500px]"
 					>
-						Our <span class="font-bold text-[#FF4500]">network</span
+						Our <span class="font-bold text-[#06B6D4]">network</span
 						> spans across Denver's most popular neighborhoods and venues
 					</p>
 				</div>
@@ -1158,11 +1183,11 @@ import Footer from "../components/Footer.astro";
 					>
 						<div class="flex justify-between items-center mb-4">
 							<div
-								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+								class="bg-[#06B6D4] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
 							>
 								EAST METRO
 							</div>
-							<div class="text-[#ff5c00]">
+							<div class="text-[#06B6D4]">
 								<svg
 									width="20"
 									height="20"
@@ -1182,51 +1207,11 @@ import Footer from "../components/Footer.astro";
 							Aurora
 						</h3>
 						<p
-							class="text-[13px] leading-[1.65] text-white/70 mb-6 hidden"
+							class="text-[13px] leading-[1.65] text-black/60 mb-6 hidden"
 						>
 							Denver's largest suburb — massive reach across busy
 							retail corridors and fitness centers.
 						</p>
-						<div
-							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
-						>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									38
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Screens
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									14
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Venues
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									450K
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Views
-								</div>
-							</div>
-						</div>
 					</button>
 
 					<!-- Lakewood - Collapsed -->
@@ -1236,11 +1221,11 @@ import Footer from "../components/Footer.astro";
 					>
 						<div class="flex justify-between items-center mb-4">
 							<div
-								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+								class="bg-[#06B6D4] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
 							>
 								WEST DENVER
 							</div>
-							<div class="text-[#ff5c00]">
+							<div class="text-[#06B6D4]">
 								<svg
 									width="20"
 									height="20"
@@ -1265,46 +1250,6 @@ import Footer from "../components/Footer.astro";
 							West Denver's hub — strong presence in shopping
 							centers and community fitness venues.
 						</p>
-						<div
-							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
-						>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									28
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Screens
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									11
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Venues
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									320K
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Views
-								</div>
-							</div>
-						</div>
 					</button>
 
 					<!-- Arvada - Collapsed -->
@@ -1314,11 +1259,11 @@ import Footer from "../components/Footer.astro";
 					>
 						<div class="flex justify-between items-center mb-4">
 							<div
-								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+								class="bg-[#06B6D4] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
 							>
 								NORTHWEST
 							</div>
-							<div class="text-[#ff5c00]">
+							<div class="text-[#06B6D4]">
 								<svg
 									width="20"
 									height="20"
@@ -1343,46 +1288,6 @@ import Footer from "../components/Footer.astro";
 							Growing northwest corridor — prime placement in
 							family-oriented retail and dining spots.
 						</p>
-						<div
-							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
-						>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									22
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Screens
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									9
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Venues
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									280K
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Views
-								</div>
-							</div>
-						</div>
 					</button>
 
 					<!-- Centennial - Collapsed -->
@@ -1392,11 +1297,11 @@ import Footer from "../components/Footer.astro";
 					>
 						<div class="flex justify-between items-center mb-4">
 							<div
-								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+								class="bg-[#06B6D4] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
 							>
 								SOUTH METRO
 							</div>
-							<div class="text-[#ff5c00]">
+							<div class="text-[#06B6D4]">
 								<svg
 									width="20"
 									height="20"
@@ -1421,46 +1326,6 @@ import Footer from "../components/Footer.astro";
 							Affluent south metro area — upscale gyms, medical
 							offices, and professional service venues.
 						</p>
-						<div
-							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
-						>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									32
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Screens
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									12
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Venues
-								</div>
-							</div>
-							<div>
-								<div
-									class="text-2xl font-extrabold text-white mb-1"
-								>
-									380K
-								</div>
-								<div
-									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
-								>
-									Views
-								</div>
-							</div>
-						</div>
 					</button>
 				</div>
 
@@ -1502,7 +1367,7 @@ import Footer from "../components/Footer.astro";
 					class="relative z-10 px-14 py-14 lg:px-16 lg:py-16 flex flex-col bg-gradient-to-br from-black/95 to-black/85"
 				>
 					<div
-						class="inline-block w-fit bg-[#ff5c00] text-black px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none mb-8"
+						class="inline-block w-fit bg-[#06B6D4] text-black px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none mb-8"
 					>
 						LIMITED TIME
 					</div>
@@ -1520,28 +1385,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
-								width="20"
-								height="20"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<circle cx="12" cy="12" r="10" stroke-width="2"
-								></circle>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 12l2 2 4-4"></path>
-							</svg>
-							<span>Free 30-minute strategy session</span>
-						</li>
-						<li
-							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
-						>
-							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="20"
 								height="20"
 								fill="none"
@@ -1562,7 +1406,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="20"
 								height="20"
 								fill="none"
@@ -1582,9 +1426,9 @@ import Footer from "../components/Footer.astro";
 					</ul>
 
 					<button
-						class="bg-[#ff5c00] text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none w-fit mb-10 hover:bg-white"
+						class="bg-[#06B6D4] text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none w-fit mb-10 hover:scale-105 hover:shadow-lg hover:shadow-[#06B6D4]/50"
 					>
-						BOOK YOUR SESSION
+						GET STARTED
 						<svg
 							width="14"
 							height="14"
@@ -1608,7 +1452,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-2 text-[12px] font-bold text-white/60 uppercase tracking-[0.05em]"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="16"
 								height="16"
 								fill="currentColor"
@@ -1625,7 +1469,7 @@ import Footer from "../components/Footer.astro";
 							class="flex items-center gap-2 text-[12px] font-bold text-white/60 uppercase tracking-[0.05em]"
 						>
 							<svg
-								class="text-[#ff5c00] flex-shrink-0"
+								class="text-[#06B6D4] flex-shrink-0"
 								width="16"
 								height="16"
 								fill="currentColor"
@@ -1663,8 +1507,8 @@ import Footer from "../components/Footer.astro";
 	}
 
 	.faq-item-open .faq-item-icon {
-		background: #ff5c00;
-		border-color: #ff5c00;
+		background: #06b6d4;
+		border-color: #06b6d4;
 	}
 
 	.faq-item-open .faq-item-icon svg {
@@ -1686,6 +1530,8 @@ import Footer from "../components/Footer.astro";
 
 	.map-location-active p {
 		display: block !important;
+		text-transform: none !important;
+		color: #ffffff !important;
 	}
 
 	.map-location-active > div:last-child {
