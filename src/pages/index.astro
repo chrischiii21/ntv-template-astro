@@ -4,7 +4,7 @@ import Map from "../components/Map.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="NTV Pulse Clone - Denver Marketing">
+<Layout title="NTV Clone - Denver Marketing">
 	<!-- Hero Section -->
 	<section
 		class="relative bg-black text-white min-h-screen flex items-center px-6 py-24 pb-12 overflow-hidden md:px-8 md:py-32 md:pb-16"
@@ -18,7 +18,7 @@ import Footer from "../components/Footer.astro";
 		<div class="max-w-[90rem] mx-auto w-full relative z-10">
 			<!-- Label -->
 			<div
-				class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] mb-12 flex items-center gap-3"
+				class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] mb-12 flex items-center gap-3"
 			>
 				<span>PREMIUM MARKETING</span>
 				<span class="text-white/30">·</span>
@@ -27,7 +27,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Heading -->
 			<h1
-				class="text-[clamp(2.5rem,10vw,4rem)] md:text-[clamp(3rem,12vw,9rem)] font-extrabold leading-[0.9] tracking-[-0.02em] mb-10 uppercase"
+				class="font-display text-[clamp(2.5rem,10vw,4rem)] md:text-[clamp(3rem,12vw,9rem)] font-bold leading-[0.9] tracking-tighter mb-10 uppercase"
 			>
 				<span class="block">GET YOUR</span>
 				<span class="block text-[#ff5c00] italic">BUSINESS</span>
@@ -36,7 +36,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Description -->
 			<p
-				class="text-[15px] leading-[1.7] text-white/60 mb-12 max-w-[600px]"
+				class="text-[15px] leading-[1.7] text-white/60 mb-16 max-w-[600px]"
 			>
 				Denver's sharpest advertising and digital marketing<br />
 				team — on screens, on search, and everywhere<br />
@@ -45,7 +45,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- CTA Button -->
 			<button
-				class="bg-[#ff5c00] text-black border-none px-10 py-[1.125rem] text-[11px] font-extrabold uppercase tracking-[0.2em] cursor-pointer transition-colors duration-200 inline-flex items-center gap-3 rounded-none mb-24 hover:bg-white"
+				class="bg-[#ff5c00] text-black border-none px-10 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-colors duration-200 inline-flex items-center gap-3 rounded-none mb-24 hover:bg-white"
 			>
 				TALK TO OUR TEAM
 				<svg
@@ -65,7 +65,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Stats -->
 			<div
-				class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 md:gap-12 pt-12 border-t border-white/10 max-w-[1200px]"
+				class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 md:gap-12 pt-16 border-t border-white/10 max-w-[1200px]"
 			>
 				<div class="text-left">
 					<div class="text-[2.5rem] font-extrabold mb-2 text-white">
@@ -98,7 +98,7 @@ import Footer from "../components/Footer.astro";
 					</div>
 				</div>
 				<button
-					class="bg-transparent border-none text-white/40 text-[10px] font-bold uppercase tracking-[0.2em] cursor-pointer flex items-center gap-2 p-0 transition-colors duration-200 hover:text-[#ff5c00]"
+					class="bg-transparent border-none text-white/40 text-[10px] font-bold uppercase tracking-button cursor-pointer flex items-center gap-2 p-0 transition-colors duration-200 hover:text-[#ff5c00]"
 				>
 					SCROLL
 					<svg
@@ -121,18 +121,18 @@ import Footer from "../components/Footer.astro";
 
 	<!-- Services Section -->
 	<section
-		class="bg-white px-8 py-24 border-b border-black/[0.08] md:px-8 md:py-24 max-md:px-6 max-md:py-16"
+		class="bg-white px-8 py-28 border-b border-black/[0.08] md:px-8 md:py-28 max-md:px-6 max-md:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<!-- Header with split layout -->
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-20">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-24">
 				<div>
 					<span
-						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-8"
+						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-10"
 						>WHAT WE DO</span
 					>
 					<h2
-						class="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-none tracking-[-0.02em]"
+						class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-display tracking-tighter"
 					>
 						<span class="block text-black">Local Advertising</span>
 						<span class="block text-black/25"
@@ -152,15 +152,15 @@ import Footer from "../components/Footer.astro";
 			</div>
 
 			<!-- Services Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
 				<!-- Service 01 -->
-				<div class="relative pt-10 pb-0 border-t border-black/[0.08]">
+				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
 					<div
-						class="absolute top-10 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
 					>
 						01
 					</div>
-					<div class="text-black/40 mb-6">
+					<div class="text-black/40 mb-8">
 						<svg
 							width="32"
 							height="32"
@@ -178,7 +178,7 @@ import Footer from "../components/Footer.astro";
 							<path d="M3 9h18M9 21V9" stroke-width="1.5"></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-extrabold mb-4 leading-[1.3]">
+					<h3 class="text-[18px] font-bold mb-5 leading-heading">
 						Indoor Billboard Advertising
 					</h3>
 					<p class="text-[14px] leading-[1.7] text-black/60">
@@ -188,13 +188,13 @@ import Footer from "../components/Footer.astro";
 				</div>
 
 				<!-- Service 02 -->
-				<div class="relative pt-10 pb-0 border-t border-black/[0.08]">
+				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
 					<div
-						class="absolute top-10 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
 					>
 						02
 					</div>
-					<div class="text-black/40 mb-6">
+					<div class="text-black/40 mb-8">
 						<svg
 							width="32"
 							height="32"
@@ -210,7 +210,7 @@ import Footer from "../components/Footer.astro";
 							></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-extrabold mb-4 leading-[1.3]">
+					<h3 class="text-[18px] font-bold mb-5 leading-heading">
 						Social Media Marketing
 					</h3>
 					<p class="text-[14px] leading-[1.7] text-black/60">
@@ -220,13 +220,13 @@ import Footer from "../components/Footer.astro";
 				</div>
 
 				<!-- Service 03 -->
-				<div class="relative pt-10 pb-0 border-t border-black/[0.08]">
+				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
 					<div
-						class="absolute top-10 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
 					>
 						03
 					</div>
-					<div class="text-black/40 mb-6">
+					<div class="text-black/40 mb-8">
 						<svg
 							width="32"
 							height="32"
@@ -249,7 +249,7 @@ import Footer from "../components/Footer.astro";
 							></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-extrabold mb-4 leading-[1.3]">
+					<h3 class="text-[18px] font-bold mb-5 leading-heading">
 						Custom Website Design
 					</h3>
 					<p class="text-[14px] leading-[1.7] text-black/60">
@@ -259,13 +259,13 @@ import Footer from "../components/Footer.astro";
 				</div>
 
 				<!-- Service 04 -->
-				<div class="relative pt-10 pb-0 border-t border-black/[0.08]">
+				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
 					<div
-						class="absolute top-10 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
 					>
 						04
 					</div>
-					<div class="text-black/40 mb-6">
+					<div class="text-black/40 mb-8">
 						<svg
 							width="32"
 							height="32"
@@ -284,7 +284,7 @@ import Footer from "../components/Footer.astro";
 								d="M12 2v4m0 12v4M2 12h4m12 0h4"></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-extrabold mb-4 leading-[1.3]">
+					<h3 class="text-[18px] font-bold mb-5 leading-heading">
 						Targeted Lead Generation
 					</h3>
 					<p class="text-[14px] leading-[1.7] text-black/60">
@@ -298,25 +298,25 @@ import Footer from "../components/Footer.astro";
 
 	<!-- Venue Network Section -->
 	<section
-		class="bg-black text-white px-8 py-24 border-b border-white/10 max-lg:px-6 max-lg:py-16"
+		class="bg-black text-white px-8 py-28 border-b border-white/10 max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-28 items-center"
 			>
 				<!-- Left: Content -->
 				<div>
 					<span
-						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-8"
+						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-10"
 						>VENUE NETWORK</span
 					>
 					<h2
-						class="text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-[1.1] tracking-[-0.02em] mb-6"
+						class="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-display tracking-tighter mb-8"
 					>
 						Denver's Most<br />Coveted Locations.
 					</h2>
 					<p
-						class="text-[15px] leading-[1.7] text-white/60 mb-12 max-w-[500px]"
+						class="text-[15px] leading-[1.7] text-white/60 mb-16 max-w-[500px]"
 					>
 						We've built an exclusive network inside Denver's
 						highest-traffic venues — where your audience is already
@@ -325,7 +325,7 @@ import Footer from "../components/Footer.astro";
 
 					<!-- Stats -->
 					<div
-						class="grid grid-cols-3 max-lg:grid-cols-1 gap-8 max-lg:gap-6 py-8 border-t border-b border-white/10 mb-12"
+						class="grid grid-cols-3 max-lg:grid-cols-1 gap-8 max-lg:gap-6 py-10 border-t border-b border-white/10 mb-16"
 					>
 						<div>
 							<div class="text-[2rem] font-extrabold mb-2">
@@ -360,7 +360,7 @@ import Footer from "../components/Footer.astro";
 					</div>
 
 					<button
-						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-extrabold uppercase tracking-[0.2em] cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-white hover:text-black"
+						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-white hover:text-black"
 					>
 						VIEW ALL VENUES
 						<svg
@@ -421,25 +421,25 @@ import Footer from "../components/Footer.astro";
 
 	<!-- Full Stack Section -->
 	<section
-		class="bg-[#f9f9f7] px-8 py-20 border-b border-black/[0.08] max-lg:px-6 max-lg:py-16"
+		class="bg-[#f9f9f7] px-8 py-28 border-b border-black/[0.08] max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<div
-				class="grid grid-cols-1 lg:grid-cols-[45%_55%] xl:grid-cols-[42%_58%] gap-12 lg:gap-16 xl:gap-14 items-start"
+				class="grid grid-cols-1 lg:grid-cols-[45%_55%] xl:grid-cols-[42%_58%] gap-16 lg:gap-20 xl:gap-18 items-start"
 			>
 				<!-- Left: Content + Image -->
 				<div class="flex flex-col">
 					<span
-						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-6"
+						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
 						>FULL STACK</span
 					>
 					<h2
-						class="text-[clamp(2.25rem,5vw,3.5rem)] lg:text-[3rem] xl:text-[3.5rem] font-extrabold leading-[1.05] tracking-[-0.02em] mb-5"
+						class="font-display text-[clamp(2.25rem,5vw,3.5rem)] lg:text-[3rem] xl:text-[3.5rem] font-bold leading-display tracking-tighter mb-6"
 					>
 						Complete<br />Digital<br />Coverage.
 					</h2>
 					<p
-						class="text-[14px] leading-[1.65] text-black/60 mb-10 max-w-[420px]"
+						class="text-[14px] leading-[1.65] text-black/60 mb-12 max-w-[420px]"
 					>
 						Beyond screens, we run the full playbook — from your
 						Google presence to paid campaigns that drive real
@@ -467,7 +467,7 @@ import Footer from "../components/Footer.astro";
 					<div class="flex flex-col gap-0">
 						<!-- Service 01 -->
 						<div
-							class="flex gap-7 py-7 max-lg:py-6 border-t border-black/[0.08] items-start"
+							class="flex gap-7 py-8 max-lg:py-7 border-t border-black/[0.08] items-start"
 						>
 							<div
 								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
@@ -491,7 +491,7 @@ import Footer from "../components/Footer.astro";
 
 						<!-- Service 02 -->
 						<div
-							class="flex gap-7 py-7 max-lg:py-6 border-t border-black/[0.08] items-start"
+							class="flex gap-7 py-8 max-lg:py-7 border-t border-black/[0.08] items-start"
 						>
 							<div
 								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
@@ -515,7 +515,7 @@ import Footer from "../components/Footer.astro";
 
 						<!-- Service 03 -->
 						<div
-							class="flex gap-7 py-7 max-lg:py-6 border-t border-black/[0.08] items-start"
+							class="flex gap-7 py-8 max-lg:py-7 border-t border-black/[0.08] items-start"
 						>
 							<div
 								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
@@ -539,7 +539,7 @@ import Footer from "../components/Footer.astro";
 
 						<!-- Service 04 -->
 						<div
-							class="flex gap-7 py-7 max-lg:py-6 pb-0 border-t border-black/[0.08] items-start"
+							class="flex gap-7 py-8 max-lg:py-7 pb-0 border-t border-black/[0.08] items-start"
 						>
 							<div
 								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
@@ -568,20 +568,20 @@ import Footer from "../components/Footer.astro";
 
 	<!-- Why Apex Section -->
 	<section
-		class="bg-black text-white px-8 py-20 border-b border-white/10 max-lg:px-6 max-lg:py-16"
+		class="bg-black text-white px-8 py-28 border-b border-white/10 max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<!-- Header -->
 			<div
-				class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-start mb-16 max-lg:mb-12"
+				class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-start mb-20 max-lg:mb-16"
 			>
 				<div>
 					<span
-						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-6"
+						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
 						>WHY APEX</span
 					>
 					<h2
-						class="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[1.1] tracking-[-0.02em]"
+						class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-display tracking-tighter"
 					>
 						<span class="block text-white">Not Just Another</span>
 						<span class="block text-white/25">Agency.</span>
@@ -589,7 +589,7 @@ import Footer from "../components/Footer.astro";
 				</div>
 				<div class="flex items-start pt-2">
 					<button
-						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-extrabold uppercase tracking-[0.2em] cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none whitespace-nowrap hover:bg-white hover:text-black"
+						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none whitespace-nowrap hover:bg-white hover:text-black"
 					>
 						GET STARTED TODAY
 						<svg
@@ -611,12 +611,12 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Cards Grid -->
 			<div
-				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 mb-16 max-lg:mb-12"
+				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-12 lg:gap-10 mb-20 max-lg:mb-16"
 			>
 				<!-- Card 01 -->
 				<div class="bg-transparent p-0">
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-6 tracking-[0.05em]"
+						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
 					>
 						01
 					</div>
@@ -634,7 +634,7 @@ import Footer from "../components/Footer.astro";
 				<!-- Card 02 -->
 				<div class="bg-transparent p-0">
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-6 tracking-[0.05em]"
+						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
 					>
 						02
 					</div>
@@ -652,7 +652,7 @@ import Footer from "../components/Footer.astro";
 				<!-- Card 03 -->
 				<div class="bg-transparent p-0">
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-6 tracking-[0.05em]"
+						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
 					>
 						03
 					</div>
@@ -670,7 +670,7 @@ import Footer from "../components/Footer.astro";
 				<!-- Card 04 -->
 				<div class="bg-transparent p-0">
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-6 tracking-[0.05em]"
+						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
 					>
 						04
 					</div>
@@ -688,7 +688,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Quote -->
 			<div
-				class="max-w-[900px] mx-auto text-center pt-12 border-t border-white/10"
+				class="max-w-[900px] mx-auto text-center pt-16 border-t border-white/10"
 			>
 				<p
 					class="text-[18px] max-lg:text-[16px] leading-[1.7] text-white/70 tracking-[-0.01em]"
@@ -706,7 +706,7 @@ import Footer from "../components/Footer.astro";
 
 	<!-- CTA Section -->
 	<section
-		class="bg-[#ff5c00] text-white px-8 py-20 max-lg:px-6 max-lg:py-16"
+		class="bg-[#ff5c00] text-white px-8 py-28 max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<div
@@ -714,7 +714,7 @@ import Footer from "../components/Footer.astro";
 			>
 				<div>
 					<h2
-						class="text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[1.1] tracking-[-0.02em] text-white"
+						class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-display tracking-tighter text-white"
 					>
 						Ready to Dominate<br />Your Market?
 					</h2>
@@ -727,7 +727,7 @@ import Footer from "../components/Footer.astro";
 						pressure — just a real conversation about your growth.
 					</p>
 					<button
-						class="bg-white text-black border-none px-8 py-[1.125rem] text-[11px] font-extrabold uppercase tracking-[0.2em] cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-black hover:text-white"
+						class="bg-white text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-black hover:text-white"
 					>
 						SCHEDULE FREE CONSULTATION
 						<svg
@@ -751,20 +751,20 @@ import Footer from "../components/Footer.astro";
 
 	<!-- FAQ Section -->
 	<section
-		class="bg-[#f9f9f7] px-8 py-20 border-b border-black/[0.08] max-lg:px-6 max-lg:py-16"
+		class="bg-[#f9f9f7] px-8 py-28 border-b border-black/[0.08] max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<div
-				class="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-12 lg:gap-24 max-lg:gap-12"
+				class="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-16 lg:gap-28 max-lg:gap-16"
 			>
 				<!-- Left: Header -->
 				<div class="sticky top-32 self-start max-lg:static">
 					<span
-						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-6"
+						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
 						>FAQS</span
 					>
 					<h2
-						class="text-[clamp(2.5rem,5vw,3.5rem)] font-extrabold leading-[1.1] tracking-[-0.02em] text-black"
+						class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-display tracking-tighter text-black"
 					>
 						Common<br />Questions.
 					</h2>
@@ -774,7 +774,7 @@ import Footer from "../components/Footer.astro";
 				<div class="flex flex-col gap-0">
 					<!-- FAQ 1 -->
 					<div
-						class="faq-item faq-item-open border-t border-black/[0.08] py-7 last:border-b"
+						class="faq-item faq-item-open border-t border-black/[0.08] py-8 last:border-b"
 					>
 						<button
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
@@ -814,7 +814,7 @@ import Footer from "../components/Footer.astro";
 
 					<!-- FAQ 2 -->
 					<div
-						class="faq-item border-t border-black/[0.08] py-7 last:border-b"
+						class="faq-item border-t border-black/[0.08] py-8 last:border-b"
 					>
 						<button
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
@@ -856,7 +856,7 @@ import Footer from "../components/Footer.astro";
 
 					<!-- FAQ 3 -->
 					<div
-						class="faq-item border-t border-black/[0.08] py-7 last:border-b"
+						class="faq-item border-t border-black/[0.08] py-8 last:border-b"
 					>
 						<button
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
@@ -898,7 +898,7 @@ import Footer from "../components/Footer.astro";
 
 					<!-- FAQ 4 -->
 					<div
-						class="faq-item border-t border-black/[0.08] py-7 last:border-b"
+						class="faq-item border-t border-black/[0.08] py-8 last:border-b"
 					>
 						<button
 							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
@@ -979,20 +979,20 @@ import Footer from "../components/Footer.astro";
 
 	<!-- Coverage Area / Map Section -->
 	<section
-		class="relative z-0 bg-[#f9f9f7] px-8 py-20 border-b border-black/[0.08] max-lg:px-6 max-lg:py-16"
+		class="relative z-0 bg-[#f9f9f7] px-8 py-28 border-b border-black/[0.08] max-lg:px-6 max-lg:py-20"
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<!-- Header -->
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 max-lg:mb-12"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20 max-lg:mb-16"
 			>
 				<div>
 					<span
-						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-6"
+						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
 						>COVERAGE AREA</span
 					>
 					<h2
-						class="text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-[1.1] tracking-[-0.02em]"
+						class="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-display tracking-tighter"
 					>
 						<span class="block text-black">We Put Local</span>
 						<span class="block text-black/25"
@@ -1012,7 +1012,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Map Grid -->
 			<div
-				class="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 lg:gap-12"
+				class="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-16 lg:gap-16"
 			>
 				<!-- Left: Location Cards -->
 				<div class="flex flex-col gap-4">
@@ -1356,7 +1356,7 @@ import Footer from "../components/Footer.astro";
 	</script>
 
 	<!-- Final CTA Section -->
-	<section class="bg-[#f9f9f7] px-8 py-20 lg:py-20">
+	<section class="bg-[#f9f9f7] px-8 py-28 lg:py-28">
 		<div class="max-w-[90rem] mx-auto">
 			<div
 				class="relative rounded-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-[500px] lg:min-h-[600px]"
@@ -1371,7 +1371,7 @@ import Footer from "../components/Footer.astro";
 						LIMITED TIME
 					</div>
 					<h2
-						class="text-[clamp(2.25rem,5vw,3.5rem)] font-extrabold leading-[1.1] tracking-[-0.02em] text-white mb-5"
+						class="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-display tracking-tighter text-white mb-5"
 					>
 						Free Marketing<br />Consultation.
 					</h2>
@@ -1450,7 +1450,7 @@ import Footer from "../components/Footer.astro";
 					</ul>
 
 					<button
-						class="bg-[#ff5c00] text-black border-none px-8 py-[1.125rem] text-[11px] font-extrabold uppercase tracking-[0.2em] cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none w-fit mb-10 hover:bg-white"
+						class="bg-[#ff5c00] text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none w-fit mb-10 hover:bg-white"
 					>
 						BOOK YOUR SESSION
 						<svg

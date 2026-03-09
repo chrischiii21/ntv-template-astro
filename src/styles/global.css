@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
 
 @theme {
     /* NTV Pulse Color System */
@@ -8,17 +7,19 @@
     --color-ntv-black: #000000;
     --color-ntv-white: #FFFFFF;
 
-    /* Typography Scale */
-    --font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* Typography Scale - Professional Font Pairing */
+    --font-family-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
     /* Letter Spacing Presets */
     --letter-spacing-display: -0.05em;
-    --letter-spacing-label: 0.4em;
-    --letter-spacing-button: 0.2em;
+    --letter-spacing-label: 0.15em;
+    --letter-spacing-button: 0.08em;
 
     /* Line Height Presets */
-    --line-height-display: 0.95;
-    --line-height-body: 1.7;
+    --line-height-display: 1.1;
+    --line-height-heading: 1.3;
+    --line-height-body: 1.6;
 }
 
 * {
@@ -26,35 +27,48 @@
 }
 
 body {
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-body);
     background: var(--color-ntv-paper);
     color: var(--color-ntv-black);
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
 }
 
-/* Display Headings */
+/* Display Headings - Space Grotesk for impact */
 h1,
-h2,
-h3 {
-    font-family: var(--font-family-base);
-    font-weight: 800;
+h2 {
+    font-family: var(--font-family-display);
+    font-weight: 700;
     letter-spacing: var(--letter-spacing-display);
     line-height: var(--line-height-display);
     margin: 0;
 }
 
-/* Body Text */
+/* Sub-headings - Inter for clarity */
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-body);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: var(--line-height-heading);
+    margin: 0;
+}
+
+/* Body Text - Inter for readability */
 p {
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-body);
     line-height: var(--line-height-body);
     margin: 0;
 }
 
-/* Labels */
+/* Labels - Inter uppercase for UI elements */
 .label {
+    font-family: var(--font-family-body);
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -62,10 +76,10 @@ p {
     color: var(--color-ntv-orange);
 }
 
-/* Buttons */
+/* Buttons - Inter for consistency */
 button {
-    font-family: var(--font-family-base);
-    font-weight: 800;
+    font-family: var(--font-family-body);
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-button);
 }
