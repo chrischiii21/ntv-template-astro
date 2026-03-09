@@ -17,12 +17,14 @@ import Footer from "../components/Footer.astro";
 
 		<div class="max-w-[90rem] mx-auto w-full relative z-10">
 			<!-- Label -->
-			<div
-				class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] mb-12 flex items-center gap-3"
-			>
-				<span>PREMIUM MARKETING</span>
-				<span class="text-white/30">·</span>
-				<span>DENVER, CO</span>
+			<div class="flex items-center gap-4">
+				<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+				<span
+					class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+				>
+					Premium Marketing Solutions
+				</span>
 			</div>
 
 			<!-- Heading -->
@@ -36,7 +38,7 @@ import Footer from "../components/Footer.astro";
 
 			<!-- Description -->
 			<p
-				class="text-[15px] leading-[1.7] text-white/60 mb-16 max-w-[600px]"
+				class="text-[18px] leading-[1.7] text-white/60 py-5 mb-16 max-w-[600px]"
 			>
 				Denver's sharpest advertising and digital marketing<br />
 				team — on screens, on search, and everywhere<br />
@@ -62,60 +64,6 @@ import Footer from "../components/Footer.astro";
 						d="M9 5l7 7-7 7"></path>
 				</svg>
 			</button>
-
-			<!-- Stats -->
-			<div
-				class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 md:gap-12 pt-16 border-t border-white/10 max-w-[1200px]"
-			>
-				<div class="text-left">
-					<div class="text-[2.5rem] font-extrabold mb-2 text-white">
-						500+
-					</div>
-					<div
-						class="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40"
-					>
-						Screens Deployed
-					</div>
-				</div>
-				<div class="text-left">
-					<div class="text-[2.5rem] font-extrabold mb-2 text-white">
-						20+
-					</div>
-					<div
-						class="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40"
-					>
-						Years of Expertise
-					</div>
-				</div>
-				<div class="text-left">
-					<div class="text-[2.5rem] font-extrabold mb-2 text-white">
-						1,200+
-					</div>
-					<div
-						class="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40"
-					>
-						Clients Served
-					</div>
-				</div>
-				<button
-					class="bg-transparent border-none text-white/40 text-[10px] font-bold uppercase tracking-button cursor-pointer flex items-center gap-2 p-0 transition-colors duration-200 hover:text-[#ff5c00]"
-				>
-					SCROLL
-					<svg
-						width="12"
-						height="12"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="3"
-							d="M19 9l-7 7-7-7"></path>
-					</svg>
-				</button>
-			</div>
 		</div>
 	</section>
 
@@ -127,10 +75,15 @@ import Footer from "../components/Footer.astro";
 			<!-- Header with split layout -->
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 mb-24">
 				<div>
-					<span
-						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-10"
-						>WHAT WE DO</span
-					>
+					<div class="flex items-center gap-4">
+						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+						<span
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+						>
+							What we do
+						</span>
+					</div>
 					<h2
 						class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-display tracking-tighter"
 					>
@@ -142,25 +95,52 @@ import Footer from "../components/Footer.astro";
 				</div>
 				<div>
 					<p
-						class="text-[15px] leading-[1.7] text-black/60 max-w-[500px]"
+						class="text-[18px] leading-[1.7] text-black/60 max-w-[500px] py-5 mb-10"
 					>
-						From billboard access to full digital campaigns —
-						everything your business needs to stand out and scale up
-						in the Denver market.
+						As your trusted <span class="font-bold text-[#FF4500]"
+							>Denver marketing pros</span
+						>, our <span class="font-bold text-[#FF4500]"
+							>billboard network</span
+						> gives you access to high-traffic locations where your ideal
+						customers spend time. From gyms and restaurants to retail
+						stores and office buildings, we help you get noticed in the
+						moments that matter.
 					</p>
+					<button
+						class="bg-[#ff5c00] text-black border-none px-10 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-colors duration-200 inline-flex items-center gap-3 rounded-none hover:bg-black hover:text-white"
+					>
+						EXPLORE OUR DIGITAL MARKETING SERVICES
+						<svg
+							width="16"
+							height="16"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="3"
+								d="M9 5l7 7-7 7"></path>
+						</svg>
+					</button>
 				</div>
 			</div>
 
 			<!-- Services Grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
 				<!-- Service 01 -->
-				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
+				<div
+					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
+				>
 					<div
-						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						01
 					</div>
-					<div class="text-black/40 mb-8">
+					<div
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						<svg
 							width="32"
 							height="32"
@@ -178,23 +158,31 @@ import Footer from "../components/Footer.astro";
 							<path d="M3 9h18M9 21V9" stroke-width="1.5"></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-bold mb-5 leading-heading">
+					<h3
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						Indoor Billboard Advertising
 					</h3>
-					<p class="text-[14px] leading-[1.7] text-black/60">
-						Own the room. High-impact digital screens placed inside
-						Denver's busiest gyms, restaurants, and retail spaces.
+					<p
+						class="py-5 text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
+					>
+						High-impact advertising in premium indoor locations
+						across Denver.
 					</p>
 				</div>
 
 				<!-- Service 02 -->
-				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
+				<div
+					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
+				>
 					<div
-						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						02
 					</div>
-					<div class="text-black/40 mb-8">
+					<div
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						<svg
 							width="32"
 							height="32"
@@ -210,23 +198,31 @@ import Footer from "../components/Footer.astro";
 							></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-bold mb-5 leading-heading">
+					<h3
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						Social Media Marketing
 					</h3>
-					<p class="text-[14px] leading-[1.7] text-black/60">
-						Scroll-stopping content that builds communities and
-						turns followers into paying customers.
+					<p
+						class="py-5 text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
+					>
+						Build and engage your audience with strategic social
+						media content.
 					</p>
 				</div>
 
 				<!-- Service 03 -->
-				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
+				<div
+					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
+				>
 					<div
-						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						03
 					</div>
-					<div class="text-black/40 mb-8">
+					<div
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						<svg
 							width="32"
 							height="32"
@@ -249,23 +245,31 @@ import Footer from "../components/Footer.astro";
 							></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-bold mb-5 leading-heading">
+					<h3
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						Custom Website Design
 					</h3>
-					<p class="text-[14px] leading-[1.7] text-black/60">
-						Blazing-fast, beautifully-crafted websites engineered to
-						convert visitors into loyal clients.
+					<p
+						class="py-5 text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
+					>
+						Professional websites that convert visitors into
+						customers
 					</p>
 				</div>
 
 				<!-- Service 04 -->
-				<div class="relative pt-12 pb-0 border-t border-black/[0.08]">
+				<div
+					class="relative pt-12 pb-8 border-t border-black/[0.08] transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
+				>
 					<div
-						class="absolute top-12 right-0 text-[11px] font-bold text-[#ff5c00] tracking-[0.1em]"
+						class="absolute top-12 right-0 text-[18px] font-bold text-[#ff5c00] tracking-[0.1em] group-hover:right-6 transition-all duration-300"
 					>
 						04
 					</div>
-					<div class="text-black/40 mb-8">
+					<div
+						class="text-black/40 mb-8 transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						<svg
 							width="32"
 							height="32"
@@ -284,12 +288,16 @@ import Footer from "../components/Footer.astro";
 								d="M12 2v4m0 12v4M2 12h4m12 0h4"></path>
 						</svg>
 					</div>
-					<h3 class="text-[18px] font-bold mb-5 leading-heading">
+					<h3
+						class="text-[20px] font-bold mb-5 leading-heading transition-colors duration-300 group-hover:text-[#ff5c00]"
+					>
 						Targeted Lead Generation
 					</h3>
-					<p class="text-[14px] leading-[1.7] text-black/60">
-						Precision-targeted campaigns across Google and social
-						that hit your pipeline with quality leads.
+					<p
+						class="py-5 text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
+					>
+						Strategic campaigns that generate quality leads and
+						maximize ROI.
 					</p>
 				</div>
 			</div>
@@ -306,58 +314,118 @@ import Footer from "../components/Footer.astro";
 			>
 				<!-- Left: Content -->
 				<div>
-					<span
-						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-10"
-						>VENUE NETWORK</span
-					>
+					<div class="flex items-center gap-4">
+						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+						<span
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+						>
+							Venue Network
+						</span>
+					</div>
 					<h2
 						class="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-display tracking-tighter mb-8"
 					>
-						Denver's Most<br />Coveted Locations.
+						Denver's Premium Venue Partner Network
 					</h2>
 					<p
-						class="text-[15px] leading-[1.7] text-white/60 mb-16 max-w-[500px]"
+						class="text-[18px] leading-[1.7] text-white/60 py-5 mb-16 max-w-[500px]"
 					>
-						We've built an exclusive network inside Denver's
-						highest-traffic venues — where your audience is already
-						present, relaxed, and receptive.
+						Our <span class="font-bold text-[#FF4500]"
+							>digital marketing pros</span
+						> have built exclusive partnerships with Denver's most popular
+						venues and businesses. Our screen network reaches customers
+						when they're relaxed, engaged, and ready to take action—whether
+						they're working out, dining, shopping, or waiting for service.
 					</p>
-
-					<!-- Stats -->
-					<div
-						class="grid grid-cols-3 max-lg:grid-cols-1 gap-8 max-lg:gap-6 py-10 border-t border-b border-white/10 mb-16"
+					<ul
+						class="list-none p-0 m-0 mb-10 grid grid-cols-1 md:grid-cols-2 gap-4"
 					>
-						<div>
-							<div class="text-[2rem] font-extrabold mb-2">
-								80+
-							</div>
-							<div
-								class="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/50"
+						<li
+							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
+						>
+							<svg
+								class="text-[#ff5c00] flex-shrink-0"
+								width="20"
+								height="20"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
 							>
-								Active Venues
-							</div>
-						</div>
-						<div>
-							<div class="text-[2rem] font-extrabold mb-2">
-								2.4M
-							</div>
-							<div
-								class="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								<circle cx="12" cy="12" r="10" stroke-width="2"
+								></circle>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12l2 2 4-4"></path>
+							</svg>
+							<span>Exclusive venue partnerships</span>
+						</li>
+						<li
+							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
+						>
+							<svg
+								class="text-[#ff5c00] flex-shrink-0"
+								width="20"
+								height="20"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
 							>
-								Monthly Impressions
-							</div>
-						</div>
-						<div>
-							<div class="text-[2rem] font-extrabold mb-2">
-								15+
-							</div>
-							<div
-								class="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								<circle cx="12" cy="12" r="10" stroke-width="2"
+								></circle>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12l2 2 4-4"></path>
+							</svg>
+							<span>High-dwell-time locations</span>
+						</li>
+						<li
+							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
+						>
+							<svg
+								class="text-[#ff5c00] flex-shrink-0"
+								width="20"
+								height="20"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
 							>
-								Neighborhoods
-							</div>
-						</div>
-					</div>
+								<circle cx="12" cy="12" r="10" stroke-width="2"
+								></circle>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12l2 2 4-4"></path>
+							</svg>
+							<span>Targeted audience reach</span>
+						</li>
+						<li
+							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
+						>
+							<svg
+								class="text-[#ff5c00] flex-shrink-0"
+								width="20"
+								height="20"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<circle cx="12" cy="12" r="10" stroke-width="2"
+								></circle>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12l2 2 4-4"></path>
+							</svg>
+							<span>Flexible campaign</span>
+						</li>
+					</ul>
 
 					<button
 						class="bg-transparent text-white border-2 border-white px-8 py-4 text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-white hover:text-black"
@@ -389,30 +457,6 @@ import Footer from "../components/Footer.astro";
 					<div
 						class="absolute bottom-6 left-6 right-6 flex flex-wrap gap-3"
 					>
-						<span
-							class="bg-black/80 backdrop-blur-[10px] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.1em] rounded-none border border-white/20"
-							>Fitness Studios</span
-						>
-						<span
-							class="bg-black/80 backdrop-blur-[10px] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.1em] rounded-none border border-white/20"
-							>Restaurants</span
-						>
-						<span
-							class="bg-black/80 backdrop-blur-[10px] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.1em] rounded-none border border-white/20"
-							>Retail Stores</span
-						>
-						<span
-							class="bg-black/80 backdrop-blur-[10px] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.1em] rounded-none border border-white/20"
-							>Medical Offices</span
-						>
-						<span
-							class="bg-black/80 backdrop-blur-[10px] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.1em] rounded-none border border-white/20"
-							>Coworking Spaces</span
-						>
-						<span
-							class="bg-black/80 backdrop-blur-[10px] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.1em] rounded-none border border-white/20"
-							>Hotel Lobbies</span
-						>
 					</div>
 				</div>
 			</div>
@@ -425,35 +469,40 @@ import Footer from "../components/Footer.astro";
 	>
 		<div class="max-w-[90rem] mx-auto">
 			<div
-				class="grid grid-cols-1 lg:grid-cols-[45%_55%] xl:grid-cols-[42%_58%] gap-16 lg:gap-20 xl:gap-18 items-start"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center"
 			>
 				<!-- Left: Content + Image -->
 				<div class="flex flex-col">
-					<span
-						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
-						>FULL STACK</span
-					>
+					<div class="flex items-center gap-4 mb-6">
+						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+						<span
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+						>
+							Full Stack
+						</span>
+					</div>
 					<h2
-						class="font-display text-[clamp(2.25rem,5vw,3.5rem)] lg:text-[3rem] xl:text-[3.5rem] font-bold leading-display tracking-tighter mb-6"
+						class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-display tracking-tighter mb-6"
 					>
-						Complete<br />Digital<br />Coverage.
+						Full-Service Digital Marketing from Denver Pros
 					</h2>
 					<p
-						class="text-[14px] leading-[1.65] text-black/60 mb-12 max-w-[420px]"
+						class="text-[18px] leading-[1.7] py-5 text-black/60 mb-12"
 					>
-						Beyond screens, we run the full playbook — from your
-						Google presence to paid campaigns that drive real
-						revenue.
+						Beyond screen ads, our Denver marketing pros provide
+						full-scale digital marketing to help your business show
+						up, stand out, and grow. Whether you're just getting
+						started or need help scaling your outreach, we've got
+						the tools and the team to support you.
 					</p>
 
 					<!-- Image with Tag -->
-					<div
-						class="relative rounded-none overflow-hidden w-full max-w-[420px]"
-					>
+					<div class="relative rounded-none overflow-hidden w-full">
 						<img
 							src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
 							alt="Team collaboration"
-							class="w-full h-[260px] max-lg:h-[240px] object-cover block"
+							class="w-full h-[280px] object-cover block"
 						/>
 						<span
 							class="absolute bottom-5 left-5 bg-[#ff5c00] text-black px-5 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
@@ -463,100 +512,179 @@ import Footer from "../components/Footer.astro";
 				</div>
 
 				<!-- Right: Services List -->
-				<div class="flex flex-col justify-start">
+				<div class="flex flex-col">
 					<div class="flex flex-col gap-0">
 						<!-- Service 01 -->
 						<div
-							class="flex gap-7 py-8 max-lg:py-7 border-t border-black/[0.08] items-start"
+							class="flex gap-6 py-7 border-t border-black/[0.08] items-start transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 						>
-							<div
-								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
-							>
-								01
-							</div>
 							<div class="flex-1">
-								<h3
-									class="text-[18px] font-extrabold mb-2 leading-[1.3] tracking-[-0.01em]"
-								>
-									Google Business Profile
-								</h3>
+								<div class="flex items-center gap-3 mb-3">
+									<div
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										<svg
+											width="24"
+											height="24"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+											></path>
+										</svg>
+									</div>
+									<h3
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										Google Business Profile Setup
+									</h3>
+								</div>
 								<p
-									class="text-[13px] leading-[1.65] text-black/60"
+									class="text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
 								>
-									Dominate local search results and appear at
-									the top of Google Maps.
+									Get found on Google Maps and local search.
 								</p>
 							</div>
 						</div>
 
 						<!-- Service 02 -->
 						<div
-							class="flex gap-7 py-8 max-lg:py-7 border-t border-black/[0.08] items-start"
+							class="flex gap-6 py-7 border-t border-black/[0.08] items-start transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 						>
-							<div
-								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
-							>
-								02
-							</div>
 							<div class="flex-1">
-								<h3
-									class="text-[18px] font-extrabold mb-2 leading-[1.3] tracking-[-0.01em]"
-								>
-									Website Design & Dev
-								</h3>
+								<div class="flex items-center gap-3 mb-3">
+									<div
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										<svg
+											width="24"
+											height="24"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<circle
+												cx="12"
+												cy="12"
+												r="10"
+												stroke-width="1.5"></circle>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d="M2 12h20"></path>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"
+											></path>
+										</svg>
+									</div>
+									<h3
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										Professional Website Design
+									</h3>
+								</div>
 								<p
-									class="text-[13px] leading-[1.65] text-black/60"
+									class="text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
 								>
-									Lightning-fast sites built around your brand
-									and conversion goals.
+									Fast, mobile-ready websites built for
+									performance.
 								</p>
 							</div>
 						</div>
 
 						<!-- Service 03 -->
 						<div
-							class="flex gap-7 py-8 max-lg:py-7 border-t border-black/[0.08] items-start"
+							class="flex gap-6 py-7 border-t border-black/[0.08] items-start transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 						>
-							<div
-								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
-							>
-								03
-							</div>
 							<div class="flex-1">
-								<h3
-									class="text-[18px] font-extrabold mb-2 leading-[1.3] tracking-[-0.01em]"
-								>
-									Social Media Strategy
-								</h3>
+								<div class="flex items-center gap-3 mb-3">
+									<div
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										<svg
+											width="24"
+											height="24"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+											></path>
+										</svg>
+									</div>
+									<h3
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										Social Media Strategy
+									</h3>
+								</div>
 								<p
-									class="text-[13px] leading-[1.65] text-black/60"
+									class="text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
 								>
-									Cohesive content ecosystems that grow,
-									engage, and convert.
+									Consistent posting and creative to grow your
+									presence.
 								</p>
 							</div>
 						</div>
 
 						<!-- Service 04 -->
 						<div
-							class="flex gap-7 py-8 max-lg:py-7 pb-0 border-t border-black/[0.08] items-start"
+							class="flex gap-6 py-7 border-t border-b border-black/[0.08] items-start transition-all duration-300 cursor-pointer group hover:bg-black/[0.02] hover:px-6 hover:-mx-6"
 						>
-							<div
-								class="text-[13px] font-bold text-[#ff5c00] shrink-0 w-8 pt-0.5"
-							>
-								04
-							</div>
 							<div class="flex-1">
-								<h3
-									class="text-[18px] font-extrabold mb-2 leading-[1.3] tracking-[-0.01em]"
-								>
-									PPC Management
-								</h3>
+								<div class="flex items-center gap-3 mb-3">
+									<div
+										class="text-black/40 transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										<svg
+											width="24"
+											height="24"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<circle
+												cx="12"
+												cy="12"
+												r="3"
+												stroke-width="1.5"></circle>
+											<circle
+												cx="12"
+												cy="12"
+												r="8"
+												stroke-width="1.5"></circle>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="1.5"
+												d="M12 2v4m0 12v4M2 12h4m12 0h4"
+											></path>
+										</svg>
+									</div>
+									<h3
+										class="text-[20px] font-extrabold leading-[1.3] tracking-[-0.01em] transition-colors duration-300 group-hover:text-[#ff5c00]"
+									>
+										PPC Campaign Management
+									</h3>
+								</div>
 								<p
-									class="text-[13px] leading-[1.65] text-black/60"
+									class="text-[15px] leading-[1.7] text-black/60 transition-colors duration-300 group-hover:text-black/80"
 								>
-									Every ad dollar optimized for maximum return
-									on investment.
+									Targeted ads that drive calls, clicks, and
+									leads.
 								</p>
 							</div>
 						</div>
@@ -576,10 +704,15 @@ import Footer from "../components/Footer.astro";
 				class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-start mb-20 max-lg:mb-16"
 			>
 				<div>
-					<span
-						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
-						>WHY APEX</span
-					>
+					<div class="flex items-center gap-4">
+						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+						<span
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+						>
+							Why Denver Businesses Choose Our Marketing Pros
+						</span>
+					</div>
 					<h2
 						class="font-display text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-display tracking-tighter"
 					>
@@ -614,72 +747,88 @@ import Footer from "../components/Footer.astro";
 				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-12 lg:gap-10 mb-20 max-lg:mb-16"
 			>
 				<!-- Card 01 -->
-				<div class="bg-transparent p-0">
+				<div
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+				>
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
+						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						01
 					</div>
 					<h3
-						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em]"
+						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em] transition-transform duration-300 group-hover:translate-x-1"
 					>
 						Local Expertise
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-white/60">
+					<p
+						class="text-[15px] py-5 leading-[1.65] text-white/60 transition-colors duration-300 group-hover:text-white/80"
+					>
 						We know Denver's neighborhoods, venues, and customer
 						behavior better than anyone.
 					</p>
 				</div>
 
 				<!-- Card 02 -->
-				<div class="bg-transparent p-0">
+				<div
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+				>
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
+						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						02
 					</div>
 					<h3
-						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em]"
+						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em] transition-transform duration-300 group-hover:translate-x-1"
 					>
 						Measurable Results
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-white/60">
+					<p
+						class="text-[15px] py-5 leading-[1.65] text-white/60 transition-colors duration-300 group-hover:text-white/80"
+					>
 						Transparent reporting and real KPIs — you always know
 						exactly what you're getting.
 					</p>
 				</div>
 
 				<!-- Card 03 -->
-				<div class="bg-transparent p-0">
+				<div
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+				>
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
+						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						03
 					</div>
 					<h3
-						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em]"
+						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em] transition-transform duration-300 group-hover:translate-x-1"
 					>
 						Full-Service Team
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-white/60">
+					<p
+						class="text-[15px] py-5 leading-[1.65] text-white/60 transition-colors duration-300 group-hover:text-white/80"
+					>
 						One team handles everything: from creative to campaign
 						management. No juggling agencies.
 					</p>
 				</div>
 
 				<!-- Card 04 -->
-				<div class="bg-transparent p-0">
+				<div
+					class="bg-transparent p-6 -m-6 transition-all duration-300 cursor-pointer group hover:bg-[#ff5c00]/20"
+				>
 					<div
-						class="text-[16px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em]"
+						class="text-[18px] font-bold text-[#ff5c00] mb-8 tracking-[0.05em] transition-colors duration-300 group-hover:text-white"
 					>
 						04
 					</div>
 					<h3
-						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em]"
+						class="text-[20px] font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em] transition-transform duration-300 group-hover:translate-x-1"
 					>
 						Honest Partnership
 					</h3>
-					<p class="text-[14px] leading-[1.65] text-white/60">
+					<p
+						class="text-[15px] py-5 leading-[1.65] text-white/60 transition-colors duration-300 group-hover:text-white/80"
+					>
 						We treat your budget like our own and only recommend
 						what actually works for you.
 					</p>
@@ -721,10 +870,25 @@ import Footer from "../components/Footer.astro";
 				</div>
 				<div>
 					<p
-						class="text-[15px] leading-[1.7] text-white/90 mb-8 max-w-[500px]"
+						class="font-bold text-[20px] text-black leading-[1.7] mb-8 max-w-[500px] uppercase"
 					>
-						Free 30-minute strategy session. No commitment, no
-						pressure — just a real conversation about your growth.
+						Partner with Denver's Local Advertising & Digital
+						Marketing Pros
+					</p>
+					<p
+						class="text-[18px] leading-[1.7] text-white/90 py-5 mb-8 max-w-[500px]"
+					>
+						Whether you're looking for <span
+							class="font-bold text-white">screen ads</span
+						>, a <span class="font-bold text-white"
+							>new website</span
+						>, or a complete <span class="font-bold text-white"
+							>digital marketing</span
+						> strategy in <span class="font-bold text-white"
+							>Denver</span
+						>, we're here to help. Contact us today for a free
+						consultation and let's discuss how we can grow your
+						business.
 					</p>
 					<button
 						class="bg-white text-black border-none px-8 py-[1.125rem] text-[11px] font-bold uppercase tracking-button cursor-pointer transition-all duration-200 inline-flex items-center gap-3 rounded-none hover:bg-black hover:text-white"
@@ -759,10 +923,15 @@ import Footer from "../components/Footer.astro";
 			>
 				<!-- Left: Header -->
 				<div class="sticky top-32 self-start max-lg:static">
-					<span
-						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
-						>FAQS</span
-					>
+					<div class="flex items-center gap-4">
+						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+						<span
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+						>
+							FAQs
+						</span>
+					</div>
 					<h2
 						class="font-display text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-display tracking-tighter text-black"
 					>
@@ -774,17 +943,17 @@ import Footer from "../components/Footer.astro";
 				<div class="flex flex-col gap-0">
 					<!-- FAQ 1 -->
 					<div
-						class="faq-item faq-item-open border-t border-black/[0.08] py-8 last:border-b"
+						class="faq-item faq-item-open border-t border-black/[0.08] py-8 last:border-b transition-colors duration-300 hover:bg-black/[0.02]"
 					>
 						<button
-							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
+							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0 px-6 -mx-6"
 						>
 							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1"
+								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#ff5c00]"
 								>What is Indoor Digital Signage Advertising?</span
 							>
 							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200"
+								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#ff5c00]"
 							>
 								<svg
 									width="24"
@@ -802,29 +971,32 @@ import Footer from "../components/Footer.astro";
 								</svg>
 							</div>
 						</button>
-						<div class="faq-item-answer pt-5 pr-16 max-lg:pr-0">
-							<p class="text-[15px] leading-[1.7] text-black/60">
-								It's the placement of your ads on HD screens
-								inside high-traffic venues — gyms, restaurants,
-								offices — where your audience is already
-								present, engaged, and receptive to your message.
+						<div
+							class="faq-item-answer pt-5 pr-16 max-lg:pr-0 px-6 -mx-6"
+						>
+							<p class="text-[18px] leading-[1.7] text-black/60">
+								It's the placement of your ads on TV screens
+								located inside high-traffic venues, offering
+								brand visibility where people are already
+								engaged.
 							</p>
 						</div>
 					</div>
 
 					<!-- FAQ 2 -->
 					<div
-						class="faq-item border-t border-black/[0.08] py-8 last:border-b"
+						class="faq-item border-t border-black/[0.08] py-8 last:border-b transition-colors duration-300 hover:bg-black/[0.02]"
 					>
 						<button
-							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
+							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0 px-6 -mx-6"
 						>
 							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1"
-								>Do you offer bundled screen + digital packages?</span
+								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#ff5c00]"
+								>Do you offer packages that include screens and
+								online ads?</span
 							>
 							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200"
+								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#ff5c00]"
 							>
 								<svg
 									width="24"
@@ -843,30 +1015,30 @@ import Footer from "../components/Footer.astro";
 							</div>
 						</button>
 						<div
-							class="faq-item-answer hidden pt-5 pr-16 max-lg:pr-0"
+							class="faq-item-answer hidden pt-5 pr-16 max-lg:pr-0 px-6 -mx-6"
 						>
-							<p class="text-[15px] leading-[1.7] text-black/60">
-								Yes! We offer comprehensive marketing packages
-								that combine indoor digital signage with online
-								advertising campaigns for maximum reach and
-								impact.
+							<p class="text-[18px] leading-[1.7] text-black/60">
+								Yes! We offer bundled packages that combine
+								indoor billboards with digital marketing
+								services like social ads, Google Ads, and SEO to
+								maximize your reach both online and offline.
 							</p>
 						</div>
 					</div>
 
 					<!-- FAQ 3 -->
 					<div
-						class="faq-item border-t border-black/[0.08] py-8 last:border-b"
+						class="faq-item border-t border-black/[0.08] py-8 last:border-b transition-colors duration-300 hover:bg-black/[0.02]"
 					>
 						<button
-							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
+							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0 px-6 -mx-6"
 						>
 							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1"
+								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1 transition-colors duration-300 hover:text-[#ff5c00]"
 								>Can you help my business rank on Google?</span
 							>
 							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200"
+								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200 hover:border-[#ff5c00]"
 							>
 								<svg
 									width="24"
@@ -885,55 +1057,13 @@ import Footer from "../components/Footer.astro";
 							</div>
 						</button>
 						<div
-							class="faq-item-answer hidden pt-5 pr-16 max-lg:pr-0"
+							class="faq-item-answer hidden pt-5 pr-16 max-lg:pr-0 px-6 -mx-6"
 						>
-							<p class="text-[15px] leading-[1.7] text-black/60">
-								Absolutely! Our digital marketing services
-								include Google Business Profile optimization,
-								local SEO strategies, and PPC campaign
-								management to improve your visibility.
-							</p>
-						</div>
-					</div>
-
-					<!-- FAQ 4 -->
-					<div
-						class="faq-item border-t border-black/[0.08] py-8 last:border-b"
-					>
-						<button
-							class="faq-item-button w-full flex justify-between items-center gap-8 bg-transparent border-none cursor-pointer text-left p-0"
-						>
-							<span
-								class="faq-item-question text-[18px] max-lg:text-[16px] font-extrabold text-black leading-[1.3] tracking-[-0.01em] flex-1"
-								>How quickly will I see results?</span
-							>
-							<div
-								class="faq-item-icon w-10 h-10 rounded-full bg-transparent border-2 border-black/20 flex items-center justify-center shrink-0 transition-all duration-200"
-							>
-								<svg
-									width="24"
-									height="24"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									class="text-black/40 transition-all duration-300"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M12 4v16m8-8H4"></path>
-								</svg>
-							</div>
-						</button>
-						<div
-							class="faq-item-answer hidden pt-5 pr-16 max-lg:pr-0"
-						>
-							<p class="text-[15px] leading-[1.7] text-black/60">
-								Results vary by service. Indoor advertising
-								campaigns show immediate brand visibility, while
-								digital marketing efforts like SEO may take 3-6
-								months for significant results.
+							<p class="text-[18px] leading-[1.7] text-black/60">
+								Absolutely. We provide SEO services, Google
+								Business setup, and local search strategies to
+								help your business show up when customers are
+								searching for your services in Denver.
 							</p>
 						</div>
 					</div>
@@ -984,13 +1114,18 @@ import Footer from "../components/Footer.astro";
 		<div class="max-w-[90rem] mx-auto">
 			<!-- Header -->
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20 max-lg:mb-16"
+				class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mb-20 max-lg:mb-16 items-center"
 			>
 				<div>
-					<span
-						class="text-[11px] font-bold uppercase tracking-label text-[#ff5c00] block mb-8"
-						>COVERAGE AREA</span
-					>
+					<div class="flex items-center gap-4 mb-6">
+						<div class="h-[2px] w-12 bg-[#FF4500]"></div>
+
+						<span
+							class="text-sm font-bold uppercase tracking-[0.2em] text-[#FF4500]"
+						>
+							Coverage Area
+						</span>
+					</div>
 					<h2
 						class="font-display text-[clamp(2.5rem,6vw,4rem)] font-bold leading-display tracking-tighter"
 					>
@@ -1002,10 +1137,10 @@ import Footer from "../components/Footer.astro";
 				</div>
 				<div>
 					<p
-						class="text-[14px] leading-[1.65] text-black/60 max-w-[500px]"
+						class="text-[18px] leading-[1.65] text-black/60 max-w-[500px]"
 					>
-						Our screen network spans Denver's most vibrant
-						neighborhoods — click a location to explore.
+						Our <span class="font-bold text-[#FF4500]">network</span
+						> spans across Denver's most popular neighborhoods and venues
 					</p>
 				</div>
 			</div>
@@ -1018,7 +1153,7 @@ import Footer from "../components/Footer.astro";
 				<div class="flex flex-col gap-4">
 					<!-- Aurora - Expanded -->
 					<button
-						class="map-location-active relative bg-black border border-black rounded-none p-8 text-left cursor-pointer transition-all duration-200 w-full hover:border-black/15"
+						class="map-location-card map-location-active relative bg-white border border-black/[0.08] rounded-none p-6 text-left cursor-pointer transition-all duration-200 w-full hover:border-black/15"
 						onclick="flyToCity(39.7294, -104.8319, 'Aurora', 'East Metro')"
 					>
 						<div class="flex justify-between items-center mb-4">
@@ -1042,18 +1177,18 @@ import Footer from "../components/Footer.astro";
 							</div>
 						</div>
 						<h3
-							class="text-2xl font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em]"
+							class="text-xl font-extrabold text-black mb-2 leading-[1.3] tracking-[-0.01em]"
 						>
 							Aurora
 						</h3>
 						<p
-							class="text-[13px] leading-[1.65] text-white/70 mb-6"
+							class="text-[13px] leading-[1.65] text-white/70 mb-6 hidden"
 						>
 							Denver's largest suburb — massive reach across busy
 							retail corridors and fitness centers.
 						</p>
 						<div
-							class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10"
+							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
 						>
 							<div>
 								<div
@@ -1341,8 +1476,9 @@ import Footer from "../components/Footer.astro";
 
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
-			const locationCards =
-				document.querySelectorAll(".map-location-card");
+			const locationCards = document.querySelectorAll(
+				".map-location-card, .map-location-active",
+			);
 
 			locationCards.forEach((card) => {
 				card.addEventListener("click", () => {
@@ -1373,17 +1509,13 @@ import Footer from "../components/Footer.astro";
 					<h2
 						class="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-display tracking-tighter text-white mb-5"
 					>
-						Free Marketing<br />Consultation.
+						Ready to Grow Your Business?
 					</h2>
-					<p
-						class="text-[15px] leading-[1.7] text-white/70 mb-8 max-w-[480px]"
-					>
-						Get expert strategies tailored for Denver businesses.
-						Let's discuss exactly how we can help you succeed.
-					</p>
 
 					<!-- Benefits List -->
-					<ul class="list-none p-0 m-0 mb-10 flex flex-col gap-4">
+					<ul
+						class="list-none p-0 m-0 mb-10 flex flex-col gap-4 py-5"
+					>
 						<li
 							class="flex items-center gap-3.5 text-[14px] font-semibold text-white"
 						>
@@ -1526,6 +1658,10 @@ import Footer from "../components/Footer.astro";
 
 <style>
 	/* FAQ Icon States - Keep for JavaScript interaction */
+	.faq-item-open {
+		background: #f9f9f7;
+	}
+
 	.faq-item-open .faq-item-icon {
 		background: #ff5c00;
 		border-color: #ff5c00;
