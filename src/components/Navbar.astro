@@ -3,87 +3,191 @@ import { Image } from "astro:assets";
 import logo from "../assets/dealer-logo.avif";
 ---
 
-<nav class="fixed top-4 left-0 right-0 z-50 px-4 md:px-6">
-    <div
-        class="max-w-7xl mx-auto bg-white/95 backdrop-blur-md rounded-xl md:rounded-2xl border border-slate-200 shadow-lg px-4 md:px-8 h-16 md:h-20 flex justify-between items-center"
-    >
-        <div class="flex items-center gap-6 md:gap-12">
-            <a
-                href="/"
-                class="flex items-center transition-transform hover:scale-105"
-            >
-                <Image
-                    src={logo}
-                    alt="Dashboard Logo"
-                    width={40}
-                    height={40}
-                    format="avif"
-                    loading="eager"
-                    class="rounded-lg object-contain md:w-12 md:h-12"
-                />
+<style>
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+        max-width: 90rem;
+        margin: 0 auto;
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+        background: #ff5c00;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-text {
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #ffffff;
+    }
+
+    .nav-links {
+        display: none;
+        gap: 2.5rem;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    @media (min-width: 1024px) {
+        .nav-links {
+            display: flex;
+        }
+    }
+
+    .nav-links a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+        color: #ff5c00;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .nav-meta {
+        display: none;
+        text-align: right;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.4;
+    }
+
+    @media (min-width: 1024px) {
+        .nav-meta {
+            display: block;
+        }
+    }
+
+    .contact-btn {
+        background: #ff5c00;
+        color: #000000;
+        border: none;
+        padding: 0.875rem 1.75rem;
+        font-size: 11px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        cursor: pointer;
+        transition: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 0;
+    }
+
+    .contact-btn:hover {
+        background: #ffffff;
+    }
+
+    .contact-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: #ffffff;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+        .mobile-menu-btn {
+            display: none;
+        }
+    }
+</style>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-left">
+            <a href="/" class="logo-container">
+                <div class="logo-circle">
+                    <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="white"
+                    >
+                        <circle cx="10" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <span class="logo-text">Apex Denver</span>
             </a>
 
-            <div
-                class="hidden md:flex gap-6 lg:gap-8 text-sm font-medium text-slate-700"
-            >
-                <a
-                    href="/"
-                    class="text-slate-900 font-semibold hover:text-slate-600 transition-colors"
-                    >Home</a
-                >
-                <a href="#" class="hover:text-slate-900 transition-colors"
-                    >About Us</a
-                >
-                <a
-                    href="#"
-                    class="hover:text-slate-900 transition-colors flex items-center gap-1"
-                >
-                    Indoor Billboards
-                    <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </a>
-                <a
-                    href="#"
-                    class="hover:text-slate-900 transition-colors flex items-center gap-1"
-                >
-                    Solutions
-                    <svg
-                        class="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#billboards">Billboards</a>
+                <a href="#solutions">Solutions</a>
             </div>
         </div>
 
-        <div class="flex items-center gap-3">
-            <button
-                class="bg-slate-900 text-white text-xs md:text-sm font-semibold px-4 md:px-6 py-2 md:py-2.5 rounded-lg hover:bg-slate-800 transition-all shadow-md hover:shadow-lg uppercase tracking-wide"
-            >
-                Contact Us
+        <div class="nav-right">
+            <div class="nav-meta">
+                <div>EST. 2024</div>
+                <div>DENVER LOCALS</div>
+            </div>
+
+            <button class="contact-btn">
+                Contact
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M9 5l7 7-7 7"></path>
+                </svg>
             </button>
 
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-slate-700 hover:text-slate-900 p-2">
+            <button class="mobile-menu-btn">
                 <svg
-                    class="w-5 h-5"
+                    width="24"
+                    height="24"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

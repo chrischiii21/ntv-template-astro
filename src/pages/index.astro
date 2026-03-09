@@ -1,780 +1,70 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getImage } from "astro:assets";
-import homeImage from "../assets/home.avif";
-import { Image } from "astro:assets";
-import section3Image from "../assets/venue-partner-mobile.avif";
 import Footer from "../components/Footer.astro";
 import Map from "../components/Map.astro";
-
-const optimizedBackground = await getImage({ src: homeImage });
 ---
 
-<Layout title="NTV Template 5 Clone">
-	<!-- Hero Section - Balanced & Clean -->
-	<section
-		class="relative flex items-center justify-center pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-24 lg:pb-28 px-4 md:px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-	>
-		<!-- Background Image -->
-		<div class="absolute inset-0 overflow-hidden">
-			<div
-				class="absolute inset-0 w-full h-full bg-cover bg-center opacity-40"
-				style={`background-image: url(${optimizedBackground.src}); background-position: center 40%;`}
-			>
-			</div>
-			<!-- Simplified Overlay -->
-			<div
-				class="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/75 to-slate-900/90"
-			>
-			</div>
-		</div>
+<Layout title="NTV Pulse Clone - Denver Marketing">
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="hero-pattern"></div>
 
-		<div class="relative z-10 w-full max-w-6xl mx-auto">
-			<div class="text-center max-w-4xl mx-auto space-y-5 md:space-y-6">
-				<!-- Badge -->
-				<div class="flex justify-center">
-					<div
-						class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-400/30 rounded-full px-4 py-2 backdrop-blur-sm"
-					>
-						<svg
-							class="w-3.5 h-3.5 text-sky-400"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-						>
-							<path
-								d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-							></path>
-							<path
-								d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-							></path>
-						</svg>
-						<span
-							class="text-sky-300 text-xs md:text-sm font-semibold tracking-wider uppercase"
-							>Premium Marketing Solutions</span
-						>
-					</div>
+		<div class="hero-container">
+			<div class="hero-label">
+				<span>PREMIUM MARKETING</span>
+				<span class="separator">·</span>
+				<span>DENVER, CO</span>
+			</div>
+
+			<h1 class="hero-heading">
+				<span class="hero-heading-line">GET YOUR</span>
+				<span class="hero-heading-line hero-heading-accent"
+					>BUSINESS</span
+				>
+				<span class="hero-heading-line">NOTICED.</span>
+			</h1>
+
+			<p class="hero-description">
+				Denver's sharpest advertising and digital marketing<br />
+				team — on screens, on search, and everywhere<br />
+				your customers are.
+			</p>
+
+			<button class="hero-cta">
+				TALK TO OUR TEAM
+				<svg
+					width="16"
+					height="16"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="3"
+						d="M9 5l7 7-7 7"></path>
+				</svg>
+			</button>
+
+			<div class="hero-stats">
+				<div class="hero-stat">
+					<div class="hero-stat-number">500+</div>
+					<div class="hero-stat-label">Screens Deployed</div>
 				</div>
-
-				<!-- Main Heading -->
-				<h1
-					class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight px-2"
-				>
-					Local Advertising and
-					<span
-						class="block text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-sky-400 mt-1.5"
-					>
-						Digital Marketing
-					</span>
-					<span class="block mt-1.5">Pros in Denver</span>
-				</h1>
-
-				<!-- Subheading - Simplified -->
-				<p
-					class="text-sky-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto px-4"
-				>
-					Helping Businesses Get Noticed—On Screens and Online
-				</p>
-
-				<!-- CTA Buttons -->
-				<div
-					class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 pt-3 px-4"
-				>
-					<button
-						class="bg-white text-slate-900 px-8 py-3.5 rounded-lg font-semibold hover:bg-slate-50 transition-all uppercase tracking-wide text-sm shadow-xl hover:shadow-indigo-500/20 hover:scale-105 transform duration-200"
-					>
-						Talk to Our Team
-					</button>
-					<button
-						class="bg-transparent border-2 border-white/40 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all uppercase tracking-wide text-sm backdrop-blur-sm"
-					>
-						Learn More
-					</button>
+				<div class="hero-stat">
+					<div class="hero-stat-number">20+</div>
+					<div class="hero-stat-label">Years of Expertise</div>
 				</div>
-			</div>
-		</div>
-
-		<!-- Bottom Gradient Fade -->
-		<div
-			class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"
-		>
-		</div>
-	</section>
-
-	<!-- Services Section -->
-	<section class="bg-slate-50 py-16 md:py-20 lg:py-24">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<!-- Section Header -->
-			<div class="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
-				<h2
-					class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4"
-				>
-					Local Advertising Solutions for Denver Businesses
-				</h2>
-				<p class="text-slate-600 text-base md:text-lg leading-relaxed">
-					As your trusted <span class="font-bold text-slate-900"
-						>Denver marketing pros</span
-					>, our <span class="text-indigo-600 font-semibold"
-						>billboard network</span
-					> gives you access to high-traffic locations where your ideal
-					customers spend time. From gyms and restaurants to retail stores
-					and office buildings, we help you get noticed in the moments that
-					matter.
-				</p>
-			</div>
-			<!-- Unique Asymmetric Grid Layout -->
-			<div class="grid lg:grid-cols-2 gap-6 md:gap-7">
-				<!-- Featured Card - Indoor Billboard (Large) -->
-				<div
-					class="group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-10 lg:p-12 hover:shadow-2xl transition-all duration-300 lg:row-span-2 flex flex-col justify-between"
-				>
-					<div>
-						<h3
-							class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 uppercase tracking-wide"
-						>
-							Local Advertising Solutions for Denver Businesses
-						</h3>
-						<p
-							class="text-slate-300 text-base md:text-lg leading-relaxed mb-6"
-						>
-							As your trusted <span class="font-bold text-white"
-								>Denver marketing pros</span
-							>, our <span class="text-indigo-400 font-semibold"
-								>billboard network</span
-							> gives you access to high-traffic locations where your
-							ideal customers spend time. From gyms and restaurants
-							to retail stores and office buildings, we help you get
-							noticed in the moments that matter.
-						</p>
-					</div>
-					<div
-						class="flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-3 transition-all group-hover:text-indigo-300"
-					>
-						<span class="text-sm uppercase tracking-wider"
-							>Explore Our Digital Marketing Services</span
-						>
-						<svg
-							class="w-5 h-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-						</svg>
-					</div>
+				<div class="hero-stat">
+					<div class="hero-stat-number">1,200+</div>
+					<div class="hero-stat-label">Clients Served</div>
 				</div>
-
-				<!-- Compact Cards Column -->
-				<div class="space-y-6 md:space-y-7">
-					<!-- Indoor Billboard Advertising Card -->
-					<div
-						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-indigo-400"
-					>
-						<div class="flex items-start gap-4">
-							<div
-								class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
-							>
-								<svg
-									class="w-8 h-8 text-white"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<rect
-										x="3"
-										y="3"
-										width="18"
-										height="18"
-										rx="2"
-										stroke-width="2"></rect>
-									<path
-										d="M9 9h6M9 12h6M9 15h4"
-										stroke-width="2"
-										stroke-linecap="round"></path>
-								</svg>
-							</div>
-							<div>
-								<h3
-									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-								>
-									Indoor Billboard Advertising
-								</h3>
-								<p
-									class="text-slate-700 text-sm leading-relaxed"
-								>
-									High-impact advertising in premium indoor
-									locations across Denver. Reach your audience
-									where they spend their time.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- Social Media Marketing Card -->
-					<div
-						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-indigo-400"
-					>
-						<div class="flex items-start gap-4">
-							<div
-								class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
-							>
-								<svg
-									class="w-6 h-6 text-white"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
-									></path>
-								</svg>
-							</div>
-							<div>
-								<h3
-									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-								>
-									Social Media Marketing
-								</h3>
-								<p
-									class="text-slate-700 text-sm leading-relaxed"
-								>
-									Build and engage your audience with
-									strategic social media content
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Custom Website Design Card -->
-					<div
-						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-sky-400"
-					>
-						<div class="flex items-start gap-4">
-							<div
-								class="w-12 h-12 bg-sky-500 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
-							>
-								<svg
-									class="w-6 h-6 text-white"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-									></path>
-								</svg>
-							</div>
-							<div>
-								<h3
-									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-								>
-									Custom Website Design
-								</h3>
-								<p
-									class="text-slate-700 text-sm leading-relaxed"
-								>
-									Professional websites that convert visitors
-									into customers
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Targeted Lead Generation Card -->
-					<div
-						class="group bg-slate-50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 border-2 border-slate-200 hover:border-indigo-400"
-					>
-						<div class="flex items-start gap-4">
-							<div
-								class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
-							>
-								<svg
-									class="w-6 h-6 text-white"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-									></path>
-								</svg>
-							</div>
-							<div>
-								<h3
-									class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-								>
-									Targeted Lead Generation
-								</h3>
-								<p
-									class="text-slate-700 text-sm leading-relaxed"
-								>
-									Strategic campaigns that generate quality
-									leads and maximize ROI
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Venue Partner Network Section - Balanced & Clean -->
-	<section class="relative bg-white py-16 md:py-20 lg:py-24 overflow-hidden">
-		<div class="max-w-6xl mx-auto px-4 md:px-6">
-			<!-- Section Header -->
-			<div class="text-center mb-10 md:mb-12">
-				<h2
-					class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3"
-				>
-					Denver's Premier Venue Partner Network
-				</h2>
-				<p
-					class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto"
-				>
-					Exclusive partnerships with Denver's most popular venues
-					reaching customers when they're engaged and ready to take
-					action.
-				</p>
-			</div>
-
-			<!-- Content Grid -->
-			<div class="grid lg:grid-cols-2 gap-8 md:gap-10 items-start">
-				<!-- Image Side with Stats -->
-				<div class="relative order-2 lg:order-1">
-					<div
-						class="relative rounded-xl overflow-hidden shadow-xl aspect-[5/4]"
-					>
-						<img
-							src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80"
-							alt="Modern digital advertising display"
-							class="w-full h-full object-cover"
-						/>
-						<div
-							class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-						>
-						</div>
-
-						<!-- Stats Overlay -->
-						<div
-							class="absolute bottom-3 left-3 right-3 grid grid-cols-2 gap-2.5"
-						>
-							<div
-								class="bg-white/95 backdrop-blur-sm rounded-lg p-3.5"
-							>
-								<div
-									class="text-2xl md:text-3xl font-bold text-indigo-600"
-								>
-									50+
-								</div>
-								<div class="text-xs text-slate-600 font-medium">
-									Premium Venues
-								</div>
-							</div>
-							<div
-								class="bg-white/95 backdrop-blur-sm rounded-lg p-3.5"
-							>
-								<div
-									class="text-2xl md:text-3xl font-bold text-indigo-600"
-								>
-									2M+
-								</div>
-								<div class="text-xs text-slate-600 font-medium">
-									Monthly Views
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Content Side -->
-				<div class="order-1 lg:order-2">
-					<!-- Benefits Grid -->
-					<div class="grid gap-3.5 mb-6">
-						<div
-							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-indigo-200 transition-colors"
-						>
-							<div
-								class="w-9 h-9 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0"
-							>
-								<svg
-									class="w-5 h-5 text-indigo-600"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M5 13l4 4L19 7"></path>
-								</svg>
-							</div>
-							<div>
-								<h4
-									class="font-semibold text-slate-900 text-sm mb-1"
-								>
-									Local Market Expertise
-								</h4>
-								<p
-									class="text-xs text-slate-600 leading-relaxed"
-								>
-									Strategic placement in high-traffic Denver
-									locations
-								</p>
-							</div>
-						</div>
-
-						<div
-							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-sky-200 transition-colors"
-						>
-							<div
-								class="w-9 h-9 bg-sky-100 rounded-lg flex items-center justify-center shrink-0"
-							>
-								<svg
-									class="w-5 h-5 text-sky-600"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M5 13l4 4L19 7"></path>
-								</svg>
-							</div>
-							<div>
-								<h4
-									class="font-semibold text-slate-900 text-sm mb-1"
-								>
-									High-Dwell-Time Locations
-								</h4>
-								<p
-									class="text-xs text-slate-600 leading-relaxed"
-								>
-									Gyms, restaurants, retail stores, and office
-									buildings
-								</p>
-							</div>
-						</div>
-
-						<div
-							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-indigo-200 transition-colors"
-						>
-							<div
-								class="w-9 h-9 bg-indigo-100 rounded-lg flex items-center justify-center shrink-0"
-							>
-								<svg
-									class="w-5 h-5 text-indigo-600"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M5 13l4 4L19 7"></path>
-								</svg>
-							</div>
-							<div>
-								<h4
-									class="font-semibold text-slate-900 text-sm mb-1"
-								>
-									Targeted Audience Reach
-								</h4>
-								<p
-									class="text-xs text-slate-600 leading-relaxed"
-								>
-									Connect with your ideal customers at the
-									right moment
-								</p>
-							</div>
-						</div>
-
-						<div
-							class="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200 hover:border-sky-200 transition-colors"
-						>
-							<div
-								class="w-9 h-9 bg-sky-100 rounded-lg flex items-center justify-center shrink-0"
-							>
-								<svg
-									class="w-5 h-5 text-sky-600"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M5 13l4 4L19 7"></path>
-								</svg>
-							</div>
-							<div>
-								<h4
-									class="font-semibold text-slate-900 text-sm mb-1"
-								>
-									Flexible Campaign Options
-								</h4>
-								<p
-									class="text-xs text-slate-600 leading-relaxed"
-								>
-									Customizable solutions to fit your budget
-									and goals
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- CTA Button -->
-					<button
-						class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white px-7 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2"
-					>
-						View Venue Partners
-						<svg
-							class="w-5 h-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-						</svg>
-					</button>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Full-Service Marketing Section -->
-	<section class="bg-slate-50 py-12 md:py-16 lg:py-20">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<!-- Section Header -->
-			<div class="max-w-4xl mb-12 md:mb-16">
-				<div
-					class="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
-				>
+				<button class="hero-scroll">
+					SCROLL
 					<svg
-						class="w-4 h-4"
-						fill="currentColor"
-						viewBox="0 0 20 20"
-					>
-						<path
-							fill-rule="evenodd"
-							d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-							clip-rule="evenodd"></path>
-					</svg>
-					Featured
-				</div>
-				<h2
-					class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 md:mb-6"
-				>
-					Full-Service Digital Marketing from Denver Pros
-				</h2>
-				<p class="text-slate-600 text-base md:text-lg leading-relaxed">
-					Beyond screen ads, our <span
-						class="font-semibold text-slate-900"
-						>Denver marketing pros</span
-					> provide full-scale digital marketing to help your business show
-					up, stand out, and grow. Whether you're just getting started or
-					need help scaling your outreach, we've got the tools and the team
-					to support you.
-				</p>
-			</div>
-
-			<!-- Hero Image -->
-			<div class="mb-12 md:mb-16">
-				<div class="relative rounded-3xl overflow-hidden shadow-2xl">
-					<img
-						src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
-						alt="Marketing team collaboration"
-						class="w-full h-[300px] md:h-[400px] object-cover"
-					/>
-					<div
-						class="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent"
-					>
-					</div>
-				</div>
-			</div>
-
-			<!-- Services Grid -->
-			<div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12">
-				<!-- Google Business Profile Setup -->
-				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
-				>
-					<div class="flex items-start gap-4 md:gap-6">
-						<div class="shrink-0">
-							<div
-								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
-							>
-								<svg
-									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-									></path>
-								</svg>
-							</div>
-						</div>
-						<div class="flex-1">
-							<h3
-								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-							>
-								Google Business Profile Setup
-							</h3>
-							<p class="text-slate-600 text-sm md:text-base">
-								Get found on Google Maps and local search.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Professional Website Design -->
-				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
-				>
-					<div class="flex items-start gap-4 md:gap-6">
-						<div class="shrink-0">
-							<div
-								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
-							>
-								<svg
-									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-									></path>
-								</svg>
-							</div>
-						</div>
-						<div class="flex-1">
-							<h3
-								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-							>
-								Professional Website Design
-							</h3>
-							<p class="text-slate-600 text-sm md:text-base">
-								Fast, mobile-ready websites built for
-								performance.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Social Media Strategy -->
-				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
-				>
-					<div class="flex items-start gap-4 md:gap-6">
-						<div class="shrink-0">
-							<div
-								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
-							>
-								<svg
-									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-									></path>
-								</svg>
-							</div>
-						</div>
-						<div class="flex-1">
-							<h3
-								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-							>
-								Social Media Strategy
-							</h3>
-							<p class="text-slate-600 text-sm md:text-base">
-								Consistent posting and creative to grow your
-								presence.
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- PPC Campaign Management -->
-				<div
-					class="group bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-slate-400"
-				>
-					<div class="flex items-start gap-4 md:gap-6">
-						<div class="shrink-0">
-							<div
-								class="w-14 h-14 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-slate-900 transition-colors"
-							>
-								<svg
-									class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-									></path>
-								</svg>
-							</div>
-						</div>
-						<div class="flex-1">
-							<h3
-								class="text-lg md:text-xl font-bold text-slate-900 mb-2 uppercase tracking-wide"
-							>
-								PPC Campaign Management
-							</h3>
-							<p class="text-slate-600 text-sm md:text-base">
-								Targeted ads that drive calls, clicks, and
-								leads.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- CTA Button -->
-			<div class="text-center">
-				<button
-					class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white px-7 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center gap-2"
-				>
-					View All Marketing Solutions
-					<svg
-						class="w-5 h-5"
+						width="12"
+						height="12"
 						fill="none"
 						stroke="currentColor"
 						viewBox="0 0 24 24"
@@ -782,834 +72,794 @@ const optimizedBackground = await getImage({ src: homeImage });
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							stroke-width="2"
-							d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+							stroke-width="3"
+							d="M19 9l-7 7-7-7"></path>
 					</svg>
 				</button>
-			</div>
-		</div>
-	</section>
-
-	<!-- Why Choose Us Section -->
-	<section class="bg-slate-50 py-12 md:py-16 lg:py-20">
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<div
-				class="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
-			>
-				<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-					<path
-						fill-rule="evenodd"
-						d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-						clip-rule="evenodd"></path>
-				</svg>
-				Your Trusted Denver Marketing Partners
-			</div>
-			<div
-				class="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center"
-			>
-				<!-- Content Side -->
-				<div class="order-2 lg:order-1">
-					<h2
-						class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
-					>
-						Why Denver Businesses Choose Our Marketing Pros
-					</h2>
-
-					<div class="space-y-4 mb-8">
-						<p
-							class="text-slate-700 text-base md:text-lg leading-relaxed"
-						>
-							We're not just another agency. We're <span
-								class="font-bold text-slate-900"
-								>Denver marketing pros</span
-							> and locals who understand the market, know the neighborhoods,
-							and have the relationships that get results.
-						</p>
-						<p
-							class="text-slate-700 text-base md:text-lg leading-relaxed"
-						>
-							Our clients choose us because we deliver measurable
-							outcomes, transparent reporting, and personalized
-							service that treats your business like our own. From <span
-								class="font-semibold text-slate-900"
-								>web design</span
-							> to <span class="font-semibold text-slate-900"
-								>PPC campaigns</span
-							>, we've got you covered.
-						</p>
-					</div>
-
-					<button
-						class="bg-slate-900 hover:bg-slate-800 text-white px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
-					>
-						Get Started Today
-						<svg
-							class="w-5 h-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-						</svg>
-					</button>
-				</div>
-
-				<!-- Image Side -->
-				<div class="order-1 lg:order-2">
-					<div class="relative">
-						<!-- Main Image -->
-						<div
-							class="relative rounded-3xl overflow-hidden shadow-2xl"
-						>
-							<img
-								src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80"
-								alt="Business team celebrating success"
-								class="w-full h-[500px] md:h-[600px] object-cover"
-							/>
-							<div
-								class="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"
-							>
-							</div>
-						</div>
-
-						<!-- Floating Badge -->
-						<div
-							class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6 max-w-[200px]"
-						>
-							<div
-								class="text-4xl font-bold text-indigo-600 mb-1"
-							>
-								500+
-							</div>
-							<div class="text-sm text-slate-600 font-semibold">
-								Happy Clients in Denver
-							</div>
-						</div>
-
-						<!-- Decorative Elements -->
-						<div
-							class="absolute -top-4 -right-4 w-32 h-32 bg-sky-200 rounded-full blur-3xl opacity-40"
-						>
-						</div>
-						<div
-							class="absolute -bottom-8 -right-8 w-40 h-40 bg-cyan-200 rounded-full blur-3xl opacity-40"
-						>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Partner With Us Section -->
-	<section
-		class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 md:py-16 lg:py-20 overflow-hidden"
-	>
-		<!-- Background Pattern -->
-		<div class="absolute inset-0 opacity-10">
-			<div
-				class="absolute inset-0"
-				style="background-image: radial-gradient(circle at 2px 2px, #ffffff 1px, transparent 0); background-size: 40px 40px;"
-			>
-			</div>
-		</div>
-
-		<!-- Decorative Gradient Blobs -->
-		<div
-			class="absolute top-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
-		>
-		</div>
-		<div
-			class="absolute bottom-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl"
-		>
-		</div>
-
-		<div class="max-w-5xl mx-auto px-4 md:px-6 relative z-10">
-			<div
-				class="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl"
-			>
-				<!-- Content -->
-				<div class="text-center max-w-3xl mx-auto">
-					<h2
-						class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
-					>
-						Partner with Denver's Local Advertising & Digital
-						Marketing Pros
-					</h2>
-
-					<p
-						class="text-sky-200 text-base md:text-lg leading-relaxed mb-8 drop-shadow"
-					>
-						Whether you're looking for <span
-							class="font-semibold text-white">screen ads</span
-						>, a new <span class="font-semibold text-white"
-							>website</span
-						>, or a complete <span class="font-semibold text-white"
-							>digital marketing</span
-						> strategy in Denver, we're here to help. Contact us today
-						for a free consultation and let's discuss how we can grow
-						your business.
-					</p>
-
-					<!-- CTA Buttons -->
-					<div
-						class="flex flex-col sm:flex-row gap-4 justify-center items-center"
-					>
-						<button
-							class="bg-white text-[#0a1628] px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm w-full sm:w-auto"
-						>
-							Schedule Free Consultation
-						</button>
-						<button
-							class="bg-transparent border-2 border-white text-white px-8 md:px-10 py-3.5 md:py-4 rounded-xl font-semibold hover:bg-white/20 hover:border-white transition-all backdrop-blur-sm uppercase tracking-wide text-sm w-full sm:w-auto"
-						>
-							Learn More
-						</button>
-					</div>
-
-					<!-- Trust Indicators -->
-					<div
-						class="mt-10 flex flex-wrap justify-center items-center gap-6 md:gap-8 text-sm text-white"
-					>
-						<div class="flex items-center gap-2">
-							<svg
-								class="w-5 h-5 text-sky-500"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-									clip-rule="evenodd"></path>
-							</svg>
-							<span class="font-medium">Free Consultation</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<svg
-								class="w-5 h-5 text-sky-500"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-									clip-rule="evenodd"></path>
-							</svg>
-							<span class="font-medium">Local Denver Team</span>
-						</div>
-						<div class="flex items-center gap-2">
-							<svg
-								class="w-5 h-5 text-sky-500"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-									clip-rule="evenodd"></path>
-							</svg>
-							<span class="font-medium">Proven Results</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!-- FAQ Section -->
-	<section class="bg-white py-12 md:py-16 lg:py-20">
-		<div class="max-w-4xl mx-auto px-4 md:px-6">
-			<!-- Header -->
-			<div class="text-center mb-12 md:mb-16">
-				<div
-					class="inline-flex items-center gap-2 bg-indigo-100 text-indigo-600 text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full mb-4"
-				>
-					<svg
-						class="w-4 h-4"
-						fill="currentColor"
-						viewBox="0 0 20 20"
-					>
-						<path
-							fill-rule="evenodd"
-							d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-							clip-rule="evenodd"></path>
-					</svg>
-					Fill Every Call with Joy
-				</div>
-				<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-					Frequently Asked Questions
-				</h2>
-				<p class="text-slate-600 max-w-2xl mx-auto">
-					Find answers to common questions about our services and how
-					we can benefit your business.
-				</p>
-			</div>
-
-			<!-- Accordion Items -->
-			<div class="space-y-4">
-				<!-- FAQ 1 - Open by default -->
-				<div
-					class="faq-item faq-open border-2 border-indigo-600 rounded-2xl overflow-hidden bg-indigo-50/50 hover:border-gray-300 transition-all"
-				>
-					<button
-						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-indigo-50 transition-all"
-					>
-						<h3
-							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
-						>
-							What is indoor digital signage advertising?
-						</h3>
-						<svg
-							class="faq-icon w-6 h-6 text-slate-900 shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M20 12H4"></path>
-						</svg>
-					</button>
-					<div class="faq-content px-6 pb-6">
-						<p class="text-slate-700 leading-relaxed">
-							It's the placement of your ads on TV screens located
-							inside high-traffic venues, offering brand
-							visibility where people are already engaged.
-						</p>
-					</div>
-				</div>
-
-				<!-- FAQ 2 -->
-				<div
-					class="faq-item border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-gray-300 transition-all"
-				>
-					<button
-						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-all"
-					>
-						<h3
-							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
-						>
-							Do you offer packages that include screens and
-							online ads?
-						</h3>
-						<svg
-							class="faq-icon w-6 h-6 text-gray-400 shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M12 4v16m8-8H4"></path>
-						</svg>
-					</button>
-					<div class="faq-content px-6 pb-6" style="display: none;">
-						<p class="text-slate-700 leading-relaxed">
-							Yes! We offer comprehensive marketing packages that
-							combine indoor digital signage with online
-							advertising campaigns. Our bundled solutions provide
-							maximum reach across both physical and digital
-							channels, ensuring your brand message reaches your
-							target audience wherever they are.
-						</p>
-					</div>
-				</div>
-
-				<!-- FAQ 3 -->
-				<div
-					class="faq-item border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-gray-300 transition-all"
-				>
-					<button
-						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-all"
-					>
-						<h3
-							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
-						>
-							Can you help my business rank on Google?
-						</h3>
-						<svg
-							class="faq-icon w-6 h-6 text-gray-400 shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M12 4v16m8-8H4"></path>
-						</svg>
-					</button>
-					<div class="faq-content px-6 pb-6" style="display: none;">
-						<p class="text-slate-700 leading-relaxed">
-							Absolutely! Our digital marketing services include
-							Google Business Profile optimization, local SEO
-							strategies, and PPC campaign management. We'll help
-							improve your online visibility, increase your search
-							rankings, and drive more qualified traffic to your
-							business.
-						</p>
-					</div>
-				</div>
-
-				<!-- FAQ 4 -->
-				<div
-					class="faq-item border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-gray-300 transition-all"
-				>
-					<button
-						class="faq-button w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-all"
-					>
-						<h3
-							class="text-lg md:text-xl font-bold text-slate-900 pr-4"
-						>
-							How long does it take to see results?
-						</h3>
-						<svg
-							class="faq-icon w-6 h-6 text-gray-400 shrink-0"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M12 4v16m8-8H4"></path>
-						</svg>
-					</button>
-					<div class="faq-content px-6 pb-6" style="display: none;">
-						<p class="text-slate-700 leading-relaxed">
-							Results vary by service. Indoor advertising
-							campaigns typically show immediate brand visibility,
-							while digital marketing efforts like SEO may take
-							3-6 months for significant results. PPC campaigns
-							can generate leads within days. We provide regular
-							reporting so you can track progress every step of
-							the way.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<!-- Still Have Questions Box -->
-			<div
-				class="mt-8 bg-gray-50 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 border border-gray-200"
-			>
-				<div class="flex items-center gap-4">
-					<div
-						class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center shrink-0"
-					>
-						<svg
-							class="w-6 h-6 text-white"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-							></path>
-						</svg>
-					</div>
-					<div>
-						<h3 class="font-bold text-slate-900 mb-1">
-							Still have a question?
-						</h3>
-						<p class="text-sm text-slate-600">
-							If you didn't find your answer, feel free to reach
-							out
-						</p>
-					</div>
-				</div>
-				<button
-					class="bg-white border-2 border-slate-900 text-slate-900 px-6 py-3 rounded-xl font-semibold hover:bg-slate-900 hover:text-white transition-all text-sm whitespace-nowrap"
-				>
-					Contact us
-				</button>
-			</div>
-		</div>
-	</section>
-
-	<!-- Locations Map Section -->
-	<section
-		class="bg-slate-50 py-12 md:py-16 lg:py-20 pb-40 md:pb-48 lg:pb-56"
-	>
-		<div class="max-w-7xl mx-auto px-4 md:px-6">
-			<div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-				<!-- Left Side - Content -->
-				<div>
-					<div
-						class="inline-flex items-center gap-2 border-2 border-slate-900 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-lg mb-6"
-					>
-						<svg
-							class="w-4 h-4"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-								clip-rule="evenodd"></path>
-						</svg>
-						NETWORK COVERAGE
-					</div>
-
-					<h2
-						class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
-					>
-						We Put Local Brands on the Map
-					</h2>
-
-					<p
-						class="text-slate-600 text-base md:text-lg leading-relaxed mb-8"
-					>
-						Our network spans across Denver's most popular
-						neighborhoods and venues
-					</p>
-
-					<!-- Location List -->
-					<div class="space-y-3">
-						<button
-							onclick="flyToCity(39.7294, -104.8319); setActiveLocation(this)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
-						>
-							<div class="flex items-center gap-3">
-								<div
-									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
-								>
-									<svg
-										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-											clip-rule="evenodd"></path>
-									</svg>
-								</div>
-								<span
-									class="font-semibold text-slate-900 text-left transition-colors"
-									>Aurora</span
-								>
-							</div>
-							<svg
-								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 5l7 7-7 7"></path>
-							</svg>
-						</button>
-
-						<button
-							onclick="flyToCity(39.7047, -105.0814); setActiveLocation(this)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
-						>
-							<div class="flex items-center gap-3">
-								<div
-									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
-								>
-									<svg
-										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-											clip-rule="evenodd"></path>
-									</svg>
-								</div>
-								<span
-									class="font-semibold text-slate-900 text-left"
-									>Lakewood</span
-								>
-							</div>
-							<svg
-								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 5l7 7-7 7"></path>
-							</svg>
-						</button>
-
-						<button
-							onclick="flyToCity(39.8028, -105.0875); setActiveLocation(this)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
-						>
-							<div class="flex items-center gap-3">
-								<div
-									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
-								>
-									<svg
-										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-											clip-rule="evenodd"></path>
-									</svg>
-								</div>
-								<span
-									class="font-semibold text-slate-900 text-left"
-									>Arvada</span
-								>
-							</div>
-							<svg
-								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 5l7 7-7 7"></path>
-							</svg>
-						</button>
-
-						<button
-							onclick="flyToCity(39.5807, -104.8767); setActiveLocation(this)"
-							class="location-btn w-full flex items-center justify-between p-4 bg-white border-2 border-slate-200 rounded-xl hover:bg-slate-100 hover:border-slate-400 transition-all group"
-						>
-							<div class="flex items-center gap-3">
-								<div
-									class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center group-hover:bg-slate-200 transition-colors"
-								>
-									<svg
-										class="w-5 h-5 text-slate-600 group-hover:text-slate-900 transition-colors"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-											clip-rule="evenodd"></path>
-									</svg>
-								</div>
-								<span
-									class="font-semibold text-slate-900 text-left"
-									>Centennial</span
-								>
-							</div>
-							<svg
-								class="w-5 h-5 text-slate-400 group-hover:text-slate-900 group-hover:translate-x-1 transition-all"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 5l7 7-7 7"></path>
-							</svg>
-						</button>
-					</div>
-
-					<script>
-						function setActiveLocation(
-							clickedButton: HTMLButtonElement,
-						) {
-							// Remove active state from all buttons
-							const allButtons =
-								document.querySelectorAll(".location-btn");
-							allButtons.forEach((button) => {
-								button.classList.remove(
-									"bg-slate-900",
-									"border-slate-900",
-								);
-								button.classList.add(
-									"bg-white",
-									"border-slate-200",
-								);
-
-								// Reset icon background
-								const iconDiv =
-									button.querySelector("div > div");
-								iconDiv.classList.remove("bg-white");
-								iconDiv.classList.add("bg-slate-100");
-
-								// Reset icon color
-								const icon = iconDiv.querySelector("svg");
-								icon.classList.remove("text-slate-900");
-								icon.classList.add("text-slate-600");
-
-								// Reset text color
-								const span = button.querySelector("span");
-								span.classList.remove("text-white");
-								span.classList.add("text-slate-900");
-
-								// Reset arrow color
-								const arrow = button.querySelector("div + svg");
-								arrow.classList.remove("text-white");
-								arrow.classList.add("text-slate-400");
-							});
-
-							// Add active state to clicked button
-							clickedButton.classList.remove(
-								"bg-white",
-								"border-slate-200",
-							);
-							clickedButton.classList.add(
-								"bg-slate-900",
-								"border-slate-900",
-							);
-
-							// Update icon background
-							const activeIconDiv =
-								clickedButton.querySelector("div > div");
-							activeIconDiv.classList.remove("bg-slate-100");
-							activeIconDiv.classList.add("bg-white");
-
-							// Update icon color
-							const activeIcon =
-								activeIconDiv.querySelector("svg");
-							activeIcon.classList.remove("text-slate-600");
-							activeIcon.classList.add("text-slate-900");
-
-							// Update text color
-							const span = clickedButton.querySelector("span");
-							span.classList.remove("text-slate-900");
-							span.classList.add("text-white");
-
-							// Update arrow color
-							const arrow =
-								clickedButton.querySelector("div + svg");
-							arrow.classList.remove("text-slate-400");
-							arrow.classList.add("text-white");
-
-							// Show active indicator (add green dot)
-							activeIconDiv.style.position = "relative";
-							let indicator =
-								activeIconDiv.querySelector(".active-dot");
-							if (!indicator) {
-								indicator = document.createElement("span");
-								indicator.className =
-									"active-dot absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white";
-								activeIconDiv.appendChild(indicator);
-							}
-
-							// Hide indicators from other buttons
-							allButtons.forEach((button) => {
-								if (button !== clickedButton) {
-									const dot =
-										button.querySelector(".active-dot");
-									if (dot) dot.remove();
-								}
-							});
-						}
-					</script>
-
-					<!-- View All Button -->
-					<div class="mt-8">
-						<button
-							class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200 uppercase tracking-wide text-sm inline-flex items-center gap-2"
-						>
-							View All Locations
-							<svg
-								class="w-5 h-5"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-							</svg>
-						</button>
-					</div>
-				</div>
-
-				<!-- Right Side - Map Card -->
-				<div class="relative">
-					<!-- Map Container -->
-					<div
-						class="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-slate-200"
-					>
-						<!-- Header -->
-						<div
-							class="bg-gradient-to-r from-slate-800 to-slate-900 p-6 text-white"
-						>
-							<div class="flex items-center gap-3 mb-2">
-								<svg
-									class="w-6 h-6"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-										clip-rule="evenodd"></path>
-								</svg>
-								<h3 class="text-xl font-bold">Our Locations</h3>
-							</div>
-							<p class="text-slate-300 text-sm">
-								Browse the venues in our network while exploring
-								the map.
-							</p>
-						</div>
-
-						<!-- Interactive Map -->
-						<Map />
-
-						<!-- Stats Overlay -->
-						<div
-							class="absolute bottom-6 left-6 right-6 grid grid-cols-2 gap-3 z-[400]"
-						>
-							<div
-								class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl"
-							>
-								<div
-									class="text-2xl font-bold text-slate-900 mb-1"
-								>
-									50+
-								</div>
-								<div class="text-xs text-slate-600 font-medium">
-									Active Venues
-								</div>
-							</div>
-							<div
-								class="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl"
-							>
-								<div
-									class="text-2xl font-bold text-slate-900 mb-1"
-								>
-									15+
-								</div>
-								<div class="text-xs text-slate-600 font-medium">
-									Neighborhoods
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
 </Layout>
+
+<!-- Services Section -->
+<section class="section-white">
+	<div class="section-container">
+		<div class="section-grid">
+			<div class="section-header">
+				<span class="section-label">OUR SERVICES</span>
+				<h2 class="section-title">
+					LOCAL ADVERTISING SOLUTIONS FOR DENVER BUSINESSES
+				</h2>
+			</div>
+
+			<div class="section-content">
+				<p class="section-description">
+					As your trusted Denver marketing pros, our billboard network
+					gives you access to high-traffic locations where your ideal
+					customers spend time.
+				</p>
+
+				<div class="service-list">
+					<div class="service-item">
+						<h3 class="service-title">
+							INDOOR BILLBOARD ADVERTISING
+						</h3>
+						<p class="service-description">
+							High-impact advertising in premium indoor locations
+							across Denver.
+						</p>
+					</div>
+					<div class="service-item">
+						<h3 class="service-title">SOCIAL MEDIA MARKETING</h3>
+						<p class="service-description">
+							Build and engage your audience with strategic social
+							media content.
+						</p>
+					</div>
+					<div class="service-item">
+						<h3 class="service-title">CUSTOM WEBSITE DESIGN</h3>
+						<p class="service-description">
+							Professional websites that convert visitors into
+							customers.
+						</p>
+					</div>
+					<div class="service-item">
+						<h3 class="service-title">TARGETED LEAD GENERATION</h3>
+						<p class="service-description">
+							Strategic campaigns that generate quality leads and
+							maximize ROI.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Venue Partner Network Section -->
+<section class="section-paper">
+	<div class="section-container">
+		<div class="section-grid">
+			<div class="section-header">
+				<span class="section-label">NETWORK COVERAGE</span>
+				<h2 class="section-title">
+					DENVER'S PREMIER VENUE PARTNER NETWORK
+				</h2>
+			</div>
+
+			<div class="section-content">
+				<p class="section-description">
+					Exclusive partnerships with Denver's most popular venues
+					reaching customers when they're engaged and ready to take
+					action.
+				</p>
+
+				<div class="stats-grid">
+					<div class="stat-card">
+						<div class="stat-number">50+</div>
+						<div class="stat-label">PREMIUM VENUES</div>
+					</div>
+					<div class="stat-card">
+						<div class="stat-number">2M+</div>
+						<div class="stat-label">MONTHLY VIEWS</div>
+					</div>
+				</div>
+
+				<button class="btn-primary">
+					VIEW VENUE PARTNERS
+					<svg
+						width="14"
+						height="14"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-white">
+	<div class="section-container">
+		<div class="section-grid">
+			<div class="section-header sticky-header">
+				<span class="section-label">FAQ</span>
+				<h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+				<p class="section-description">
+					Find answers to common questions about our services.
+				</p>
+			</div>
+
+			<div class="section-content">
+				<div class="faq-list">
+					<div class="faq-item">
+						<button class="faq-button">
+							<h3 class="faq-question">
+								WHAT IS INDOOR DIGITAL SIGNAGE ADVERTISING?
+							</h3>
+							<svg
+								class="faq-icon"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4v16m8-8H4"></path>
+							</svg>
+						</button>
+						<div class="faq-answer hidden">
+							<p>
+								It's the placement of your ads on TV screens
+								located inside high-traffic venues, offering
+								brand visibility where people are already
+								engaged.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-button">
+							<h3 class="faq-question">
+								DO YOU OFFER PACKAGES THAT INCLUDE SCREENS AND
+								ONLINE ADS?
+							</h3>
+							<svg
+								class="faq-icon"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4v16m8-8H4"></path>
+							</svg>
+						</button>
+						<div class="faq-answer hidden">
+							<p>
+								Yes! We offer comprehensive marketing packages
+								that combine indoor digital signage with online
+								advertising campaigns.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-button">
+							<h3 class="faq-question">
+								CAN YOU HELP MY BUSINESS RANK ON GOOGLE?
+							</h3>
+							<svg
+								class="faq-icon"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4v16m8-8H4"></path>
+							</svg>
+						</button>
+						<div class="faq-answer hidden">
+							<p>
+								Absolutely! Our digital marketing services
+								include Google Business Profile optimization,
+								local SEO strategies, and PPC campaign
+								management.
+							</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-button">
+							<h3 class="faq-question">
+								HOW LONG DOES IT TAKE TO SEE RESULTS?
+							</h3>
+							<svg
+								class="faq-icon"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 4v16m8-8H4"></path>
+							</svg>
+						</button>
+						<div class="faq-answer hidden">
+							<p>
+								Results vary by service. Indoor advertising
+								campaigns typically show immediate brand
+								visibility, while digital marketing efforts like
+								SEO may take 3-6 months.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+	<div class="cta-container">
+		<div class="cta-grid">
+			<div class="cta-header">
+				<h2 class="cta-title">
+					PARTNER WITH DENVER'S LOCAL ADVERTISING & DIGITAL MARKETING
+					PROS
+				</h2>
+			</div>
+			<div class="cta-content">
+				<p class="cta-description">
+					Whether you're looking for screen ads, a new website, or a
+					complete digital marketing strategy in Denver, we're here to
+					help.
+				</p>
+				<div class="cta-buttons">
+					<button class="btn-cta-primary">
+						SCHEDULE FREE CONSULTATION
+						<svg
+							width="14"
+							height="14"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="3"
+								d="M9 5l7 7-7 7"></path>
+						</svg>
+					</button>
+					<button class="btn-cta-secondary"> LEARN MORE </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const faqButtons = document.querySelectorAll(".faq-button");
+
+		faqButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const faqItem = button.closest(".faq-item");
+				const answer = faqItem?.querySelector(".faq-answer");
+				const icon = button.querySelector(".faq-icon");
+
+				if (answer && icon) {
+					const isOpen = !answer.classList.contains("hidden");
+
+					if (isOpen) {
+						answer.classList.add("hidden");
+						icon.style.transform = "rotate(0deg)";
+					} else {
+						answer.classList.remove("hidden");
+						icon.style.transform = "rotate(45deg)";
+					}
+				}
+			});
+		});
+	});
+</script>
+
+<style>
+	/* Hero Section */
+	.hero-section {
+		position: relative;
+		background: #000000;
+		color: #ffffff;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding: 8rem 2rem 4rem;
+		overflow: hidden;
+	}
+
+	.hero-pattern {
+		position: absolute;
+		inset: 0;
+		opacity: 0.03;
+		background-image: radial-gradient(
+			circle at 2px 2px,
+			#ffffff 1px,
+			transparent 0
+		);
+		background-size: 40px 40px;
+	}
+
+	.hero-container {
+		max-width: 90rem;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+		z-index: 10;
+	}
+
+	.hero-label {
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		color: #ff5c00;
+		margin-bottom: 3rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.separator {
+		color: rgba(255, 255, 255, 0.3);
+	}
+
+	.hero-heading {
+		font-size: clamp(3rem, 12vw, 9rem);
+		font-weight: 800;
+		line-height: 0.9;
+		letter-spacing: -0.02em;
+		margin-bottom: 2.5rem;
+		text-transform: uppercase;
+	}
+
+	.hero-heading-line {
+		display: block;
+	}
+
+	.hero-heading-accent {
+		color: #ff5c00;
+		font-style: italic;
+	}
+
+	.hero-description {
+		font-size: 15px;
+		line-height: 1.7;
+		color: rgba(255, 255, 255, 0.6);
+		margin-bottom: 3rem;
+		max-width: 600px;
+	}
+
+	.hero-cta {
+		background: #ff5c00;
+		color: #000000;
+		border: none;
+		padding: 1.125rem 2.5rem;
+		font-size: 11px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		cursor: pointer;
+		transition: background 0.2s;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		border-radius: 0;
+		margin-bottom: 6rem;
+	}
+
+	.hero-cta:hover {
+		background: #ffffff;
+	}
+
+	.hero-stats {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 3rem;
+		padding-top: 3rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		max-width: 1200px;
+	}
+
+	.hero-stat {
+		text-align: left;
+	}
+
+	.hero-stat-number {
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 0.5rem;
+		color: #ffffff;
+	}
+
+	.hero-stat-label {
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: rgba(255, 255, 255, 0.4);
+	}
+
+	.hero-scroll {
+		background: none;
+		border: none;
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0;
+		transition: color 0.2s;
+	}
+
+	.hero-scroll:hover {
+		color: #ff5c00;
+	}
+
+	/* Section Styles */
+	.section-white {
+		background: #ffffff;
+		padding: 6rem 2rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	.section-paper {
+		background: #f9f9f7;
+		padding: 6rem 2rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	.section-container {
+		max-width: 90rem;
+		margin: 0 auto;
+	}
+
+	.section-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 3rem;
+	}
+
+	.section-header {
+		grid-column: span 12;
+	}
+
+	.section-content {
+		grid-column: span 12;
+	}
+
+	@media (min-width: 1024px) {
+		.section-header {
+			grid-column: span 5;
+		}
+
+		.section-content {
+			grid-column: span 7;
+		}
+
+		.sticky-header {
+			position: sticky;
+			top: 8rem;
+		}
+	}
+
+	.section-label {
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.25em;
+		color: #ff5c00;
+		display: block;
+		margin-bottom: 2rem;
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		margin-bottom: 2rem;
+	}
+
+	.section-description {
+		font-size: 15px;
+		line-height: 1.7;
+		color: rgba(0, 0, 0, 0.6);
+		margin-bottom: 3rem;
+	}
+
+	/* Service List */
+	.service-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.service-item {
+		padding: 2rem 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	.service-title {
+		font-size: 16px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.75rem;
+	}
+
+	.service-description {
+		font-size: 14px;
+		line-height: 1.6;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	/* Stats Grid */
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.stat-card {
+		background: #ffffff;
+		padding: 2rem;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		border-radius: 0;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: #ff5c00;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		font-size: 11px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.15em;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	/* Buttons */
+	.btn-primary {
+		background: #000000;
+		color: #ffffff;
+		border: none;
+		padding: 1rem 2rem;
+		font-size: 11px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		cursor: pointer;
+		transition: background 0.2s;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		border-radius: 0;
+	}
+
+	.btn-primary:hover {
+		background: #ff5c00;
+	}
+
+	/* FAQ */
+	.faq-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.faq-item {
+		background: #ffffff;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	.faq-button {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 2rem 0;
+		background: none;
+		border: none;
+		cursor: pointer;
+		text-align: left;
+		transition: none;
+	}
+
+	.faq-button:hover {
+		background: rgba(0, 0, 0, 0.02);
+	}
+
+	.faq-question {
+		font-size: 16px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding-right: 2rem;
+	}
+
+	.faq-icon {
+		flex-shrink: 0;
+		transition: transform 0.3s;
+	}
+
+	.faq-answer {
+		padding: 0 0 2rem 0;
+	}
+
+	.faq-answer.hidden {
+		display: none;
+	}
+
+	.faq-answer p {
+		font-size: 14px;
+		line-height: 1.7;
+		color: rgba(0, 0, 0, 0.6);
+	}
+
+	/* CTA Section */
+	.cta-section {
+		background: #000000;
+		color: #ffffff;
+		padding: 6rem 2rem;
+	}
+
+	.cta-container {
+		max-width: 90rem;
+		margin: 0 auto;
+	}
+
+	.cta-grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.cta-header {
+		grid-column: span 12;
+	}
+
+	.cta-content {
+		grid-column: span 12;
+	}
+
+	@media (min-width: 1024px) {
+		.cta-header {
+			grid-column: span 5;
+		}
+
+		.cta-content {
+			grid-column: span 7;
+		}
+	}
+
+	.cta-title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-weight: 800;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+	}
+
+	.cta-description {
+		font-size: 15px;
+		line-height: 1.7;
+		color: rgba(255, 255, 255, 0.6);
+		margin-bottom: 2rem;
+	}
+
+	.cta-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.btn-cta-primary {
+		background: #ff5c00;
+		color: #000000;
+		border: none;
+		padding: 1.125rem 2rem;
+		font-size: 11px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		cursor: pointer;
+		transition: background 0.2s;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		border-radius: 0;
+	}
+
+	.btn-cta-primary:hover {
+		background: #ffffff;
+	}
+
+	.btn-cta-secondary {
+		background: transparent;
+		color: #ffffff;
+		border: 2px solid #ffffff;
+		padding: 1.125rem 2rem;
+		font-size: 11px;
+		font-weight: 800;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		cursor: pointer;
+		transition: all 0.2s;
+		border-radius: 0;
+	}
+
+	.btn-cta-secondary:hover {
+		background: #ffffff;
+		color: #000000;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.hero-section {
+			padding: 6rem 1.5rem 3rem;
+		}
+
+		.hero-heading {
+			font-size: clamp(2.5rem, 10vw, 4rem);
+		}
+
+		.hero-stats {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.section-white,
+		.section-paper,
+		.cta-section {
+			padding: 4rem 1.5rem;
+		}
+	}
+</style>
