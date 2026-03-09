@@ -978,19 +978,32 @@ import Footer from "../components/Footer.astro";
 	</script>
 
 	<!-- Coverage Area / Map Section -->
-	<section class="map-section">
-		<div class="map-container">
+	<section
+		class="relative z-0 bg-[#f9f9f7] px-8 py-20 border-b border-black/[0.08] max-lg:px-6 max-lg:py-16"
+	>
+		<div class="max-w-[90rem] mx-auto">
 			<!-- Header -->
-			<div class="map-header">
-				<div class="map-header-left">
-					<span class="map-label">COVERAGE AREA</span>
-					<h2 class="map-title">
-						<span class="map-title-main">We Put Local</span>
-						<span class="map-title-sub">Brands on the Map.</span>
+			<div
+				class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16 max-lg:mb-12"
+			>
+				<div>
+					<span
+						class="text-[11px] font-bold uppercase tracking-[0.25em] text-[#ff5c00] block mb-6"
+						>COVERAGE AREA</span
+					>
+					<h2
+						class="text-[clamp(2.5rem,6vw,4rem)] font-extrabold leading-[1.1] tracking-[-0.02em]"
+					>
+						<span class="block text-black">We Put Local</span>
+						<span class="block text-black/25"
+							>Brands on the Map.</span
+						>
 					</h2>
 				</div>
-				<div class="map-header-right">
-					<p class="map-description">
+				<div>
+					<p
+						class="text-[14px] leading-[1.65] text-black/60 max-w-[500px]"
+					>
 						Our screen network spans Denver's most vibrant
 						neighborhoods — click a location to explore.
 					</p>
@@ -998,17 +1011,23 @@ import Footer from "../components/Footer.astro";
 			</div>
 
 			<!-- Map Grid -->
-			<div class="map-grid">
+			<div
+				class="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-12 lg:gap-12"
+			>
 				<!-- Left: Location Cards -->
-				<div class="map-locations">
+				<div class="flex flex-col gap-4">
 					<!-- Aurora - Expanded -->
 					<button
-						class="map-location-card map-location-active"
+						class="map-location-active relative bg-black border border-black rounded-none p-8 text-left cursor-pointer transition-all duration-200 w-full hover:border-black/15"
 						onclick="flyToCity(39.7294, -104.8319, 'Aurora', 'East Metro')"
 					>
-						<div class="map-location-header">
-							<div class="map-location-tag">EAST METRO</div>
-							<div class="map-location-icon">
+						<div class="flex justify-between items-center mb-4">
+							<div
+								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+							>
+								EAST METRO
+							</div>
+							<div class="text-[#ff5c00]">
 								<svg
 									width="20"
 									height="20"
@@ -1022,39 +1041,71 @@ import Footer from "../components/Footer.astro";
 								</svg>
 							</div>
 						</div>
-						<h3 class="map-location-name">Aurora</h3>
-						<p class="map-location-description">
+						<h3
+							class="text-2xl font-extrabold text-white mb-3 leading-[1.3] tracking-[-0.01em]"
+						>
+							Aurora
+						</h3>
+						<p
+							class="text-[13px] leading-[1.65] text-white/70 mb-6"
+						>
 							Denver's largest suburb — massive reach across busy
 							retail corridors and fitness centers.
 						</p>
-						<div class="map-location-stats">
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">38</div>
-								<div class="map-location-stat-label">
+						<div
+							class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10"
+						>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									38
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Screens
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">14</div>
-								<div class="map-location-stat-label">
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									14
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Venues
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">450K</div>
-								<div class="map-location-stat-label">Views</div>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									450K
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
+									Views
+								</div>
 							</div>
 						</div>
 					</button>
 
 					<!-- Lakewood - Collapsed -->
 					<button
-						class="map-location-card"
+						class="map-location-card relative bg-white border border-black/[0.08] rounded-none p-6 text-left cursor-pointer transition-all duration-200 w-full hover:border-black/15"
 						onclick="flyToCity(39.7047, -105.0814, 'Lakewood', 'West Denver')"
 					>
-						<div class="map-location-header">
-							<div class="map-location-tag">WEST DENVER</div>
-							<div class="map-location-icon">
+						<div class="flex justify-between items-center mb-4">
+							<div
+								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+							>
+								WEST DENVER
+							</div>
+							<div class="text-[#ff5c00]">
 								<svg
 									width="20"
 									height="20"
@@ -1068,39 +1119,71 @@ import Footer from "../components/Footer.astro";
 								</svg>
 							</div>
 						</div>
-						<h3 class="map-location-name">Lakewood</h3>
-						<p class="map-location-description">
+						<h3
+							class="text-xl font-extrabold text-black mb-2 leading-[1.3] tracking-[-0.01em]"
+						>
+							Lakewood
+						</h3>
+						<p
+							class="text-[13px] leading-[1.65] text-white/70 mb-6 hidden"
+						>
 							West Denver's hub — strong presence in shopping
 							centers and community fitness venues.
 						</p>
-						<div class="map-location-stats">
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">28</div>
-								<div class="map-location-stat-label">
+						<div
+							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
+						>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									28
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Screens
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">11</div>
-								<div class="map-location-stat-label">
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									11
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Venues
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">320K</div>
-								<div class="map-location-stat-label">Views</div>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									320K
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
+									Views
+								</div>
 							</div>
 						</div>
 					</button>
 
 					<!-- Arvada - Collapsed -->
 					<button
-						class="map-location-card"
+						class="map-location-card relative bg-white border border-black/[0.08] rounded-none p-6 text-left cursor-pointer transition-all duration-200 w-full hover:border-black/15"
 						onclick="flyToCity(39.8028, -105.0875, 'Arvada', 'Northwest')"
 					>
-						<div class="map-location-header">
-							<div class="map-location-tag">NORTHWEST</div>
-							<div class="map-location-icon">
+						<div class="flex justify-between items-center mb-4">
+							<div
+								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+							>
+								NORTHWEST
+							</div>
+							<div class="text-[#ff5c00]">
 								<svg
 									width="20"
 									height="20"
@@ -1114,39 +1197,71 @@ import Footer from "../components/Footer.astro";
 								</svg>
 							</div>
 						</div>
-						<h3 class="map-location-name">Arvada</h3>
-						<p class="map-location-description">
+						<h3
+							class="text-xl font-extrabold text-black mb-2 leading-[1.3] tracking-[-0.01em]"
+						>
+							Arvada
+						</h3>
+						<p
+							class="text-[13px] leading-[1.65] text-white/70 mb-6 hidden"
+						>
 							Growing northwest corridor — prime placement in
 							family-oriented retail and dining spots.
 						</p>
-						<div class="map-location-stats">
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">22</div>
-								<div class="map-location-stat-label">
+						<div
+							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
+						>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									22
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Screens
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">9</div>
-								<div class="map-location-stat-label">
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									9
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Venues
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">280K</div>
-								<div class="map-location-stat-label">Views</div>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									280K
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
+									Views
+								</div>
 							</div>
 						</div>
 					</button>
 
 					<!-- Centennial - Collapsed -->
 					<button
-						class="map-location-card"
+						class="map-location-card relative bg-white border border-black/[0.08] rounded-none p-6 text-left cursor-pointer transition-all duration-200 w-full hover:border-black/15"
 						onclick="flyToCity(39.5807, -104.8767, 'Centennial', 'South Metro')"
 					>
-						<div class="map-location-header">
-							<div class="map-location-tag">SOUTH METRO</div>
-							<div class="map-location-icon">
+						<div class="flex justify-between items-center mb-4">
+							<div
+								class="bg-[#ff5c00] text-black px-3.5 py-1.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
+							>
+								SOUTH METRO
+							</div>
+							<div class="text-[#ff5c00]">
 								<svg
 									width="20"
 									height="20"
@@ -1160,34 +1275,64 @@ import Footer from "../components/Footer.astro";
 								</svg>
 							</div>
 						</div>
-						<h3 class="map-location-name">Centennial</h3>
-						<p class="map-location-description">
+						<h3
+							class="text-xl font-extrabold text-black mb-2 leading-[1.3] tracking-[-0.01em]"
+						>
+							Centennial
+						</h3>
+						<p
+							class="text-[13px] leading-[1.65] text-white/70 mb-6 hidden"
+						>
 							Affluent south metro area — upscale gyms, medical
 							offices, and professional service venues.
 						</p>
-						<div class="map-location-stats">
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">32</div>
-								<div class="map-location-stat-label">
+						<div
+							class="hidden grid-cols-3 gap-6 pt-6 border-t border-white/10"
+						>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									32
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Screens
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">12</div>
-								<div class="map-location-stat-label">
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									12
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
 									Venues
 								</div>
 							</div>
-							<div class="map-location-stat">
-								<div class="map-location-stat-number">380K</div>
-								<div class="map-location-stat-label">Views</div>
+							<div>
+								<div
+									class="text-2xl font-extrabold text-white mb-1"
+								>
+									380K
+								</div>
+								<div
+									class="text-[10px] font-semibold uppercase tracking-[0.1em] text-white/50"
+								>
+									Views
+								</div>
 							</div>
 						</div>
 					</button>
 				</div>
 
 				<!-- Right: Map -->
-				<div class="map-display">
+				<div
+					class="relative bg-[#1a1a1a] rounded-none overflow-hidden min-h-[500px] max-lg:min-h-[400px] border border-black/[0.08] z-0"
+				>
 					<Map />
 				</div>
 			</div>
@@ -1390,204 +1535,24 @@ import Footer from "../components/Footer.astro";
 		color: #ffffff;
 	}
 
-	/* Map Section */
-	.map-section {
-		background: #f9f9f7;
-		padding: 5rem 2rem;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-	}
-
-	.map-container {
-		max-width: 90rem;
-		margin: 0 auto;
-	}
-
-	.map-header {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 2rem;
-		margin-bottom: 4rem;
-	}
-
-	@media (min-width: 1024px) {
-		.map-header {
-			grid-template-columns: 1fr 1fr;
-			gap: 4rem;
-		}
-	}
-
-	.map-label {
-		font-size: 11px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.25em;
-		color: #ff5c00;
-		display: block;
-		margin-bottom: 1.5rem;
-	}
-
-	.map-title {
-		font-size: clamp(2.5rem, 6vw, 4rem);
-		font-weight: 800;
-		line-height: 1.1;
-		letter-spacing: -0.02em;
-	}
-
-	.map-title-main {
-		display: block;
-		color: #000000;
-	}
-
-	.map-title-sub {
-		display: block;
-		color: rgba(0, 0, 0, 0.25);
-	}
-
-	.map-description {
-		font-size: 14px;
-		line-height: 1.65;
-		color: rgba(0, 0, 0, 0.6);
-		max-width: 500px;
-	}
-
-	.map-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 3rem;
-	}
-
-	@media (min-width: 1024px) {
-		.map-grid {
-			grid-template-columns: 420px 1fr;
-			gap: 3rem;
-		}
-	}
-
-	.map-locations {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.map-location-card {
-		background: #ffffff;
-		border: 1px solid rgba(0, 0, 0, 0.08);
-		border-radius: 0;
-		padding: 1.5rem;
-		text-align: left;
-		cursor: pointer;
-		transition: all 0.2s;
-		width: 100%;
-	}
-
-	.map-location-card:hover {
-		border-color: rgba(0, 0, 0, 0.15);
-	}
-
+	/* Map Location Active States - Keep for JavaScript interaction */
 	.map-location-active {
-		background: #000000;
-		border-color: #000000;
-		padding: 2rem;
+		background: #000000 !important;
+		border-color: #000000 !important;
+		padding: 2rem !important;
 	}
 
-	.map-location-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1rem;
+	.map-location-active h3 {
+		color: #ffffff !important;
+		font-size: 1.5rem !important;
+		margin-bottom: 0.75rem !important;
 	}
 
-	.map-location-tag {
-		background: #ff5c00;
-		color: #000000;
-		padding: 0.375rem 0.875rem;
-		font-size: 10px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
-		border-radius: 0;
+	.map-location-active p {
+		display: block !important;
 	}
 
-	.map-location-icon {
-		color: #ff5c00;
-	}
-
-	.map-location-name {
-		font-size: 20px;
-		font-weight: 800;
-		color: #000000;
-		margin-bottom: 0.5rem;
-		letter-spacing: -0.01em;
-	}
-
-	.map-location-active .map-location-name {
-		color: #ffffff;
-		font-size: 24px;
-		margin-bottom: 0.75rem;
-	}
-
-	.map-location-description {
-		font-size: 13px;
-		line-height: 1.65;
-		color: rgba(255, 255, 255, 0.7);
-		margin-bottom: 1.5rem;
-		display: none;
-	}
-
-	.map-location-active .map-location-description {
-		display: block;
-	}
-
-	.map-location-stats {
-		display: none;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-		padding-top: 1.5rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-	}
-
-	.map-location-active .map-location-stats {
-		display: grid;
-	}
-
-	.map-location-stat-number {
-		font-size: 24px;
-		font-weight: 800;
-		color: #ffffff;
-		margin-bottom: 0.25rem;
-	}
-
-	.map-location-stat-label {
-		font-size: 10px;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: rgba(255, 255, 255, 0.5);
-	}
-
-	.map-location-card {
-		position: relative;
-	}
-
-	.map-display {
-		background: #1a1a1a;
-		border-radius: 0;
-		overflow: hidden;
-		min-height: 500px;
-		border: 1px solid rgba(0, 0, 0, 0.08);
-	}
-
-	@media (max-width: 1023px) {
-		.map-section {
-			padding: 4rem 1.5rem;
-		}
-
-		.map-header {
-			margin-bottom: 3rem;
-		}
-
-		.map-display {
-			min-height: 400px;
-		}
+	.map-location-active > div:last-child {
+		display: grid !important;
 	}
 </style>

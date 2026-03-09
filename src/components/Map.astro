@@ -4,9 +4,20 @@
 
 <div id="map-wrapper" class="relative w-full h-full">
     <div id="map" class="w-full h-full"></div>
-    <div id="map-location-overlay" class="map-location-overlay">
-        <span id="map-location-name">AURORA</span>
-        <span id="map-location-region">East Metro</span>
+    <div
+        id="map-location-overlay"
+        class="absolute top-6 left-6 bg-black/85 backdrop-blur-[10px] px-6 py-4 rounded-none border border-white/10 z-10 flex flex-col gap-1"
+    >
+        <span
+            id="map-location-name"
+            class="text-[18px] font-extrabold text-white tracking-[0.05em]"
+            >AURORA</span
+        >
+        <span
+            id="map-location-region"
+            class="text-[11px] font-semibold text-white/50 uppercase tracking-[0.1em]"
+            >East Metro</span
+        >
     </div>
 </div>
 
@@ -91,6 +102,7 @@
 </script>
 
 <style>
+    /* Global styles for Leaflet marker - cannot be converted to Tailwind */
     :global(.custom-marker-orange) {
         background: transparent;
         border: none;
@@ -108,36 +120,6 @@
         50% {
             opacity: 0.7;
         }
-    }
-
-    .map-location-overlay {
-        position: absolute;
-        top: 1.5rem;
-        left: 1.5rem;
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(10px);
-        padding: 1rem 1.5rem;
-        border-radius: 0;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-
-    #map-location-name {
-        font-size: 18px;
-        font-weight: 800;
-        color: #ffffff;
-        letter-spacing: 0.05em;
-    }
-
-    #map-location-region {
-        font-size: 11px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.5);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
     }
 
     /* Hide Leaflet attribution */
