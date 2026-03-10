@@ -1,4 +1,4 @@
-# Cache static assets for 1 year
+# Cache static assets for 1 year with immutable flag
 /*.avif
   Cache-Control: public, max-age=31536000, immutable
 
@@ -40,6 +40,17 @@
 /*.eot
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML files - shorter cache
+# HTML files - shorter cache with revalidation
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
+
+# Root HTML
+/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

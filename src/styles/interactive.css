@@ -1,0 +1,38 @@
+/* Interactive Component Styles - Loaded only when needed */
+
+/* FAQ Icon States */
+.faq-item-open {
+    background: #f9f9f7;
+}
+
+.faq-item-open .faq-item-icon {
+    background: #06b6d4;
+    border-color: #06b6d4;
+}
+
+.faq-item-open .faq-item-icon svg {
+    color: #ffffff;
+}
+
+/* Map Location Active States */
+.map-location-active {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    padding: 2rem !important;
+}
+
+.map-location-active h3 {
+    color: #ffffff !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.map-location-active p {
+    display: block !important;
+    text-transform: none !important;
+    color: #ffffff !important;
+}
+
+.map-location-active>div:last-child {
+    display: block !important;
+}

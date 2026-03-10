@@ -12,8 +12,12 @@ export default defineConfig({
       minify: 'terser',
       terserOptions: {
         compress: {
-          drop_console: true, // Remove console.logs in production
+          drop_console: true,
           drop_debugger: true,
+          passes: 2, // Multiple passes for better compression
+        },
+        mangle: {
+          safari10: true,
         },
       },
       // Code splitting for better caching
@@ -22,13 +26,22 @@ export default defineConfig({
           manualChunks: {
             'leaflet': ['leaflet'],
           },
+          // Better asset naming for caching
+          assetFileNames: 'assets/[name].[hash][extname]',
+          chunkFileNames: 'chunks/[name].[hash].js',
+          entryFileNames: 'entry/[name].[hash].js',
         },
       },
+      cssCodeSplit: true,
+      cssMinify: true,
     },
   },
   // Enable compression
   compressHTML: true,
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'never', // Prevent unused CSS from being inlined
+    assets: '_astro', // Custom assets directory
   },
+  // Optimize output
+  output: 'static',
 });

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Map from "../components/Map.astro";
 import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
+import "../styles/interactive.css";
 ---
 
 <Layout title="NTV Cloned - Denver Marketing">
@@ -12,7 +13,7 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 		<!-- Background Image -->
 		<div
 			class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-			style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');"
+			style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80&auto=format');"
 		>
 		</div>
 
@@ -476,14 +477,13 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 				<div class="relative rounded-none overflow-hidden">
 					<img
 						src="/venue-partner-mobile.avif"
-						srcset="/venue-partner-mobile.avif 800w"
-						sizes="(max-width: 768px) 100vw, 50vw"
 						alt="Indoor digital advertising screen in retail environment"
 						class="w-full h-[500px] max-lg:h-[400px] object-cover block"
 						width="800"
 						height="500"
 						loading="lazy"
 						decoding="async"
+						fetchpriority="low"
 					/>
 					<div
 						class="absolute bottom-6 left-6 right-6 flex flex-wrap gap-3"
@@ -531,13 +531,14 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 					<!-- Image with Tag -->
 					<div class="relative rounded-none overflow-hidden w-full">
 						<img
-							src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
+							src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80&auto=format"
 							alt="Team collaboration"
 							class="w-full h-[280px] object-cover block"
 							width="600"
 							height="280"
 							loading="lazy"
 							decoding="async"
+							fetchpriority="low"
 						/>
 						<span
 							class="absolute bottom-5 left-5 bg-[#06B6D4] text-black px-5 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
@@ -1453,12 +1454,13 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 				>
 					<img
 						class="w-full h-full object-cover block"
-						src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+						src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format"
 						alt="Team consultation meeting"
 						width="800"
 						height="600"
 						loading="lazy"
 						decoding="async"
+						fetchpriority="low"
 					/>
 				</div>
 			</div>
