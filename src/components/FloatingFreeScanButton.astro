@@ -2,51 +2,50 @@
 // FloatingFreeScanButton.astro - Floating "FREE SCAN" button matching site design
 ---
 
-<div id="floating-scan-button" class="fixed bottom-8 right-8 z-[9999]">
-    <!-- Main Button Container -->
-    <div class="relative">
-        <!-- Close Button -->
-        <button
-            id="scan-close-btn"
-            class="absolute -top-3 -right-3 w-7 h-7 bg-black hover:bg-black/80 text-white rounded-full flex items-center justify-center text-lg font-bold transition-all duration-200 hover:scale-110 shadow-lg z-10"
-            aria-label="Close FREE SCAN button"
-        >
-            ×
-        </button>
+<div id="floating-scan-button" class="fixed bottom-8 right-8 z-[9999] hidden">
+    <!-- Close Button -->
+    <button
+        id="scan-close-btn"
+        class="absolute -top-2 -right-2 w-6 h-6 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center text-sm font-bold transition-all duration-200 hover:scale-110 shadow-lg z-10"
+        aria-label="Close FREE SCAN button"
+        type="button"
+    >
+        ×
+    </button>
 
-        <!-- Main Button -->
-        <button
-            id="scan-main-btn"
-            class="bg-[#06B6D4] text-black border-none px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em] cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none shadow-2xl hover:scale-105 hover:shadow-[#06B6D4]/50"
+    <!-- Main Button -->
+    <button
+        id="scan-main-btn"
+        class="bg-[#06B6D4] text-black border-none px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em] cursor-pointer transition-all duration-300 inline-flex items-center gap-3 rounded-none shadow-2xl hover:scale-105 hover:shadow-[#06B6D4]/50"
+        type="button"
+    >
+        <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
         >
-            <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span>FREE SCAN</span>
-            <svg
-                width="14"
-                height="14"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3"
-                    d="M9 5l7 7-7 7"></path>
-            </svg>
-        </button>
-    </div>
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>FREE SCAN</span>
+        <svg
+            width="14"
+            height="14"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
 </div>
 
 <script>
@@ -78,20 +77,22 @@
                 "free-scan-floating-dismissed",
             );
             if (isDismissed) {
-                floatingButton.style.display = "none";
                 return;
             }
 
-            // Show button with animation after page loads
-            floatingButton.style.opacity = "0";
-            floatingButton.style.transform = "translateY(100px) scale(0.9)";
-
+            // Show button after 3 seconds
             setTimeout(() => {
-                floatingButton.style.transition =
-                    "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)";
-                floatingButton.style.opacity = "1";
-                floatingButton.style.transform = "translateY(0) scale(1)";
-            }, 3000); // Show after 3 seconds (after modal)
+                floatingButton.classList.remove("hidden");
+                floatingButton.style.opacity = "0";
+                floatingButton.style.transform = "translateY(100px)";
+
+                requestAnimationFrame(() => {
+                    floatingButton.style.transition =
+                        "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)";
+                    floatingButton.style.opacity = "1";
+                    floatingButton.style.transform = "translateY(0)";
+                });
+            }, 3000);
 
             // Close button functionality
             if (closeBtn) {
@@ -101,11 +102,10 @@
 
                     floatingButton.style.transition = "all 0.4s ease-out";
                     floatingButton.style.opacity = "0";
-                    floatingButton.style.transform =
-                        "translateY(100px) scale(0.9)";
+                    floatingButton.style.transform = "translateY(100px)";
 
                     setTimeout(() => {
-                        floatingButton.style.display = "none";
+                        floatingButton.classList.add("hidden");
                         localStorage.setItem(
                             "free-scan-floating-dismissed",
                             "true",
@@ -117,7 +117,6 @@
             // Main button click functionality
             if (mainBtn) {
                 mainBtn.addEventListener("click", () => {
-                    // Scroll to CTA section (cyan background section)
                     const ctaSection = document.querySelector(
                         "section.bg-\\[\\#06B6D4\\]",
                     );
@@ -127,7 +126,6 @@
                             block: "start",
                         });
                     } else {
-                        // Fallback: scroll to bottom
                         window.scrollTo({
                             top: document.body.scrollHeight,
                             behavior: "smooth",
@@ -140,9 +138,8 @@
 </script>
 
 <style>
-    /* Ensure button stays above everything */
     #floating-scan-button {
-        z-index: 9999;
+        position: relative;
     }
 
     /* Mobile responsiveness */
@@ -157,19 +154,14 @@
             font-size: 10px;
         }
 
-        #scan-main-btn svg:first-child {
+        #scan-main-btn svg:first-of-type {
             width: 1rem;
             height: 1rem;
         }
 
-        #scan-main-btn svg:last-child {
+        #scan-main-btn svg:last-of-type {
             width: 12px;
             height: 12px;
         }
-    }
-
-    /* Prevent animation conflicts */
-    #floating-scan-button * {
-        pointer-events: auto;
     }
 </style>
