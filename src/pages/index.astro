@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Map from "../components/Map.astro";
-import OnLoadModal from "../components/OnLoadModal.astro";
 import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 ---
 
@@ -1098,9 +1097,7 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 		</div>
 	</section>
 
-	<script>
-		import "/src/scripts/faq.js";
-	</script>
+	<script src="../scripts/faq.js"></script>
 
 	<!-- Coverage Area / Map Section -->
 	<section
@@ -1309,9 +1306,7 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 		</div>
 	</section>
 
-	<script>
-		import "/src/scripts/mapLocationCards.js";
-	</script>
+	<script src="../scripts/mapLocationCards.js"></script>
 
 	<!-- Final CTA Section -->
 	<section class="bg-[#f9f9f7] px-8 py-28 lg:py-28">
@@ -1456,9 +1451,25 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 		</div>
 	</section>
 
-	<!-- On-load Modal -->
-	<OnLoadModal />
-
 	<!-- Floating FREE SCAN Button -->
 	<FloatingFreeScanButton />
+
+	<!-- Debug Helper Script -->
+	<script is:inline>
+		// Helper function to reset the floating button
+		window.resetFloatingButton = function () {
+			localStorage.removeItem("free-scan-dismissed");
+			console.log(
+				"✅ Floating button reset! Refresh the page to see it.",
+			);
+			location.reload();
+		};
+
+		// Log helper instructions
+		console.log(
+			"%c💡 Floating Button Helper",
+			"background: #06B6D4; color: black; padding: 4px 8px; font-weight: bold;",
+		);
+		console.log("To reset the floating button, run: resetFloatingButton()");
+	</script>
 </Layout>
