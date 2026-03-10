@@ -22,6 +22,17 @@
     --line-height-body: 1.6;
 }
 
+/* Font face with font-display: swap for better performance */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+}
+
 * {
     @apply box-border;
 }

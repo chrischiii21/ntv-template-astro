@@ -26,11 +26,19 @@ const { title } = Astro.props;
 			type="image/avif"
 		/>
 
-		<!-- Fonts -->
+		<!-- Fonts - Load asynchronously to prevent render blocking -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
+			media="print"
+			onload="this.media='all'"
 		/>
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+				rel="stylesheet"
+			/>
+		</noscript>
 
 		<title>{title}</title>
 	</head>
