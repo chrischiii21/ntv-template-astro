@@ -1,0 +1,341 @@
+---
+// OnLoadModal.astro - Modal that appears on page load, matching site design
+---
+
+<div
+    id="onload-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+>
+    <div
+        class="relative bg-white rounded-none shadow-2xl max-w-2xl w-full mx-4 overflow-hidden border border-black/8"
+    >
+        <!-- Close button -->
+        <button
+            id="modal-close"
+            class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-all duration-200 z-10 group"
+            aria-label="Close modal"
+        >
+            <svg
+                class="w-5 h-5 text-black/60 group-hover:text-black transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Header Section -->
+        <div class="bg-black text-white px-12 py-12">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-[2px] w-12 bg-[#06B6D4]"></div>
+                <span
+                    class="text-sm font-bold uppercase tracking-[0.2em] text-[#06B6D4]"
+                >
+                    Premium Marketing Solutions
+                </span>
+            </div>
+            <h2
+                class="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-bold leading-[1.1] tracking-tighter mb-4"
+            >
+                Ready to Dominate Your Market?
+            </h2>
+            <p class="text-white/70 text-lg leading-[1.6]">
+                Partner with Denver's local advertising & digital marketing pros
+                to grow your business across the metro area.
+            </p>
+        </div>
+
+        <!-- Content Section -->
+        <div class="px-12 py-10">
+            <!-- Benefits List -->
+            <div class="grid grid-cols-1 gap-6 mb-10">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#06B6D4] flex items-center justify-center mt-1 flex-shrink-0"
+                    >
+                        <svg
+                            class="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-black text-lg mb-1">
+                            Strategic Location Targeting
+                        </h3>
+                        <p class="text-black/60 text-sm leading-[1.6]">
+                            Reach customers in Aurora, Lakewood, Arvada, and
+                            Centennial with precision indoor billboard
+                            placement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#06B6D4] flex items-center justify-center mt-1 flex-shrink-0"
+                    >
+                        <svg
+                            class="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-black text-lg mb-1">
+                            Full-Service Digital Marketing
+                        </h3>
+                        <p class="text-black/60 text-sm leading-[1.6]">
+                            Complete marketing solutions from website design to
+                            social media management and PPC campaigns.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#06B6D4] flex items-center justify-center mt-1 flex-shrink-0"
+                    >
+                        <svg
+                            class="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-black text-lg mb-1">
+                            Proven ROI Results
+                        </h3>
+                        <p class="text-black/60 text-sm leading-[1.6]">
+                            Transparent reporting and measurable outcomes with
+                            20+ years of Denver market expertise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                <button
+                    id="modal-cta-primary"
+                    class="flex-1 bg-[#06B6D4] text-black border-none px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-3 rounded-none hover:scale-105 hover:shadow-lg hover:shadow-[#06B6D4]/50"
+                >
+                    SCHEDULE FREE CONSULTATION
+                    <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button
+                    id="modal-cta-secondary"
+                    class="flex-1 bg-transparent text-black border-2 border-black/20 px-8 py-4 text-[11px] font-bold uppercase tracking-[0.1em] cursor-pointer transition-all duration-300 inline-flex items-center justify-center gap-3 rounded-none hover:border-black/40 hover:bg-black/5"
+                >
+                    LEARN MORE
+                    <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div
+                class="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-black/8"
+            >
+                <div
+                    class="flex items-center gap-2 text-[11px] font-bold text-black/50 uppercase tracking-[0.1em]"
+                >
+                    <svg
+                        class="w-4 h-4 text-[#06B6D4]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span>No Commitment Required</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-[11px] font-bold text-black/50 uppercase tracking-[0.1em]"
+                >
+                    <svg
+                        class="w-4 h-4 text-[#06B6D4]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Denver Metro Specialists</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Modal functionality with localStorage persistence
+    document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("onload-modal") as HTMLElement;
+        const closeBtn = document.getElementById("modal-close");
+        const primaryCTA = document.getElementById("modal-cta-primary");
+        const secondaryCTA = document.getElementById("modal-cta-secondary");
+
+        // Check if user has seen modal today
+        const today = new Date().toDateString();
+        const lastShown = localStorage.getItem("modal-last-shown");
+        const modalDismissed = localStorage.getItem("modal-dismissed");
+
+        // Show modal if not seen today and not permanently dismissed
+        if (lastShown !== today && !modalDismissed) {
+            setTimeout(() => {
+                if (modal) {
+                    modal.classList.add("modal-visible");
+                    localStorage.setItem("modal-last-shown", today);
+                }
+            }, 2000); // Show after 2 seconds
+        } else {
+            // Hide modal if already seen
+            if (modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Close modal function
+        const closeModal = (dismissed = false) => {
+            if (modal) {
+                modal.classList.add("modal-closing");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+
+                if (dismissed) {
+                    localStorage.setItem("modal-dismissed", "true");
+                }
+            }
+        };
+
+        // Event listeners
+        if (closeBtn) {
+            closeBtn.addEventListener("click", () => closeModal(true));
+        }
+
+        if (primaryCTA) {
+            primaryCTA.addEventListener("click", () => {
+                closeModal(false);
+                // Scroll to contact or final CTA section
+                setTimeout(() => {
+                    const targetSection =
+                        document.querySelector(".bg-\\[\\#06B6D4\\]") ||
+                        document.querySelector(
+                            '[class*="bg-\\[\\#06B6D4\\]"]',
+                        ) ||
+                        document.querySelector("#contact");
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                        window.scrollTo({
+                            top: document.body.scrollHeight,
+                            behavior: "smooth",
+                        });
+                    }
+                }, 300);
+            });
+        }
+
+        if (secondaryCTA) {
+            secondaryCTA.addEventListener("click", () => {
+                closeModal(false);
+                // Scroll to services section
+                setTimeout(() => {
+                    const servicesSection =
+                        document.querySelector(".bg-white") || document.body;
+                    servicesSection.scrollIntoView({ behavior: "smooth" });
+                }, 300);
+            });
+        }
+
+        // Close on backdrop click
+        if (modal) {
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) {
+                    closeModal(true);
+                }
+            });
+        }
+
+        // Close on Escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && modal && modal.style.display !== "none") {
+                closeModal(true);
+            }
+        });
+    });
+</script>
+
+<style>
+    #onload-modal {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    #onload-modal.modal-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    #onload-modal.modal-closing {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.3s ease-out;
+    }
+
+    /* Prevent body scroll when modal is open */
+    body:has(#onload-modal:not([style*="display: none"])) {
+        overflow: hidden;
+    }
+</style>
