@@ -476,8 +476,12 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 				<div class="relative rounded-none overflow-hidden">
 					<img
 						src="/venue-partner-mobile.avif"
+						srcset="/venue-partner-mobile.avif 800w"
+						sizes="(max-width: 768px) 100vw, 50vw"
 						alt="Indoor digital advertising screen in retail environment"
 						class="w-full h-[500px] max-lg:h-[400px] object-cover block"
+						width="800"
+						height="500"
 						loading="lazy"
 						decoding="async"
 					/>
@@ -530,6 +534,10 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 							src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
 							alt="Team collaboration"
 							class="w-full h-[280px] object-cover block"
+							width="600"
+							height="280"
+							loading="lazy"
+							decoding="async"
 						/>
 						<span
 							class="absolute bottom-5 left-5 bg-[#06B6D4] text-black px-5 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.15em] rounded-none"
@@ -1447,6 +1455,10 @@ import FloatingFreeScanButton from "../components/FloatingFreeScanButton.astro";
 						class="w-full h-full object-cover block"
 						src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
 						alt="Team consultation meeting"
+						width="800"
+						height="600"
+						loading="lazy"
+						decoding="async"
 					/>
 				</div>
 			</div>
